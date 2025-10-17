@@ -153,17 +153,13 @@ config.json
 .env.development
 
 # Automation reports (keep structure but ignore generated content)
-automation-reports/*.md
-!automation-reports/README.md
+
 
 # Generated images (keep structure but ignore generated content)
-public/generated/
-public/ai-generated/
 
 # Backup files
-*.backup
-*.bak
-*~
+
+
 
 # Package manager lock files (keep one, ignore others)
 # Keep package-lock.json, ignore others
