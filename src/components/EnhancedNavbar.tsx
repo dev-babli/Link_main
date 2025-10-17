@@ -50,7 +50,7 @@ export function EnhancedNavbar() {
                     <div className="flex min-h-[var(--spacing-phi-2xl)] items-center justify-between px-[5%] md:min-h-[var(--spacing-phi-xl)] lg:min-h-full lg:px-0">
                         <Link href="/" className="group" aria-label="Link Innovations Home">
                             <img
-                                src="/logos/Link_Innovations_transparent.png"
+                                src="/logos/Logo's/Logo1.png"
                                 alt="Link Innovations Logo"
                                 className="h-phi-xl w-auto group-hover:scale-105 transition-transform duration-300"
                             />
@@ -446,7 +446,7 @@ export function EnhancedNavbar() {
                                 size="sm"
                             >
                                 <img
-                                    src="/logos/Link_Innovations_transparent.png"
+                                    src="/logos/Logo's/Logo1.png"
                                     alt="Link Innovations"
                                     className="h-4 w-auto"
                                 />

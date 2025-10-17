@@ -18,13 +18,16 @@ import { CtaSection } from "@/components/CtaSection";
 import { Footer } from "@/components/Footer";
 
 // Additional Strategic Components
-import { TimelineSection } from "@/components/TimelineSection";
 import LinkUseCasesAccordion from "@/components/link-sections/use-cases-accordion";
 import LinkCustomerStatsCards from "@/components/link-sections/customer-stats-cards";
 import LinkPortfolioShowcase from "@/components/link-sections/portfolio-showcase";
 import { LogoSection } from "@/components/LogosSection";
 import LinkDevexVideoSection from "@/components/link-sections/devex-video-section";
 import { HeroParallax, portfolioProducts } from "@/components/ui/hero-parallax";
+import { HomepageStickyTabs } from "@/components/HomepageStickyTabs";
+import IndustryExpandableSection from "@/components/IndustryExpandableSection";
+import { ServiceShowcase } from "@/components/ServiceShowcase";
+import { CaseStudiesShowcase } from "@/components/CaseStudiesShowcase";
 
 export default function Home() {
         return (
@@ -63,7 +66,8 @@ export default function Home() {
           ═══════════════════════════════════════════════════════════════ */}
 
                         <LinkTabbedFeatures />
-                        <TimelineSection />
+                        <ServiceShowcase />
+                        <HomepageStickyTabs />
                         <LinkDevexVideoSection />
 
                         {/* ═══════════════════════════════════════════════════════════════
@@ -71,6 +75,7 @@ export default function Home() {
           Goal: Show industry-specific solutions and use cases
           ═══════════════════════════════════════════════════════════════ */}
 
+                        <IndustryExpandableSection />
                         <LinkUseCasesAccordion />
                         <LogoSection />
 
@@ -81,6 +86,7 @@ export default function Home() {
 
                         <LinkCustomerStatsCards />
                         <LinkTestimonialsCarousel />
+                        <CaseStudiesShowcase />
                         <LinkPortfolioShowcase />
                         <HeroParallax products={portfolioProducts} />
 

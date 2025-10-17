@@ -9,7 +9,7 @@ export function PerformanceOptimizer() {
         // Preload critical Link Innovations resources
         const preloadCriticalResources = () => {
             const criticalImages = [
-                "/logos/Link_Innovations_transparent.png",
+                "/logos/Logo's/Logo1.png",
                 "/herosectionimages/generative-ai-hero.jpg",
                 "/herosectionimages/cloud-computing-illustration.jpg",
                 "/herosectionimages/ai-human-collaboration.jpg",

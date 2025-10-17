@@ -8,57 +8,57 @@ const services = [
         id: 1,
         title: "Web Development",
         description: "Modern, responsive web applications built with cutting-edge technologies",
-        image: "/images/services/development-typographic-header-presenting-content-web-pages-website-layout-composition-color-develop (1)/site_design_12.jpg",
-        fallback: "/images/services/li-service-web-development-hero-v1.jpg"
+        image: "/herosectionimages/Digital Technology.webp",
+        fallback: "/herosectionimages/Digital Technology.webp"
     },
     {
         id: 2,
         title: "Mobile App Development",
         description: "Native and cross-platform mobile applications for iOS and Android",
-        image: "/images/services/li-service-mobile-app-development-hero-v1.webp",
-        fallback: "/images/services/li-service-mobile-app-development-hero-v1.jpg"
+        image: "/herosectionimages/3.webp",
+        fallback: "/herosectionimages/3.webp"
     },
     {
         id: 3,
         title: "AI Automation",
         description: "Intelligent automation solutions powered by artificial intelligence",
-        image: "/images/services/li-service-ai-automation-hero-v1.webp",
-        fallback: "/images/services/li-service-ai-automation-hero-v1.jpg"
+        image: "/herosectionimages/Agentic Ai.webp",
+        fallback: "/herosectionimages/Agentic Ai.webp"
     },
     {
         id: 4,
         title: "Cloud Services",
         description: "Scalable cloud infrastructure and migration solutions",
-        image: "/images/services/li-service-cloud-services-hero-v1.webp",
-        fallback: "/images/services/li-service-cloud-services-hero-v1.jpg"
+        image: "/herosectionimages/cloud.webp",
+        fallback: "/herosectionimages/cloud.webp"
     },
     {
         id: 5,
         title: "Data Analytics",
         description: "Advanced analytics and business intelligence solutions",
-        image: "/images/services/li-service-data-analytics-hero-v1.webp",
-        fallback: "/images/services/li-service-data-analytics-hero-v1.jpg"
+        image: "/herosectionimages/Data & Analytics.webp",
+        fallback: "/herosectionimages/Data & Analytics.webp"
     },
     {
         id: 6,
         title: "Cybersecurity",
         description: "Comprehensive security solutions to protect your digital assets",
-        image: "/images/services/li-service-cybersecurity-hero-v1.webp",
-        fallback: "/images/services/li-service-cybersecurity-hero-v1.jpg"
+        image: "/herosectionimages/Cyber Security.webp",
+        fallback: "/herosectionimages/Cyber Security.webp"
     },
     {
         id: 7,
         title: "Cloud DevOps",
         description: "Streamlined development and deployment with DevOps practices",
-        image: "/images/services/li-service-cloud-devops-hero-v1.webp",
-        fallback: "/images/services/li-service-cloud-devops-hero-v1.jpg"
+        image: "/herosectionimages/Scalable Cloud and Application.webp",
+        fallback: "/herosectionimages/Scalable Cloud and Application.webp"
     },
     {
         id: 8,
         title: "Automation Testing",
         description: "Comprehensive testing solutions to ensure software quality",
-        image: "/images/services/li-service-automation-testing-hero-v1.webp",
-        fallback: "/images/services/li-service-automation-testing-hero-v1.jpg"
+        image: "/herosectionimages/4.webp",
+        fallback: "/herosectionimages/4.webp"
     }
 ];
 

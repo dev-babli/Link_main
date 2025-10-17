@@ -122,8 +122,8 @@ const TimelineSection = () => {
             </div>
             <div
               className={`absolute z-[-2] h-full w-[3px] translate-x-5 rounded-full lg:left-1/2 lg:-translate-x-1/2 ${index === DATA.length - 1
-                  ? "bg-linear-to-b from-foreground/10 via-foreground/10 to-transparent"
-                  : "bg-foreground/10"
+                ? "bg-linear-to-b from-foreground/10 via-foreground/10 to-transparent"
+                : "bg-foreground/10"
                 }`}
             >
               {index == 0 && (
