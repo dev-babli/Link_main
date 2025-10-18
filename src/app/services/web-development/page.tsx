@@ -1,18 +1,19 @@
 "use client";
 
-import { EnhancedNavbar } from "@/components/EnhancedNavbar";
+import LinkInnovationsNavbar from "@/components/LinkInnovationsNavbar";
 import { Footer } from "@/components/Footer";
 import { PerformanceOptimizer } from "@/components/PerformanceOptimizer";
 import { motion } from "motion/react";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { WebDevelopmentStickyScrollDemo } from "@/components/ui/sticky-scroll-demo";
 
 export default function WebDevelopmentPage() {
     return (
         <div className="min-h-screen bg-[#0a0a0f]">
             <PerformanceOptimizer />
-            <EnhancedNavbar />
+            <LinkInnovationsNavbar />
 
             {/* Hero Section - Clear Value Proposition */}
             <section className="pt-32 pb-20 bg-[#0a0a0f] relative">
@@ -68,6 +69,13 @@ export default function WebDevelopmentPage() {
                     </motion.div>
                 </div>
             </section>
+
+            {/* ═══════════════════════════════════════════════════════════════
+          WEB DEVELOPMENT SHOWCASE - STICKY SCROLL
+          Goal: Interactive showcase of web development solutions
+          ═══════════════════════════════════════════════════════════════ */}
+
+            <WebDevelopmentStickyScrollDemo />
 
             {/* What We Offer - Clear Service Breakdown */}
             <section className="py-20 bg-[#0a0a0f]">

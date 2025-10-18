@@ -34,7 +34,7 @@ export function EnhancedServicesSection() {
             title: "Web Development",
             description: "Custom web applications built with modern frameworks and cutting-edge technologies",
             icon: Code,
-            backgroundImage: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&h=600&fit=crop&crop=center",
+            backgroundImage: "/Service Cards images/Cloud and Application Service.webp",
             highlight: "Full-Stack Solutions",
             link: "/services/web-development"
         },
@@ -42,7 +42,7 @@ export function EnhancedServicesSection() {
             title: "Mobile Apps",
             description: "Native and cross-platform mobile applications for iOS and Android",
             icon: SmartphoneNfc,
-            backgroundImage: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=600&fit=crop&crop=center",
+            backgroundImage: "/Service Cards images/Engineering and Manufacturing.webp",
             highlight: "Cross-Platform",
             link: "/services/mobile-apps"
         },
@@ -50,7 +50,7 @@ export function EnhancedServicesSection() {
             title: "Cloud Solutions",
             description: "Scalable cloud infrastructure and migration services",
             icon: CloudDownload,
-            backgroundImage: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=600&fit=crop&crop=center",
+            backgroundImage: "/herosectionimages/cloud.webp",
             highlight: "AWS · Azure · GCP",
             link: "/services/cloud-solutions"
         },
@@ -58,7 +58,7 @@ export function EnhancedServicesSection() {
             title: "Data Analytics",
             description: "Business intelligence and data-driven insights for informed decision making",
             icon: ChartLine,
-            backgroundImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&crop=center",
+            backgroundImage: "/Service Cards images/Data Analytics.webp",
             highlight: "AI-Powered Insights",
             link: "/services/data-analytics"
         },
@@ -66,7 +66,7 @@ export function EnhancedServicesSection() {
             title: "Cybersecurity",
             description: "Enterprise-grade security solutions and comprehensive security audits",
             icon: BadgeCheck,
-            backgroundImage: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=600&fit=crop&crop=center",
+            backgroundImage: "/Service Cards images/Digital Security.webp",
             highlight: "Zero-Trust Architecture",
             link: "/services/cybersecurity"
         },
@@ -74,7 +74,7 @@ export function EnhancedServicesSection() {
             title: "AI & Automation",
             description: "Intelligent automation and AI solutions to streamline your business processes",
             icon: Sparkles,
-            backgroundImage: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop&crop=center",
+            backgroundImage: "/Service Cards images/AI Gen AI.webp",
             highlight: "Machine Learning",
             link: "/services/ai-automation"
         },
@@ -82,7 +82,7 @@ export function EnhancedServicesSection() {
             title: "UI/UX Design",
             description: "User-centered interface design that creates exceptional digital experiences",
             icon: SwatchBook,
-            backgroundImage: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&h=600&fit=crop&crop=center",
+            backgroundImage: "/herosectionimages/Digital Technology.webp",
             highlight: "Design Systems",
             link: "/services/uiux-design"
         },
@@ -90,7 +90,7 @@ export function EnhancedServicesSection() {
             title: "DevOps",
             description: "CI/CD pipelines and automation for seamless software delivery",
             icon: Rocket,
-            backgroundImage: "https://images.unsplash.com/photo-1556075798-4825dfaaf498?w=800&h=600&fit=crop&crop=center",
+            backgroundImage: "/herosectionimages/Digital Partner.webp",
             highlight: "Infrastructure as Code",
             link: "/services/devops"
         },
@@ -98,7 +98,7 @@ export function EnhancedServicesSection() {
             title: "API Development",
             description: "RESTful and GraphQL APIs for seamless system integration",
             icon: Network,
-            backgroundImage: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop&crop=center",
+            backgroundImage: "/herosectionimages/Scalable Cloud and Application.webp",
             highlight: "Microservices",
             link: "/services/api-development"
         },
@@ -106,7 +106,7 @@ export function EnhancedServicesSection() {
             title: "Database Design",
             description: "Optimized database solutions for performance and scalability",
             icon: Boxes,
-            backgroundImage: "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=800&h=600&fit=crop&crop=center",
+            backgroundImage: "/herosectionimages/Data & Analytics.webp",
             highlight: "SQL & NoSQL",
             link: "/services/database-design"
         },
@@ -114,7 +114,7 @@ export function EnhancedServicesSection() {
             title: "Consulting",
             description: "Technical architecture consulting and strategic technology guidance",
             icon: Users,
-            backgroundImage: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop&crop=center",
+            backgroundImage: "/Service Cards images/Healthcare and Lifesciences.webp",
             highlight: "Enterprise Solutions",
             link: "/services/consulting"
         },
@@ -122,7 +122,7 @@ export function EnhancedServicesSection() {
             title: "Support",
             description: "24/7 maintenance and support services for your applications",
             icon: HeartHandshake,
-            backgroundImage: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=600&fit=crop&crop=center",
+            backgroundImage: "/Service Cards images/Talent Solution.webp",
             highlight: "24/7 Availability",
             link: "/services/support"
         }

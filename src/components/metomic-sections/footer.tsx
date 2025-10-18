@@ -100,8 +100,8 @@ const Footer = () => {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    target={link.newTab ? "_blank" : "_self"}
-                    rel={link.newTab ? "noopener noreferrer" : ""}
+                    target="_self"
+                    rel=""
                     className="text-sm font-medium text-text-secondary hover:text-white hover:underline transition-colors"
                   >
                     {link.label}

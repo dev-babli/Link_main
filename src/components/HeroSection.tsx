@@ -15,10 +15,10 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
 const menuItems = [
-  { name: "Services", href: "#" },
-  { name: "Solutions", href: "#" },
-  { name: "Portfolio", href: "#" },
-  { name: "About", href: "#" },
+  { name: "Services", href: "/services" },
+  { name: "Solutions", href: "/services" },
+  { name: "Portfolio", href: "/portfolio" },
+  { name: "About", href: "/about" },
 ];
 
 export default function HeroSection() {
@@ -71,12 +71,12 @@ export default function HeroSection() {
 
                 <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit lg:border-l lg:pl-6">
                   <Button asChild variant="outline" size="sm">
-                    <Link href="#">
+                    <Link href="/contact">
                       <span>Contact</span>
                     </Link>
                   </Button>
                   <Button asChild size="sm">
-                    <Link href="#">
+                    <Link href="/contact">
                       <span>Get Quote</span>
                     </Link>
                   </Button>
@@ -108,7 +108,7 @@ export default function HeroSection() {
                   IT Development Excellence
                 </h2>
                 <p className="mx-auto mt-8 hidden max-w-2xl text-wrap text-lg sm:block">
-                  Custom software solutions that drive business growth. Expert 
+                  Custom software solutions that drive business growth. Expert
                   development team delivering innovation.
                 </p>
                 <p className="mx-auto mt-6 max-w-2xl text-wrap sm:hidden">
@@ -117,7 +117,7 @@ export default function HeroSection() {
 
                 <div className="mt-8">
                   <Button size="lg" asChild>
-                    <Link href="#">
+                    <Link href="/contact">
                       <Rocket className="relative size-4" />
                       <span className="text-nowrap">Start Your Project</span>
                     </Link>

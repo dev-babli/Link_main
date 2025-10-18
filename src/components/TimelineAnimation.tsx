@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from 'react';
 import { motion } from 'motion/react';
+import { useLenisScrollTrigger } from '@/hooks/useLenisScrollTrigger';
 
 declare global {
     interface Window {
@@ -13,6 +14,9 @@ declare global {
 
 const TimelineAnimation = () => {
     const containerRef = useRef<HTMLDivElement>(null);
+
+    // Integrate Lenis with ScrollTrigger
+    useLenisScrollTrigger();
 
     useEffect(() => {
         // Dynamically load GSAP and plugins
@@ -35,8 +39,7 @@ const TimelineAnimation = () => {
                 // Load external dependencies
                 await Promise.all([
                     loadScript('https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js'),
-                    loadScript('https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js'),
-                    loadScript('https://cdn.jsdelivr.net/gh/studio-freight/lenis@1/bundled/lenis.min.js')
+                    loadScript('https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js')
                 ]);
 
                 // Wait for GSAP to be available
@@ -50,27 +53,9 @@ const TimelineAnimation = () => {
                 // Register GSAP plugins
                 gsap.registerPlugin(ScrollTrigger);
 
-                // Setup smooth scrolling with Lenis
-                const lenis = new window.Lenis({
-                    duration: 1.2,
-                    easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-                    direction: 'vertical',
-                    gestureDirection: 'vertical',
-                    smooth: true,
-                    mouseMultiplier: 1,
-                    smoothTouch: false,
-                    touchMultiplier: 2,
-                    infinite: false,
-                });
-
-                // Update ScrollTrigger on scroll
-                lenis.on('scroll', ScrollTrigger.update);
-
-                gsap.ticker.add((time: number) => {
-                    lenis.raf(time * 1000);
-                });
-
-                gsap.ticker.lagSmoothing(0);
+                // Use existing Lenis instance from LenisProvider
+                // No need to create a new Lenis instance here
+                // ScrollTrigger will work with the global Lenis instance
 
                 // Text fill animation for animated text elements
                 const animatedTextElements = gsap.utils.toArray('.animate-text');
@@ -154,7 +139,6 @@ const TimelineAnimation = () => {
                 // Cleanup function
                 return () => {
                     ScrollTrigger.getAll().forEach((trigger: any) => trigger.kill());
-                    lenis.destroy();
                 };
 
             } catch (error) {

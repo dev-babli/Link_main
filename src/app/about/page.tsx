@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { Footer } from "@/components/Footer";
+import LinkInnovationsNavbar from "@/components/LinkInnovationsNavbar";
 
 export const metadata: Metadata = {
     title: "About Us | Link Innovations",
@@ -10,6 +11,8 @@ export const metadata: Metadata = {
 export default function AboutPage() {
     return (
         <main className="min-h-screen bg-black text-white">
+            <LinkInnovationsNavbar />
+
             {/* Particle Background */}
             <div className="fixed inset-0 bg-black">
                 <div className="absolute inset-0 opacity-30">

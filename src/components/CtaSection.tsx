@@ -1,6 +1,7 @@
 import { Zap } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const CtaSection = () => {
   return (
@@ -13,16 +14,20 @@ const CtaSection = () => {
             </div>
             <h2 className="">Transform your business with cutting-edge technology.</h2>
             <div className="flex flex-col justify-center gap-2 sm:flex-row">
-              <Button size="lg" variant="secondary">
-                Get Started
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="bg-background/20 hover:bg-background/30 hover:text-primary-foreground border-0 backdrop-blur-sm"
-              >
-                Learn More
-              </Button>
+              <Link href="/contact">
+                <Button size="lg" variant="secondary">
+                  Get Started
+                </Button>
+              </Link>
+              <Link href="/services">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="bg-background/20 hover:bg-background/30 hover:text-primary-foreground border-0 backdrop-blur-sm"
+                >
+                  Learn More
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

@@ -1,11 +1,11 @@
 "use client";
 
 import React from 'react';
-import { FullScreenScrollFX } from '@/components/full-screen-scroll-fx';
-import InfiniteMenuSection from '@/components/link-sections/infinite-menu-section';
+// import { FullScreenScrollFX } from '@/components/full-screen-scroll-fx';
+import InfiniteMenuSection from '@/components/InfiniteMenuSection';
 import LinkTabbedFeatures from '@/components/link-sections/tabbed-features';
 import LinkVaretoFeaturesSection from '@/components/link-sections/vareto-features-section';
-import LogoSection from '@/components/link-sections/logo-section';
+import { LogoSection } from '@/components/LogosSection';
 
 const Phase2ScrollEffects = () => {
     console.log('Phase2ScrollEffects component is rendering');
@@ -138,7 +138,7 @@ const Phase2ScrollEffects = () => {
             </div>
 
             {/* Full Screen Scroll Effects */}
-            <FullScreenScrollFX
+            {/* <FullScreenScrollFX
                 sections={sections}
                 className="phase-2-scroll-effects"
                 colors={{
@@ -174,7 +174,7 @@ const Phase2ScrollEffects = () => {
                         </h2>
                     </div>
                 }
-            />
+            /> */}
 
             {/* Original Components (Hidden but still rendered for functionality) */}
             <div className="hidden">

@@ -1,9 +1,10 @@
 "use client";
 
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";
-import { Circle } from "lucide-react";
+import { Circle, ArrowRight } from "lucide-react";
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 
 function ElegantShape({
@@ -83,15 +84,10 @@ function HeroGeometric({
 }) {
     const fadeUpVariants = {
         hidden: { opacity: 0, y: 30 },
-        visible: (i: number) => ({
+        visible: {
             opacity: 1,
             y: 0,
-            transition: {
-                duration: 1,
-                delay: 0.5 + i * 0.2,
-                ease: [0.25, 0.4, 0.25, 1],
-            },
-        }),
+        },
     };
 
 
@@ -149,10 +145,10 @@ function HeroGeometric({
             <div className="relative z-10 container mx-auto px-4 md:px-6">
                 <div className="max-w-3xl mx-auto text-center">
                     <motion.div
-                        custom={0}
                         variants={fadeUpVariants}
                         initial="hidden"
                         animate="visible"
+                        transition={{ duration: 1, ease: "easeOut" }}
                         className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.03] border border-white/[0.08] mb-8 md:mb-12"
                     >
                         <Circle className="h-2 w-2 fill-rose-500/80" />
@@ -162,10 +158,10 @@ function HeroGeometric({
                     </motion.div>
 
                     <motion.div
-                        custom={1}
                         variants={fadeUpVariants}
                         initial="hidden"
                         animate="visible"
+                        transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
                     >
                         <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold mb-6 md:mb-8 tracking-tight">
                             <span className="bg-clip-text text-transparent bg-gradient-to-b from-white to-white/80">
@@ -183,14 +179,37 @@ function HeroGeometric({
                     </motion.div>
 
                     <motion.div
-                        custom={2}
                         variants={fadeUpVariants}
                         initial="hidden"
                         animate="visible"
+                        transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
                     >
                         <p className="text-base sm:text-lg md:text-xl text-white/40 mb-8 leading-relaxed font-light tracking-wide max-w-xl mx-auto px-4">
                             We turn complex challenges into intelligent solutions that drive business growth and technological advancement. From concept to deployment, we're your innovation partners.
                         </p>
+                    </motion.div>
+
+                    {/* CTA Buttons */}
+                    <motion.div
+                        variants={fadeUpVariants}
+                        initial="hidden"
+                        animate="visible"
+                        transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
+                        className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8"
+                    >
+                        <Link
+                            href="/contact"
+                            className="group inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white font-semibold rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/25 hover:-translate-y-1"
+                        >
+                            Get Started
+                            <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
+                        </Link>
+                        <Link
+                            href="/services"
+                            className="inline-flex items-center justify-center px-8 py-4 border-2 border-white/20 hover:border-white/40 text-white font-semibold rounded-xl transition-all duration-300 backdrop-blur-sm hover:bg-white/5"
+                        >
+                            Our Services
+                        </Link>
                     </motion.div>
                 </div>
             </div>

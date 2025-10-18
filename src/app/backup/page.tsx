@@ -46,82 +46,82 @@ import { FeatureSectionThree } from "@/components/FeatureSectionThree";
 import { FeatureSectionTwo } from "@/components/FeatureTwoSection";
 import { Footer } from "@/components/Footer";
 import { EnhancedServicesSection } from "@/components/EnhancedServicesSection";
-import { EnhancedNavbar } from "@/components/EnhancedNavbar";
+import LinkInnovationsNavbar from "@/components/LinkInnovationsNavbar";
 import { TimelineSection } from "@/components/TimelineSection";
 import { PerformanceOptimizer } from "@/components/PerformanceOptimizer";
 import { LogoSection } from "@/components/LogosSection";
 import InfiniteMenuSection from "@/components/InfiniteMenuSection";
 
 export default function Home() {
-    return (
-        <div className="w-full bg-black">
-            <PerformanceOptimizer />
+  return (
+    <div className="w-full bg-black">
+      <PerformanceOptimizer />
 
-            {/* ═══════════════════════════════════════════════════════════════
+      {/* ═══════════════════════════════════════════════════════════════
           PHASE 1: ATTENTION (0-3 seconds)
           Goal: Capture attention immediately
           ═══════════════════════════════════════════════════════════════ */}
 
-            <EnhancedNavbar />
-            <HeroGeometric
-                badge="Link Innovations - Digital Excellence"
-                title1="Transform Your Business"
-                title2="With Cutting-Edge Technology"
-            />
-            <LinkMetomicTrustedBySection />
-            <LinkLogoMarquee />
+      <LinkInnovationsNavbar />
+      <HeroGeometric
+        badge="Link Innovations - Digital Excellence"
+        title1="Transform Your Business"
+        title2="With Cutting-Edge Technology"
+      />
+      <LinkMetomicTrustedBySection />
+      <LinkLogoMarquee />
 
-            {/* ═══════════════════════════════════════════════════════════════
+      {/* ═══════════════════════════════════════════════════════════════
           PHASE 2: INTEREST (3-30 seconds)
           Goal: Show what we offer, create interest
           ═══════════════════════════════════════════════════════════════ */}
 
-            <InfiniteMenuSection />
-            <LinkTabbedFeatures />
-            <HeroSection />
-            <LinkVaretoFeaturesSection />
-            <LogoSection />
+      <InfiniteMenuSection />
+      <LinkTabbedFeatures />
+      <HeroSection />
+      <LinkVaretoFeaturesSection />
+      <LogoSection />
 
-            {/* ═══════════════════════════════════════════════════════════════
+      {/* ═══════════════════════════════════════════════════════════════
           PHASE 3: UNDERSTANDING (30 seconds - 2 minutes)
           Goal: Demonstrate how it works
           ═══════════════════════════════════════════════════════════════ */}
 
-            <TimelineSection />
-            <LinkVaretoPlanningResolutionSection />
-            <LinkVaretoReportingViewsSection />
-            <FeatureSection />
-            <FeatureSectionTwo />
-            <FeatureSectionThree />
+      <TimelineSection />
+      <LinkVaretoPlanningResolutionSection />
+      <LinkVaretoReportingViewsSection />
+      <FeatureSection />
+      <FeatureSectionTwo />
+      <FeatureSectionThree />
 
-            {/* ═══════════════════════════════════════════════════════════════
+      {/* ═══════════════════════════════════════════════════════════════
           PHASE 4: DIFFERENTIATION (2-4 minutes)
           Goal: Show what makes us unique
           ═══════════════════════════════════════════════════════════════ */}
 
-            <LinkUseCasesAccordion />
-            <LinkVaretoMultiplayerEditingSection />
-            <LinkVaretoCollaborationSection />
-            <LinkDevexVideoSection />
+      <LinkUseCasesAccordion />
+      <LinkVaretoMultiplayerEditingSection />
+      <LinkVaretoCollaborationSection />
+      <LinkDevexVideoSection />
 
-            {/* ═══════════════════════════════════════════════════════════════
+      {/* ═══════════════════════════════════════════════════════════════
           PHASE 5: SOCIAL PROOF & PORTFOLIO (4-6 minutes)
           Goal: Build trust and showcase work
           ═══════════════════════════════════════════════════════════════ */}
 
-            <LinkCustomerStatsCards />
-            <LinkTestimonialsCarousel />
-            <LinkPortfolioShowcase />
+      <LinkCustomerStatsCards />
+      <LinkTestimonialsCarousel />
+      <LinkPortfolioShowcase />
 
-            {/* ═══════════════════════════════════════════════════════════════
+      {/* ═══════════════════════════════════════════════════════════════
           PHASE 6: CONVERSION (6+ minutes)
           Goal: Drive action with clear CTAs
           ═══════════════════════════════════════════════════════════════ */}
 
-            <CtaSection />
+      <CtaSection />
 
-            {/* Footer */}
-            <Footer />
-        </div>
-    );
+      {/* Footer */}
+      <Footer />
+    </div>
+  );
 }

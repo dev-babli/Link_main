@@ -32,6 +32,18 @@ const nextConfig: NextConfig = {
         hostname: 'slelguoygbfzlpylpxfs.supabase.co',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'cdn.dribbble.com',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'html.tailus.io',
+        port: '',
+        pathname: '/**',
       }
     ],
   },

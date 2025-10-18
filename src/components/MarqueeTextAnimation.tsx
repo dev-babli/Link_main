@@ -6,6 +6,7 @@ import { SmartphoneNfc } from '@/icons/SmartphoneNfc';
 import { Wand } from '@/icons/Wand';
 import { CloudDrizzle } from '@/icons/CloudDrizzle';
 import { BadgeCheck } from '@/icons/BadgeCheck';
+import { useLenisScrollTrigger } from '@/hooks/useLenisScrollTrigger';
 
 declare global {
     interface Window {
@@ -17,6 +18,9 @@ declare global {
 
 export default function MarqueeTextAnimation() {
     const containerRef = useRef<HTMLDivElement>(null);
+
+    // Integrate Lenis with ScrollTrigger
+    useLenisScrollTrigger();
 
     useEffect(() => {
         // Dynamically load GSAP and plugins
@@ -65,8 +69,7 @@ export default function MarqueeTextAnimation() {
                 await Promise.all([
                     loadFonts(),
                     loadScript('https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js'),
-                    loadScript('https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js'),
-                    loadScript('https://cdn.jsdelivr.net/gh/studio-freight/lenis@1/bundled/lenis.min.js')
+                    loadScript('https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js')
                 ]);
 
                 // Wait for GSAP to be available
@@ -80,27 +83,9 @@ export default function MarqueeTextAnimation() {
                 // Register GSAP plugins
                 gsap.registerPlugin(ScrollTrigger);
 
-                // Setup smooth scrolling with Lenis
-                const lenis = new window.Lenis({
-                    duration: 1.2,
-                    easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-                    direction: 'vertical',
-                    gestureDirection: 'vertical',
-                    smooth: true,
-                    mouseMultiplier: 1,
-                    smoothTouch: false,
-                    touchMultiplier: 2,
-                    infinite: false,
-                });
-
-                // Update ScrollTrigger on scroll
-                lenis.on('scroll', ScrollTrigger.update);
-
-                gsap.ticker.add((time: number) => {
-                    lenis.raf(time * 1000);
-                });
-
-                gsap.ticker.lagSmoothing(0);
+                // Use existing Lenis instance from LenisProvider
+                // No need to create a new Lenis instance here
+                // ScrollTrigger will work with the global Lenis instance
 
                 // Get all heading elements within this component
                 const headings = gsap.utils.toArray('.marquee-title h1');
@@ -186,7 +171,6 @@ export default function MarqueeTextAnimation() {
                 // Cleanup function
                 return () => {
                     ScrollTrigger.getAll().forEach((trigger: any) => trigger.kill());
-                    lenis.destroy();
                 };
 
             } catch (error) {

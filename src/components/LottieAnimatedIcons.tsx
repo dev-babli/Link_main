@@ -375,7 +375,7 @@ export const AIIcon = ({
             animationData={aiAnimation}
             loop={loop}
             autoplay={autoplay}
-            speed={speed}
+            // speed={speed}
             style={{ width: '100%', height: '100%' }}
         />
     </motion.div>
@@ -407,7 +407,7 @@ export const CertifiedIcon = ({
             animationData={certifiedAnimation}
             loop={loop}
             autoplay={autoplay}
-            speed={speed}
+            // speed={speed}
             style={{ width: '100%', height: '100%' }}
         />
     </motion.div>
@@ -439,7 +439,7 @@ export const CRMIcon = ({
             animationData={crmAnimation}
             loop={loop}
             autoplay={autoplay}
-            speed={speed}
+            // speed={speed}
             style={{ width: '100%', height: '100%' }}
         />
     </motion.div>
@@ -471,7 +471,7 @@ export const GrowthIcon = ({
             animationData={growthAnimation}
             loop={loop}
             autoplay={autoplay}
-            speed={speed}
+            // speed={speed}
             style={{ width: '100%', height: '100%' }}
         />
     </motion.div>
@@ -504,7 +504,7 @@ export const LottieIcon = ({
             animationData={animationData}
             loop={loop}
             autoplay={autoplay}
-            speed={speed}
+            // speed={speed}
             style={{ width: '100%', height: '100%' }}
         />
     </motion.div>

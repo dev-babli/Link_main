@@ -1,6 +1,6 @@
 "use client";
 
-import { EnhancedNavbar } from "@/components/EnhancedNavbar";
+import LinkInnovationsNavbar from "@/components/LinkInnovationsNavbar";
 import { Footer } from "@/components/Footer";
 import { PerformanceOptimizer } from "@/components/PerformanceOptimizer";
 import MarqueeTextAnimation from "@/components/MarqueeTextAnimation";
@@ -12,7 +12,7 @@ export default function DataAnalyticsPage() {
     return (
         <div className="min-h-screen bg-[#0a0a0f]">
             <PerformanceOptimizer />
-            <EnhancedNavbar />
+            <LinkInnovationsNavbar />
 
             {/* Hero Section */}
             <section className="pt-32 pb-20 bg-[#0a0a0f] relative min-h-screen flex items-center">

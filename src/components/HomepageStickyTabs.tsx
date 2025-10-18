@@ -15,6 +15,7 @@ import {
   CheckCircle
 } from 'lucide-react';
 import { motion } from 'motion/react';
+import Link from 'next/link';
 
 const ServiceContent: React.FC<{
   title: string;
@@ -23,7 +24,8 @@ const ServiceContent: React.FC<{
   features: string[];
   technologies: string[];
   imageUrl: string;
-}> = ({ title, icon, description, features, technologies, imageUrl }) => (
+  link: string;
+}> = ({ title, icon, description, features, technologies, imageUrl, link }) => (
   <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
     <motion.div
       className="space-y-10"
@@ -120,14 +122,16 @@ const ServiceContent: React.FC<{
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.8 }}
       >
-        <motion.button
-          className="group flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl text-white font-semibold hover:from-blue-500 hover:to-purple-500 transition-all duration-300 shadow-lg hover:shadow-blue-500/25"
-          whileHover={{ scale: 1.05, y: -2 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          <span>Learn More</span>
-          <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-        </motion.button>
+        <Link href={link}>
+          <motion.button
+            className="group flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl text-white font-semibold hover:from-blue-500 hover:to-purple-500 transition-all duration-300 shadow-lg hover:shadow-blue-500/25"
+            whileHover={{ scale: 1.05, y: -2 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <span>Learn More</span>
+            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+          </motion.button>
+        </Link>
       </motion.div>
     </motion.div>
 
@@ -211,7 +215,8 @@ export const HomepageStickyTabs: React.FC = () => {
         "Progressive Web Apps (PWA)"
       ],
       technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Node.js", "PostgreSQL"],
-      imageUrl: "/herosectionimages/Digital Technology.webp"
+      imageUrl: "/herosectionimages/Digital Technology.webp",
+      link: "/services/web-development"
     },
     {
       id: "mobile-apps",
@@ -226,7 +231,8 @@ export const HomepageStickyTabs: React.FC = () => {
         "Offline-First Architecture"
       ],
       technologies: ["React Native", "Flutter", "Swift", "Kotlin", "Firebase", "Expo"],
-      imageUrl: "/herosectionimages/3.webp"
+      imageUrl: "/herosectionimages/3.webp",
+      link: "/services/mobile-apps"
     },
     {
       id: "ai-automation",
@@ -241,7 +247,8 @@ export const HomepageStickyTabs: React.FC = () => {
         "Predictive Analytics"
       ],
       technologies: ["Python", "TensorFlow", "OpenAI", "LangChain", "Azure AI", "AWS ML"],
-      imageUrl: "/herosectionimages/Agentic Ai.webp"
+      imageUrl: "/herosectionimages/Agentic Ai.webp",
+      link: "/services/ai-automation"
     },
     {
       id: "cloud-services",
@@ -256,7 +263,8 @@ export const HomepageStickyTabs: React.FC = () => {
         "Monitoring & Analytics"
       ],
       technologies: ["AWS", "Azure", "Google Cloud", "Docker", "Kubernetes", "Terraform"],
-      imageUrl: "/herosectionimages/cloud.webp"
+      imageUrl: "/herosectionimages/cloud.webp",
+      link: "/services/cloud-devops"
     },
     {
       id: "cybersecurity",
@@ -271,7 +279,8 @@ export const HomepageStickyTabs: React.FC = () => {
         "Security Training & Awareness"
       ],
       technologies: ["SIEM", "Firewalls", "VPN", "Encryption", "SOC", "ISO 27001"],
-      imageUrl: "/herosectionimages/Cyber Security.webp"
+      imageUrl: "/herosectionimages/Cyber Security.webp",
+      link: "/services/cybersecurity"
     },
     {
       id: "data-analytics",
@@ -286,7 +295,8 @@ export const HomepageStickyTabs: React.FC = () => {
         "ETL/ELT Pipelines"
       ],
       technologies: ["Python", "R", "Tableau", "Power BI", "Apache Spark", "Snowflake"],
-      imageUrl: "/herosectionimages/Data & Analytics.webp"
+      imageUrl: "/herosectionimages/Data & Analytics.webp",
+      link: "/services/data-analytics"
     }
   ];
 
@@ -340,6 +350,7 @@ export const HomepageStickyTabs: React.FC = () => {
               features={service.features}
               technologies={service.technologies}
               imageUrl={service.imageUrl}
+              link={service.link}
             />
           </StickyTabs.Item>
         ))}

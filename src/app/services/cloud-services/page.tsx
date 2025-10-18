@@ -6,7 +6,7 @@ import {
   Cloud, Server, Database, Shield, Zap, Settings,
   ArrowRight, Star, Award, CheckCircle, Lock, TrendingUp
 } from "lucide-react";
-import { EnhancedNavbar } from "@/components/EnhancedNavbar";
+import LinkInnovationsNavbar from "@/components/LinkInnovationsNavbar";
 import { Footer } from "@/components/Footer";
 import {
   ServiceHero,
@@ -161,7 +161,7 @@ export default function CloudServicesPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#000000] via-[#0f1724] to-[#000000]">
-      <EnhancedNavbar />
+      <LinkInnovationsNavbar />
 
       {/* Enhanced Hero Section */}
       <ServiceHero
@@ -263,15 +263,13 @@ export default function CloudServicesPage() {
       {/* Problems We Solve */}
       <ProblemsWeSolve
         title="Cloud Challenges We Solve"
-        subtitle="Common infrastructure pain points"
         problems={problems}
       />
 
       {/* Capabilities Grid */}
       <ServiceCapabilitiesGrid
         title="Cloud Services Capabilities"
-        subtitle="End-to-end cloud solutions"
-        description="From migration strategy to ongoing optimization, we provide comprehensive cloud services across AWS, Azure, and Google Cloud."
+        intro="From migration strategy to ongoing optimization, we provide comprehensive cloud services across AWS, Azure, and Google Cloud."
         capabilities={capabilities}
       />
 
@@ -339,7 +337,7 @@ export default function CloudServicesPage() {
             text: "Learn More",
             href: "/portfolio",
             variant: "secondary",
-            icon: "ArrowRight"
+            icon: "arrow"
           }
         ]}
       />

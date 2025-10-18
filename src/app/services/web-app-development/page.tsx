@@ -6,7 +6,7 @@ import {
   Code, Database, Shield, Zap, Cpu, Globe,
   ArrowRight, Star, Award, CheckCircle, Layers, Server
 } from "lucide-react";
-import { EnhancedNavbar } from "@/components/EnhancedNavbar";
+import LinkInnovationsNavbar from "@/components/LinkInnovationsNavbar";
 import { Footer } from "@/components/Footer";
 import {
   ServiceHero,
@@ -161,7 +161,7 @@ export default function WebAppDevelopmentPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#000000] via-[#0f1724] to-[#000000]">
-      <EnhancedNavbar />
+      <LinkInnovationsNavbar />
 
       {/* Enhanced Hero Section */}
       <ServiceHero
@@ -176,7 +176,7 @@ export default function WebAppDevelopmentPage() {
           text: "Explore Solutions",
           href: "#capabilities"
         }}
-        imageUrl="/WhatsApp Image 2025-10-12 at 1.16.43 AM (3).jpeg"
+        imageUrl="/herosectionimages/Scalable Cloud and Application.webp"
       />
 
       {/* Technology Stack */}
@@ -263,15 +263,13 @@ export default function WebAppDevelopmentPage() {
       {/* Problems We Solve */}
       <ProblemsWeSolve
         title="Web Development Challenges"
-        subtitle="Common issues we solve for businesses"
         problems={problems}
       />
 
       {/* Capabilities Grid */}
       <ServiceCapabilitiesGrid
         title="Web Development Capabilities"
-        subtitle="Full-stack expertise for modern web"
-        description="From frontend to backend, we build complete web solutions that are fast, secure, and built to scale."
+        intro="From frontend to backend, we build complete web solutions that are fast, secure, and built to scale."
         capabilities={capabilities}
       />
 
@@ -339,7 +337,7 @@ export default function WebAppDevelopmentPage() {
             text: "View Our Portfolio",
             href: "/portfolio",
             variant: "secondary",
-            icon: "ArrowRight"
+            icon: "arrow"
           }
         ]}
       />

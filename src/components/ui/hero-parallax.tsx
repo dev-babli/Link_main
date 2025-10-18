@@ -55,11 +55,11 @@ export const HeroParallax = ({
         springConfig
     );
     return (
-    <div
-      ref={ref}
-      className="h-[300vh] py-40 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d] bg-black"
-      style={{ position: 'relative' }}
-    >
+        <div
+            ref={ref}
+            className="h-[300vh] py-40 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d] bg-black"
+            style={{ position: 'relative' }}
+        >
             <Header />
             <motion.div
                 style={{

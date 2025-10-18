@@ -218,7 +218,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
                         {backContent.metrics.map((metric, idx) => (
                             <div
                                 key={idx}
-                                ref={el => metricsRefs.current[idx] = el}
+                                ref={el => { if (el) metricsRefs.current[idx] = el; }}
                                 className="text-center p-6 bg-black/40 rounded-xl backdrop-blur-sm border border-[#345830]/40"
                             >
                                 <div className="text-3xl font-light text-[#4a7856] mb-2">

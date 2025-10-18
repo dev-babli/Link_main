@@ -21,6 +21,7 @@ import {
     Zap
 } from 'lucide-react';
 import { motion } from 'motion/react';
+import Link from 'next/link';
 
 const services = [
     {
@@ -29,7 +30,8 @@ const services = [
         icon: <Code size={24} />,
         description: "Transform your digital presence with cutting-edge web applications. We build responsive, scalable, and performant websites that drive business growth.",
         imageUrl: "/herosectionimages/Digital Technology.webp",
-        features: ["React & Next.js", "TypeScript", "Tailwind CSS", "Performance Optimization"]
+        features: ["React & Next.js", "TypeScript", "Tailwind CSS", "Performance Optimization"],
+        link: "/services/web-development"
     },
     {
         id: "mobile-apps",
@@ -37,7 +39,8 @@ const services = [
         icon: <Smartphone size={24} />,
         description: "Create powerful mobile experiences that engage users and drive results. From iOS to Android, we deliver native and cross-platform solutions.",
         imageUrl: "/herosectionimages/3.webp",
-        features: ["React Native", "Flutter", "iOS & Android", "App Store Optimization"]
+        features: ["React Native", "Flutter", "iOS & Android", "App Store Optimization"],
+        link: "/services/mobile-apps"
     },
     {
         id: "ai-automation",
@@ -45,7 +48,8 @@ const services = [
         icon: <Brain size={24} />,
         description: "Leverage artificial intelligence to automate processes, gain insights, and create intelligent solutions that adapt to your business needs.",
         imageUrl: "/herosectionimages/Agentic Ai.webp",
-        features: ["Machine Learning", "Process Automation", "NLP", "Computer Vision"]
+        features: ["Machine Learning", "Process Automation", "NLP", "Computer Vision"],
+        link: "/services/ai-automation"
     },
     {
         id: "cloud-services",
@@ -53,7 +57,8 @@ const services = [
         icon: <Cloud size={24} />,
         description: "Scale your infrastructure with cloud solutions that provide reliability, security, and cost-effectiveness for your growing business.",
         imageUrl: "/herosectionimages/cloud.webp",
-        features: ["AWS & Azure", "Serverless", "DevOps", "Container Orchestration"]
+        features: ["AWS & Azure", "Serverless", "DevOps", "Container Orchestration"],
+        link: "/services/cloud-devops"
     },
     {
         id: "cybersecurity",
@@ -61,7 +66,8 @@ const services = [
         icon: <Shield size={24} />,
         description: "Protect your digital assets with comprehensive security solutions. From threat assessment to incident response, we keep your business secure.",
         imageUrl: "/herosectionimages/Cyber Security.webp",
-        features: ["Security Audits", "Penetration Testing", "Compliance", "Incident Response"]
+        features: ["Security Audits", "Penetration Testing", "Compliance", "Incident Response"],
+        link: "/services/cybersecurity"
     },
     {
         id: "data-analytics",
@@ -69,7 +75,8 @@ const services = [
         icon: <BarChart3 size={24} />,
         description: "Turn your data into actionable insights with advanced analytics solutions. Make data-driven decisions that drive business success.",
         imageUrl: "/herosectionimages/Data & Analytics.webp",
-        features: ["Business Intelligence", "Real-time Processing", "Predictive Modeling", "Data Visualization"]
+        features: ["Business Intelligence", "Real-time Processing", "Predictive Modeling", "Data Visualization"],
+        link: "/services/data-analytics"
     }
 ];
 
@@ -147,13 +154,15 @@ export const ServiceShowcase: React.FC = () => {
                                     </div>
 
                                     {/* CTA Button */}
-                                    <Button
-                                        variant="secondary"
-                                        size="icon"
-                                        className="aspect-square rounded-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 border-0 shadow-lg hover:shadow-blue-500/25 transition-all duration-300"
-                                    >
-                                        <ArrowUpRight className="w-4 h-4" />
-                                    </Button>
+                                    <Link href={service.link}>
+                                        <Button
+                                            variant="secondary"
+                                            size="icon"
+                                            className="aspect-square rounded-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 border-0 shadow-lg hover:shadow-blue-500/25 transition-all duration-300"
+                                        >
+                                            <ArrowUpRight className="w-4 h-4" />
+                                        </Button>
+                                    </Link>
 
                                     {/* Curtain Effect */}
                                     <CardCurtain className="bg-gradient-to-br from-blue-500/10 to-purple-500/10" />
@@ -181,13 +190,15 @@ export const ServiceShowcase: React.FC = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.4 }}
                 >
-                    <Button
-                        size="lg"
-                        className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white font-semibold rounded-xl shadow-lg hover:shadow-blue-500/25 transition-all duration-300"
-                    >
-                        Explore All Services
-                        <ArrowUpRight className="w-5 h-5 ml-2" />
-                    </Button>
+                    <Link href="/services">
+                        <Button
+                            size="lg"
+                            className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white font-semibold rounded-xl shadow-lg hover:shadow-blue-500/25 transition-all duration-300"
+                        >
+                            Explore All Services
+                            <ArrowUpRight className="w-5 h-5 ml-2" />
+                        </Button>
+                    </Link>
                 </motion.div>
             </div>
         </section>

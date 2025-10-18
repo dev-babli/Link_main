@@ -6,7 +6,7 @@ import {
   Smartphone, Cloud, Wifi, Battery, Shield, Zap, Cpu, Code2,
   ArrowRight, Star, Award, CheckCircle, Globe, Layers, Rocket
 } from "lucide-react";
-import { EnhancedNavbar } from "@/components/EnhancedNavbar";
+import LinkInnovationsNavbar from "@/components/LinkInnovationsNavbar";
 import { Footer } from "@/components/Footer";
 import {
   ServiceHero,
@@ -161,7 +161,7 @@ export default function MobileAppDevelopmentPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#000000] via-[#0f1724] to-[#000000]">
-      <EnhancedNavbar />
+      <LinkInnovationsNavbar />
 
       {/* Enhanced Hero Section */}
       <ServiceHero
@@ -263,15 +263,13 @@ export default function MobileAppDevelopmentPage() {
       {/* Problems We Solve */}
       <ProblemsWeSolve
         title="Mobile Challenges We Solve"
-        subtitle="Common pain points in mobile development"
         problems={problems}
       />
 
       {/* Capabilities Grid */}
       <ServiceCapabilitiesGrid
         title="Mobile Development Capabilities"
-        subtitle="End-to-end mobile solutions"
-        description="From concept to deployment, we build mobile apps that users love and businesses depend on."
+        intro="From concept to deployment, we build mobile apps that users love and businesses depend on."
         capabilities={capabilities}
       />
 
@@ -339,7 +337,7 @@ export default function MobileAppDevelopmentPage() {
             text: "See Our Work",
             href: "/portfolio",
             variant: "secondary",
-            icon: "ArrowRight"
+            icon: "arrow"
           }
         ]}
       />

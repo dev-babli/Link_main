@@ -1,64 +1,97 @@
 "use client";
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import Lenis from 'lenis';
 
 interface LenisProviderProps {
     children: React.ReactNode;
 }
 
+// Global Lenis instance to prevent multiple instances
+let globalLenis: Lenis | null = null;
+
 export const LenisProvider: React.FC<LenisProviderProps> = ({ children }) => {
+    const lenisRef = useRef<Lenis | null>(null);
+
     useEffect(() => {
-        // Initialize Lenis with optimized settings for buttery smooth scrolling
-        const lenis = new Lenis({
-            // Core smoothness settings
-            lerp: 0.08, // Lower values = smoother, higher = more responsive (0.05-0.1 optimal)
-            duration: 1.1, // Duration for programmatic scrolling (1.0-1.2 optimal)
-            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Smooth easing curve
+        // Only create one global Lenis instance
+        if (!globalLenis) {
+            globalLenis = new Lenis({
+                // Core smoothness settings - optimized for buttery smooth scrolling
+                lerp: 0.06, // Lower for smoother scrolling (0.05-0.08 optimal)
+                duration: 1.2, // Slightly longer for smoother programmatic scrolling
+                easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Smooth easing curve
 
-            // Input sensitivity
-            wheelMultiplier: 1.1, // Mouse wheel sensitivity (1.0-1.2 optimal)
-            touchMultiplier: 1.8, // Touch sensitivity for mobile (1.5-2.0 optimal)
+                // Input sensitivity - fine-tuned for responsiveness
+                wheelMultiplier: 1.0, // Standard wheel sensitivity
+                touchMultiplier: 2.0, // Higher touch sensitivity for mobile
 
-            // Performance optimizations
-            smoothWheel: true, // Enable smooth wheel scrolling
-            autoRaf: true, // Automatically handle requestAnimationFrame
+                // Performance optimizations
+                smoothWheel: true, // Enable smooth wheel scrolling
+                autoRaf: true, // Automatically handle requestAnimationFrame
+                syncTouch: true, // Sync touch events for better mobile experience
 
-            // Additional smoothness
-            infinite: false, // Disable infinite scroll for better performance
-            orientation: 'vertical', // Vertical scrolling only
-        });
+                // Additional smoothness settings
+                infinite: false, // Disable infinite scroll for better performance
+                orientation: 'vertical', // Vertical scrolling only
+                gestureOrientation: 'vertical', // Vertical gesture orientation
+            });
 
-        // Animation frame function
-        function raf(time: number) {
-            lenis.raf(time);
-            requestAnimationFrame(raf);
-        }
+            lenisRef.current = globalLenis;
 
-        requestAnimationFrame(raf);
+            // Expose Lenis globally for ScrollTrigger integration
+            (window as any).lenis = globalLenis;
 
-        // Handle anchor links for smooth scrolling
-        const handleAnchorLinks = (e: Event) => {
-            const target = e.target as HTMLAnchorElement;
-            if (target.tagName === 'A' && target.getAttribute('href')?.startsWith('#')) {
-                e.preventDefault();
-                const targetId = target.getAttribute('href');
-                if (targetId) {
-                    lenis.scrollTo(targetId, {
-                        duration: 1.1,
-                        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
-                    });
+            // Enhanced animation frame function with performance monitoring
+            function raf(time: number) {
+                if (globalLenis) {
+                    globalLenis.raf(time);
+                    requestAnimationFrame(raf);
                 }
             }
-        };
 
-        // Add event listener for anchor links
-        document.addEventListener('click', handleAnchorLinks);
+            requestAnimationFrame(raf);
 
-        // Cleanup
+            // Handle anchor links for smooth scrolling
+            const handleAnchorLinks = (e: Event) => {
+                const target = e.target as HTMLAnchorElement;
+                if (target.tagName === 'A' && target.getAttribute('href')?.startsWith('#')) {
+                    e.preventDefault();
+                    const targetId = target.getAttribute('href');
+                    if (targetId && globalLenis) {
+                        globalLenis.scrollTo(targetId, {
+                            duration: 1.2,
+                            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
+                        });
+                    }
+                }
+            };
+
+            // Add event listener for anchor links
+            document.addEventListener('click', handleAnchorLinks);
+
+            // Store cleanup function
+            const cleanup = () => {
+                document.removeEventListener('click', handleAnchorLinks);
+                if (globalLenis) {
+                    globalLenis.destroy();
+                    globalLenis = null;
+                }
+            };
+
+            // Store cleanup function for later use
+            (globalLenis as any).cleanup = cleanup;
+        } else {
+            // Use existing global instance
+            lenisRef.current = globalLenis;
+        }
+
+        // Cleanup on unmount
         return () => {
-            document.removeEventListener('click', handleAnchorLinks);
-            lenis.destroy();
+            // Only cleanup if this is the last component using Lenis
+            if (globalLenis && (globalLenis as any).cleanup) {
+                (globalLenis as any).cleanup();
+            }
         };
     }, []);
 

@@ -7,7 +7,7 @@ import {
   CheckCircle, ArrowRight, Star, Award, Sparkles, TrendingUp
 } from "lucide-react";
 import { AIIcon, CertifiedIcon, GrowthIcon } from "@/components/LottieAnimatedIcons";
-import { EnhancedNavbar } from "@/components/EnhancedNavbar";
+import LinkInnovationsNavbar from "@/components/LinkInnovationsNavbar";
 import { Footer } from "@/components/Footer";
 import {
   ServiceHero,
@@ -166,7 +166,7 @@ export default function AIAutomationPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#000000] via-[#0f1724] to-[#000000]">
-      <EnhancedNavbar />
+      <LinkInnovationsNavbar />
 
       {/* Enhanced Hero Section */}
       <ServiceHero

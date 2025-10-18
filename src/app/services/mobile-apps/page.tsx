@@ -1,6 +1,6 @@
 "use client";
 
-import { EnhancedNavbar } from "@/components/EnhancedNavbar";
+import LinkInnovationsNavbar from "@/components/LinkInnovationsNavbar";
 import { Footer } from "@/components/Footer";
 import { PerformanceOptimizer } from "@/components/PerformanceOptimizer";
 import { TimelineAnimation } from "@/components/TimelineAnimation";
@@ -12,13 +12,13 @@ export default function MobileAppsPage() {
   return (
     <div className="min-h-screen bg-[#0a0a0f]">
       <PerformanceOptimizer />
-      <EnhancedNavbar />
-      
+      <LinkInnovationsNavbar />
+
       {/* Hero Section */}
       <section className="pt-32 pb-20 bg-[#0a0a0f] relative min-h-screen flex items-center">
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:64px_64px]" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(59,130,246,0.15),transparent_50%)]" />
-        
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -95,7 +95,7 @@ export default function MobileAppsPage() {
               Visualizing complex workflows with intelligent automation
             </p>
           </motion.div>
-          <NeuralNetwork 
+          <NeuralNetwork
             width={800}
             height={400}
             layers={[3, 5, 5, 3]}

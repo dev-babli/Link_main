@@ -1,6 +1,6 @@
 "use client";
 
-import { EnhancedNavbar } from "@/components/EnhancedNavbar";
+import LinkInnovationsNavbar from "@/components/LinkInnovationsNavbar";
 import { Footer } from "@/components/Footer";
 import { PerformanceOptimizer } from "@/components/PerformanceOptimizer";
 import { motion } from "motion/react";
@@ -24,18 +24,46 @@ const services = [
         color: "from-blue-500/20 to-cyan-500/20"
     },
     {
-        title: "Mobile Apps",
-        description: "Native and cross-platform mobile applications. We focus on usability, accessibility, and creating delightful user experiences.",
+        title: "Web App Development",
+        description: "Advanced web applications and platforms with complex functionality. Enterprise-grade solutions for modern businesses.",
+        icon: "🖥️",
+        features: [
+            "Enterprise Web Applications",
+            "Complex Business Logic",
+            "API Integration",
+            "Real-time Features",
+            "Scalable Architecture"
+        ],
+        link: "/services/web-app-development",
+        color: "from-cyan-500/20 to-blue-500/20"
+    },
+    {
+        title: "Mobile App Development",
+        description: "Native iOS and Android applications with platform-specific optimizations. High-performance mobile solutions.",
         icon: "📱",
         features: [
-            "iOS & Android Native Development",
-            "Cross-Platform (React Native, Flutter)",
-            "Accessible Mobile Interfaces",
-            "Offline-First Architecture",
+            "Native iOS & Android Development",
+            "Platform-Specific UI/UX",
+            "High Performance",
+            "Native API Integration",
             "App Store Optimization"
         ],
+        link: "/services/mobile-app-development",
+        color: "from-green-500/20 to-emerald-500/20"
+    },
+    {
+        title: "Mobile Apps",
+        description: "Cross-platform mobile solutions that work seamlessly across devices. Cost-effective development with native performance.",
+        icon: "📲",
+        features: [
+            "Cross-Platform Development",
+            "React Native & Flutter",
+            "Single Codebase",
+            "Rapid Development",
+            "Consistent User Experience"
+        ],
         link: "/services/mobile-apps",
-        color: "from-cyan-500/20 to-teal-500/20"
+        color: "from-emerald-500/20 to-teal-500/20"
     },
     {
         title: "AI & Automation",
@@ -52,18 +80,32 @@ const services = [
         color: "from-teal-500/20 to-green-500/20"
     },
     {
-        title: "Cloud & DevOps",
-        description: "Scalable, secure cloud infrastructure. We build reliable systems with clear documentation and transparent practices.",
+        title: "Cloud Services",
+        description: "Scalable cloud infrastructure that grows with your business. We provide reliable, secure, and cost-effective cloud solutions.",
         icon: "☁️",
         features: [
+            "AWS, Azure & GCP Expertise",
+            "Auto-Scaling Infrastructure",
+            "Disaster Recovery Planning",
+            "Cost Optimization",
+            "24/7 Monitoring & Support"
+        ],
+        link: "/services/cloud-services",
+        color: "from-teal-500/20 to-green-500/20"
+    },
+    {
+        title: "Cloud DevOps",
+        description: "Streamlined development workflows with modern DevOps practices. Accelerate delivery with automated CI/CD pipelines.",
+        icon: "⚙️",
+        features: [
+            "CI/CD Pipeline Setup",
             "Infrastructure as Code",
-            "Automated CI/CD Pipelines",
-            "Security Best Practices",
-            "Monitoring & Logging",
-            "Cost Optimization"
+            "Automated Testing",
+            "Deployment Automation",
+            "Monitoring & Logging"
         ],
         link: "/services/cloud-devops",
-        color: "from-green-500/20 to-emerald-500/20"
+        color: "from-orange-500/20 to-red-500/20"
     },
     {
         title: "Data Analytics",
@@ -91,7 +133,21 @@ const services = [
             "Security Training"
         ],
         link: "/services/cybersecurity",
-        color: "from-blue-500/20 to-purple-500/20"
+        color: "from-red-500/20 to-pink-500/20"
+    },
+    {
+        title: "Automation Testing",
+        description: "Comprehensive testing solutions to ensure quality and reliability. Automated testing that catches issues early.",
+        icon: "🧪",
+        features: [
+            "Automated Test Suites",
+            "CI/CD Integration",
+            "Performance Testing",
+            "API Testing",
+            "Cross-Browser Testing"
+        ],
+        link: "/services/automation-testing",
+        color: "from-yellow-500/20 to-orange-500/20"
     }
 ];
 
@@ -99,7 +155,7 @@ export default function ServicesPage() {
     return (
         <div className="min-h-screen bg-[#0a0a0f]">
             <PerformanceOptimizer />
-            <EnhancedNavbar />
+            <LinkInnovationsNavbar />
 
             {/* Hero Section - Clean, Clear, Purposeful */}
             <section className="pt-32 pb-20 bg-[#0a0a0f] relative">

@@ -4,36 +4,36 @@ import InfiniteMenu from "./InfiniteMenu";
 
 const serviceItems = [
     {
-        image: "/images/services/li-service-web-development-dashboard-v1.webp",
-        fallback: "/images/services/li-service-web-development-dashboard-v1.jpg",
+        image: "/Service Cards images/Cloud and Application Service.webp",
+        fallback: "/Service Cards images/Cloud and Application Service.webp",
         link: "/services/web-development",
         title: "Web Development",
         description: "Modern, responsive websites built with React, Next.js, and cutting-edge technologies"
     },
     {
-        image: "/images/services/li-service-mobile-app-development-dashboard-v1.webp",
-        fallback: "/images/services/li-service-mobile-app-development-dashboard-v1.jpg",
+        image: "/Service Cards images/Engineering and Manufacturing.webp",
+        fallback: "/Service Cards images/Engineering and Manufacturing.webp",
         link: "/services/mobile-apps",
         title: "Mobile Apps",
         description: "Native iOS & Android apps with seamless user experiences"
     },
     {
-        image: "/images/services/li-service-ai-automation-dashboard-v1.webp",
-        fallback: "/images/services/li-service-ai-automation-dashboard-v1.jpg",
+        image: "/Service Cards images/AI Gen AI.webp",
+        fallback: "/Service Cards images/AI Gen AI.webp",
         link: "/services/ai-automation",
         title: "AI & Machine Learning",
         description: "Intelligent automation and predictive analytics that transform operations"
     },
     {
-        image: "/images/services/li-service-cloud-devops-dashboard-v1.webp",
-        fallback: "/images/services/li-service-cloud-devops-dashboard-v1.jpg",
+        image: "/herosectionimages/cloud.webp",
+        fallback: "/herosectionimages/cloud.webp",
         link: "/services/cloud-devops",
         title: "Cloud Solutions",
         description: "Scalable cloud infrastructure on AWS, Azure, and GCP with DevOps excellence"
     },
     {
-        image: "/images/services/li-service-cybersecurity-dashboard-v1.webp",
-        fallback: "/images/services/li-service-cybersecurity-dashboard-v1.jpg",
+        image: "/Service Cards images/Digital Security.webp",
+        fallback: "/Service Cards images/Digital Security.webp",
         link: "/services/cybersecurity",
         title: "Cybersecurity",
         description: "Enterprise-grade security solutions and compliance management"
