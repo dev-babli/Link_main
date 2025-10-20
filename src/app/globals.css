@@ -23,6 +23,21 @@ body {
   overscroll-behavior: none;
 }
 
+/* Ensure dropdown menus can appear above content */
+[data-radix-navigation-menu-viewport] {
+  z-index: 9999 !important;
+}
+
+[data-radix-navigation-menu-content] {
+  z-index: 9999 !important;
+}
+
+/* Ensure navigation menu items are visible */
+[data-slot="navigation-menu-content"] {
+  z-index: 9999 !important;
+  position: relative !important;
+}
+
 /* Performance optimizations for smooth scrolling */
 * {
   -webkit-font-smoothing: antialiased;
@@ -139,19 +154,19 @@ body {
     }
   }
   @keyframes accordion-down {
-  from {
-    height: 0;
+    from {
+      height: 0;
     }
-  to {
-    height: var(--radix-accordion-content-height);
+    to {
+      height: var(--radix-accordion-content-height);
     }
   }
   @keyframes accordion-up {
-  from {
-    height: var(--radix-accordion-content-height);
+    from {
+      height: var(--radix-accordion-content-height);
     }
-  to {
-    height: 0;
+    to {
+      height: 0;
     }
   }
 }

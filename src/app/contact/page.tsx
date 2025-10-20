@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
 import { Switch } from "@/components/ui/switch";
-import LinkInnovationsNavbar from "@/components/LinkInnovationsNavbar";
+import LinkMetomicNavigationHeader from "@/components/link-sections/metomic-navigation-header";
 import { Footer } from "@/components/Footer";
 
 export default function ContactPage() {
@@ -48,7 +48,7 @@ export default function ContactPage() {
 
   return (
     <div className="min-h-screen bg-[#0A0E27] relative overflow-hidden">
-      <LinkInnovationsNavbar />
+      <LinkMetomicNavigationHeader />
       <main className="relative">
         {/* Cosmic Background Elements */}
         <div className="absolute inset-0">

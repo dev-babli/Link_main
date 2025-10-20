@@ -7,7 +7,7 @@
 
 // Essential Components
 import { PerformanceOptimizer } from "@/components/PerformanceOptimizer";
-import LinkInnovationsNavbar from "@/components/LinkInnovationsNavbar";
+import LinkMetomicNavigationHeader from "@/components/link-sections/metomic-navigation-header";
 import { HeroGeometric } from "@/components/ui/shape-landing-hero";
 import LinkMetomicTrustedBySection from "@/components/link-sections/metomic-trusted-by-section";
 import InfiniteMenuSection from "@/components/InfiniteMenuSection";
@@ -32,6 +32,7 @@ import IndustryExpandableSection from "@/components/IndustryExpandableSection";
 import { ServiceShowcase } from "@/components/ServiceShowcase";
 import { CaseStudiesShowcase } from "@/components/CaseStudiesShowcase";
 import { LinkInnovationsHeroDemo } from "@/components/ui/hero-gallery-demo";
+import TechnologyLogos from "@/components/TechnologyLogos";
 
 export default function Home() {
         return (
@@ -42,7 +43,7 @@ export default function Home() {
           ═══════════════════════════════════════════════════════════════ */}
 
                         <PerformanceOptimizer />
-                        <LinkInnovationsNavbar />
+                        <LinkMetomicNavigationHeader />
 
                         {/* Hero Section with Interactive Parallax Elements */}
                         <div className="relative">
@@ -115,6 +116,7 @@ export default function Home() {
 
                         <InfiniteMenuSection />
                         <LinkLogoMarquee />
+                        <TechnologyLogos />
 
                         {/* ═══════════════════════════════════════════════════════════════
           PHASE 4: DETAILED SHOWCASE (30-60 seconds)

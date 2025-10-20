@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { Footer } from "@/components/Footer";
-import LinkInnovationsNavbar from "@/components/LinkInnovationsNavbar";
+import LinkMetomicNavigationHeader from "@/components/link-sections/metomic-navigation-header";
 
 export const metadata: Metadata = {
     title: "About Us | Link Innovations",
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
     return (
         <main className="min-h-screen bg-black text-white">
-            <LinkInnovationsNavbar />
+            <LinkMetomicNavigationHeader />
 
             {/* Particle Background */}
             <div className="fixed inset-0 bg-black">

@@ -6,7 +6,7 @@ import {
   Smartphone, Cloud, Wifi, Battery, Shield, Zap, Cpu, Code2,
   ArrowRight, Star, Award, CheckCircle, Globe, Layers, Rocket
 } from "lucide-react";
-import LinkInnovationsNavbar from "@/components/LinkInnovationsNavbar";
+import LinkMetomicNavigationHeader from "@/components/link-sections/metomic-navigation-header";
 import { Footer } from "@/components/Footer";
 import {
   ServiceHero,
@@ -25,155 +25,118 @@ import {
  */
 export default function MobileAppDevelopmentPage() {
   const problems = [
-    { text: "Need to reach both iOS and Android users without double development costs" },
-    { text: "Poor app performance leading to high uninstall rates and negative reviews" },
-    { text: "Difficulty maintaining feature parity across multiple platforms" },
-    { text: "Challenges with offline functionality and data synchronization" },
-    { text: "Long development cycles delaying time-to-market" },
+    { text: "Slow time-to-market for native apps" },
+    { text: "Fragmented user experiences across platforms" },
+    { text: "Offline and sync challenges in low-connectivity regions" },
+    { text: "Complex app store submissions and versioning" },
   ];
 
   const capabilities = [
     {
       icon: "📱",
-      title: "Cross-Platform Development",
-      description: "Build once, deploy everywhere with React Native and Flutter. Reach both iOS and Android users with a single, maintainable codebase.",
+      title: "Cross-Platform App Development (React Native / Flutter)",
+      description: "Single codebase for Android & iOS.",
       useCases: [
-        "Consumer mobile apps",
-        "Enterprise mobility solutions",
-        "E-commerce applications",
-        "Social networking platforms"
+        "Consumer apps",
+        "Employee apps",
+        "Field apps"
       ],
       outcomes: [
-        "40% faster development",
-        "Single codebase maintenance",
-        "Native-like performance"
+        "Faster delivery",
+        "Lower maintenance costs"
       ]
     },
     {
       icon: "🎯",
-      title: "Native iOS & Android",
-      description: "Pure native development for apps requiring maximum performance, platform-specific features, or complex hardware integration.",
+      title: "Native App Enhancements (iOS & Android)",
+      description: "Device-specific modules: camera, sensors, biometrics.",
       useCases: [
-        "High-performance gaming",
-        "AR/VR applications",
-        "Hardware-intensive apps",
-        "Platform-specific features"
+        "AR",
+        "Advanced sensors",
+        "Background processing"
       ],
       outcomes: [
-        "Maximum performance",
-        "Full platform access",
-        "Optimal user experience"
-      ]
-    },
-    {
-      icon: "☁️",
-      title: "Cloud Integration",
-      description: "Seamless backend integration with Firebase, AWS, Azure, and custom APIs for real-time data sync and scalability.",
-      useCases: [
-        "Real-time collaboration",
-        "Cloud storage solutions",
-        "Push notifications",
-        "Backend as a Service"
-      ],
-      outcomes: [
-        "Real-time synchronization",
-        "Scalable infrastructure",
-        "Reduced backend costs"
+        "Native-grade performance where needed"
       ]
     },
     {
       icon: "📡",
-      title: "Offline-First Architecture",
-      description: "Build apps that work flawlessly without internet connectivity. Local-first data storage with intelligent sync mechanisms.",
+      title: "Offline-First & Sync Architecture",
+      description: "Local-first storage and conflict resolution strategies.",
       useCases: [
-        "Field service applications",
-        "Travel and transportation",
-        "Healthcare apps",
-        "Remote work tools"
+        "Field data collection",
+        "Intermittent networks"
       ],
       outcomes: [
-        "100% offline functionality",
-        "Improved user experience",
-        "Higher app reliability"
+        "Reliable user experience",
+        "Data integrity"
       ]
     },
     {
-      icon: "⚡",
-      title: "Performance Optimization",
-      description: "Lightning-fast apps with optimized rendering, efficient memory management, and battery-conscious design.",
+      icon: "☁️",
+      title: "Cloud-Integrated Mobile Apps",
+      description: "Real-time sync, push notifications, secure API integration.",
       useCases: [
-        "Media and entertainment",
-        "Data-intensive apps",
-        "Gaming applications",
-        "Real-time processing"
+        "Messaging apps",
+        "Real-time dashboards"
       ],
       outcomes: [
-        "60fps smooth animations",
-        "Reduced battery drain",
-        "Faster load times"
+        "Engaging, connected mobile experiences"
       ]
     },
     {
-      icon: "🔒",
-      title: "Security & Compliance",
-      description: "Enterprise-grade security with encryption, secure authentication, and compliance with GDPR, HIPAA, and industry standards.",
+      icon: "📊",
+      title: "App Store Deployment & Analytics",
+      description: "Store listing, CI/CD, crash analytics, and A/B testing.",
       useCases: [
-        "Banking and fintech",
-        "Healthcare applications",
-        "Enterprise solutions",
-        "Payment processing"
+        "Launches",
+        "Continuous improvement"
       ],
       outcomes: [
-        "Bank-level security",
-        "Regulatory compliance",
-        "Data protection"
+        "Smoother releases",
+        "Better retention"
       ]
     },
   ];
 
   const deliverySteps = [
     {
-      title: "Discovery & Planning",
+      title: "Discovery & Design",
       duration: "Week 1-2",
-      description: "Comprehensive requirement gathering, user research, and technical feasibility analysis. Define app architecture and create detailed project roadmap."
+      description: "UX, wireframes, device flows."
     },
     {
-      title: "UX/UI Design",
-      duration: "Week 3-4",
-      description: "Create wireframes, interactive prototypes, and pixel-perfect designs following iOS Human Interface Guidelines and Material Design principles."
+      title: "Build",
+      duration: "Week 3-8",
+      description: "Cross-platform/core native modules."
     },
     {
-      title: "Development Sprint",
-      duration: "Week 5-10",
-      description: "Agile development with bi-weekly sprints. Build features iteratively with continuous feedback and testing on real devices."
+      title: "Test",
+      duration: "Week 9-10",
+      description: "Device lab, automation, crash monitoring."
     },
     {
-      title: "Testing & QA",
+      title: "Release & Monitor",
       duration: "Week 11-12",
-      description: "Comprehensive testing including unit tests, integration tests, UI tests, and device-specific testing across multiple screen sizes and OS versions."
-    },
-    {
-      title: "Deployment & Support",
-      duration: "Week 13-14",
-      description: "App Store and Play Store submission, launch support, performance monitoring, and continuous improvement based on user feedback."
+      description: "Store release, analytics, iteration."
     },
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#000000] via-[#0f1724] to-[#000000]">
-      <LinkInnovationsNavbar />
+      <LinkMetomicNavigationHeader />
 
       {/* Enhanced Hero Section */}
       <ServiceHero
-        title="Mobile App Development"
-        subtitle="Cross-Platform & Native Excellence"
-        description="Deliver seamless mobile experiences with React Native, Flutter, or native iOS/Android. Built for performance, offline capabilities, and cloud integration."
+        title="Mobile App Development — Cross-Platform & Native"
+        subtitle="Fast-to-market mobile apps with native capabilities and cloud integration."
+        description="Deliver responsive, offline-capable mobile apps with analytics and CI/CD for scalable releases."
         primaryCTA={{
           text: "Start Mobile Discovery",
           href: "/contact"
         }}
         secondaryCTA={{
-          text: "View Mobile Cases",
+          text: "See Mobile Cases",
           href: "#capabilities"
         }}
         imageUrl="/WhatsApp Image 2025-10-12 at 1.16.43 AM (5).jpeg"
@@ -231,22 +194,22 @@ export default function MobileAppDevelopmentPage() {
             <StatisticCounter
               value={40}
               suffix="%"
-              label="Faster Development"
-              description="With cross-platform approach"
+              label="Time-to-market reduction"
+              description="With cross-platform"
               gradient="primary"
-            />
-            <StatisticCounter
-              value={4}
-              suffix=".8"
-              label="Average Rating"
-              description="On app stores"
-              gradient="secondary"
             />
             <StatisticCounter
               value={99}
               suffix="%"
-              label="Crash-Free Rate"
-              description="Post-launch stability"
+              label="Crash rate reduced"
+              description="Via CI/CD and monitoring"
+              gradient="secondary"
+            />
+            <StatisticCounter
+              value={98}
+              suffix="%"
+              label="Field data availability"
+              description="Improved retention"
               gradient="accent"
             />
             <StatisticCounter
@@ -317,8 +280,8 @@ export default function MobileAppDevelopmentPage() {
 
       {/* Delivery Timeline */}
       <DeliveryTimeline
-        title="Mobile App Development Process"
-        subtitle="From idea to App Store in 14 weeks"
+        title="Mobile delivery model"
+        subtitle="Typical timeline: MVP (6–10 weeks), Production (ongoing improvements)"
         steps={deliverySteps}
       />
 
@@ -329,12 +292,12 @@ export default function MobileAppDevelopmentPage() {
         description="Schedule a free consultation to discuss your mobile app project. We'll help you choose the right technology and create a roadmap to success."
         buttons={[
           {
-            text: "Start Your Project",
+            text: "Start Mobile Discovery",
             href: "/contact",
             variant: "primary"
           },
           {
-            text: "See Our Work",
+            text: "See Mobile Cases",
             href: "/portfolio",
             variant: "secondary",
             icon: "arrow"

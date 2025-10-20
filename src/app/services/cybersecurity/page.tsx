@@ -1,6 +1,6 @@
 "use client";
 
-import LinkInnovationsNavbar from "@/components/LinkInnovationsNavbar";
+import LinkMetomicNavigationHeader from "@/components/link-sections/metomic-navigation-header";
 import { Footer } from "@/components/Footer";
 import { PerformanceOptimizer } from "@/components/PerformanceOptimizer";
 import MagicBento from "@/components/MagicBento";
@@ -13,7 +13,7 @@ export default function CybersecurityPage() {
     return (
         <div className="min-h-screen bg-[#0a0a0f]">
             <PerformanceOptimizer />
-            <LinkInnovationsNavbar />
+            <LinkMetomicNavigationHeader />
 
             {/* Hero Section */}
             <section className="pt-32 pb-20 bg-[#0a0a0f] relative min-h-screen flex items-center">
@@ -38,10 +38,7 @@ export default function CybersecurityPage() {
                         </motion.div>
 
                         <h1 className="text-6xl md:text-7xl lg:text-8xl font-light tracking-tight text-white mb-8 leading-[1.1]" style={{ fontFamily: 'Georgia, "Times New Roman", serif' }}>
-                            Protect Your{" "}
-                            <span className="font-normal italic bg-gradient-to-r from-white via-red-200 to-white bg-clip-text text-transparent">
-                                Digital Assets
-                            </span>
+                            Cybersecurity — Managed Detection, AppSec & Cloud Security
                         </h1>
 
                         <motion.p
@@ -50,7 +47,7 @@ export default function CybersecurityPage() {
                             transition={{ duration: 0.8, delay: 0.4 }}
                             className="text-xl text-white/60 max-w-3xl mx-auto mb-12"
                         >
-                            Comprehensive security solutions to safeguard your business. From penetration testing to compliance audits, we protect what matters most.
+                            Proactive threat detection, secure development, and cloud posture management to keep your systems resilient.
                         </motion.p>
 
                         <motion.div
@@ -60,13 +57,13 @@ export default function CybersecurityPage() {
                             className="flex flex-wrap justify-center gap-8 text-sm text-white/60 mb-12"
                         >
                             <div className="flex items-center gap-2">
-                                <span className="font-mono">#1 IN SECURITY</span>
+                                <span className="font-mono">24/7 MDR</span>
                             </div>
                             <div className="flex items-center gap-2">
-                                <span className="font-mono">#1 IN COMPLIANCE</span>
+                                <span className="font-mono">AppSec</span>
                             </div>
                             <div className="flex items-center gap-2">
-                                <span className="font-mono">#1 IN PROTECTION</span>
+                                <span className="font-mono">Cloud Security</span>
                             </div>
                         </motion.div>
                     </motion.div>
@@ -86,11 +83,11 @@ export default function CybersecurityPage() {
                         <h2 className="text-5xl font-light text-white mb-4">
                             Security{" "}
                             <span className="font-normal italic bg-gradient-to-r from-white via-red-200 to-white bg-clip-text text-transparent">
-                                Architecture
+                                Capabilities
                             </span>
                         </h2>
                         <p className="text-xl text-white/60">
-                            Multi-layered defense systems protecting your infrastructure
+                            End-to-end cybersecurity services combining managed detection and response, application security, and cloud posture management
                         </p>
                     </motion.div>
                     <div className="flex justify-center">

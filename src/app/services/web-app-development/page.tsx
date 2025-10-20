@@ -6,7 +6,7 @@ import {
   Code, Database, Shield, Zap, Cpu, Globe,
   ArrowRight, Star, Award, CheckCircle, Layers, Server
 } from "lucide-react";
-import LinkInnovationsNavbar from "@/components/LinkInnovationsNavbar";
+import LinkMetomicNavigationHeader from "@/components/link-sections/metomic-navigation-header";
 import { Footer } from "@/components/Footer";
 import {
   ServiceHero,
@@ -25,155 +25,119 @@ import {
  */
 export default function WebAppDevelopmentPage() {
   const problems = [
-    { text: "Legacy systems that can't scale with business growth" },
-    { text: "Poor website performance affecting user experience and SEO rankings" },
-    { text: "Security vulnerabilities exposing business to cyber threats" },
-    { text: "High maintenance costs for outdated technology stacks" },
-    { text: "Lack of mobile responsiveness losing mobile-first audiences" },
+    { text: "Slow, unmaintainable legacy web platforms" },
+    { text: "Poor user experience and accessibility gaps" },
+    { text: "Monolithic architectures that hinder scaling" },
+    { text: "Fragmented data and poor integrations" },
   ];
 
   const capabilities = [
     {
       icon: "⚡",
-      title: "Modern Web Frameworks",
-      description: "Build lightning-fast applications with React, Next.js, and cutting-edge JavaScript frameworks optimized for performance and SEO.",
+      title: "Custom Web Application Development",
+      description: "Tailored applications using React, Next.js, and TypeScript.",
       useCases: [
-        "Single Page Applications (SPAs)",
-        "Progressive Web Apps (PWAs)",
-        "Server-side rendered websites",
-        "Static site generation"
+        "SaaS platforms",
+        "Marketplaces",
+        "Internal tools"
       ],
       outcomes: [
-        "90+ Lighthouse scores",
-        "3x faster page loads",
-        "SEO-optimized content"
+        "Modular, testable, scalable codebases"
       ]
     },
     {
-      icon: "🗄️",
-      title: "Backend & APIs",
-      description: "Robust backend systems with Node.js, Python, or .NET. RESTful and GraphQL APIs designed for scalability and maintainability.",
+      icon: "📝",
+      title: "CMS & Content Platforms",
+      description: "Headless CMS using Sanity, Strapi, or custom API-first CMS.",
       useCases: [
-        "Microservices architecture",
-        "API development and integration",
-        "Database design and optimization",
-        "Real-time data processing"
+        "Marketing sites",
+        "Blogs",
+        "Knowledge bases"
       ],
       outcomes: [
-        "99.9% uptime SLA",
-        "Auto-scaling infrastructure",
-        "Optimized query performance"
-      ]
-    },
-    {
-      icon: "🔒",
-      title: "Security & Compliance",
-      description: "Enterprise-grade security with OWASP best practices, encryption, secure authentication, and compliance with data protection regulations.",
-      useCases: [
-        "PCI-DSS compliance",
-        "GDPR data protection",
-        "SOC 2 certification",
-        "Penetration testing"
-      ],
-      outcomes: [
-        "Zero data breaches",
-        "Regulatory compliance",
-        "Security audits passed"
-      ]
-    },
-    {
-      icon: "🎨",
-      title: "UI/UX Excellence",
-      description: "Beautiful, intuitive interfaces built with modern design systems. Responsive across all devices with accessibility built-in.",
-      useCases: [
-        "Design system development",
-        "Responsive web design",
-        "WCAG 2.1 AA compliance",
-        "User research and testing"
-      ],
-      outcomes: [
-        "Improved user engagement",
-        "Higher conversion rates",
-        "Reduced bounce rates"
+        "Easy content management",
+        "Multi-language support"
       ]
     },
     {
       icon: "📊",
-      title: "Analytics & Monitoring",
-      description: "Comprehensive tracking and monitoring with real-time dashboards, error tracking, and performance analytics for data-driven decisions.",
+      title: "Enterprise Portals & Dashboards",
+      description: "Data-driven portals with BI integrations and role-based access.",
       useCases: [
-        "User behavior analytics",
-        "Performance monitoring",
-        "Error tracking and alerting",
-        "A/B testing platforms"
+        "Operations portals",
+        "Executive dashboards"
       ],
       outcomes: [
-        "Real-time insights",
-        "Proactive issue detection",
-        "Data-driven optimization"
+        "Actionable insights",
+        "Secure access controls"
       ]
     },
     {
-      icon: "☁️",
-      title: "Cloud & DevOps",
-      description: "Deploy on AWS, Azure, or Google Cloud with CI/CD pipelines, automated testing, and infrastructure as code for reliable operations.",
+      icon: "🔗",
+      title: "API Development & System Integration",
+      description: "REST/GraphQL APIs, microservices architecture, and secure integrations.",
       useCases: [
-        "Cloud migration",
-        "Container orchestration",
-        "Automated deployments",
-        "Infrastructure management"
+        "Payment gateways",
+        "Third-party integrations"
       ],
       outcomes: [
-        "Faster deployment cycles",
-        "Cost-optimized infrastructure",
-        "Improved reliability"
+        "Reliable backend",
+        "Integration stability"
+      ]
+    },
+    {
+      icon: "🎨",
+      title: "UI/UX Design & Accessibility",
+      description: "Responsive design, accessibility audits, and interaction design.",
+      useCases: [
+        "Conversion-focused landing pages",
+        "Inclusive enterprise UX"
+      ],
+      outcomes: [
+        "Improved conversions",
+        "Accessibility compliance"
       ]
     },
   ];
 
   const deliverySteps = [
     {
-      title: "Discovery & Architecture",
+      title: "Discover & Design",
       duration: "Week 1-2",
-      description: "Deep dive into requirements, user needs, and technical constraints. Design scalable architecture and technology stack selection."
+      description: "UX, flows, prototypes."
     },
     {
-      title: "Design & Prototyping",
-      duration: "Week 3-4",
-      description: "Create wireframes, design mockups, and interactive prototypes. Establish design system and component library."
+      title: "Build",
+      duration: "Week 3-8",
+      description: "Component-driven frontend, API-first backend."
     },
     {
-      title: "Development Sprints",
-      duration: "Week 5-10",
-      description: "Agile development with 2-week sprints. Build features incrementally with continuous integration and regular demos."
+      title: "Test",
+      duration: "Week 9-10",
+      description: "Automated testing, performance tuning."
     },
     {
-      title: "Testing & QA",
+      title: "Deploy & Monitor",
       duration: "Week 11-12",
-      description: "Comprehensive testing including unit tests, integration tests, E2E tests, performance testing, and security audits."
-    },
-    {
-      title: "Launch & Optimization",
-      duration: "Week 13-14",
-      description: "Production deployment, monitoring setup, performance optimization, and post-launch support with continuous improvements."
+      description: "CI/CD, observability, feature flags."
     },
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#000000] via-[#0f1724] to-[#000000]">
-      <LinkInnovationsNavbar />
+      <LinkMetomicNavigationHeader />
 
       {/* Enhanced Hero Section */}
       <ServiceHero
-        title="Web App Development"
-        subtitle="Modern, Scalable & Accessible"
-        description="Build fast, secure, and maintainable web platforms with React, Next.js, and API-first architectures that scale with your business."
+        title="Web App Development — Scalable, Fast & Accessible"
+        subtitle="Modern web apps with robust APIs, inclusive UX, and cloud-native deployment."
+        description="Build web applications and dashboards that are fast, secure, and maintainable using modern frameworks and CI/CD."
         primaryCTA={{
           text: "Get an MVP Quote",
           href: "/contact"
         }}
         secondaryCTA={{
-          text: "Explore Solutions",
+          text: "Explore Web Solutions",
           href: "#capabilities"
         }}
         imageUrl="/herosectionimages/Scalable Cloud and Application.webp"
@@ -231,22 +195,22 @@ export default function WebAppDevelopmentPage() {
             <StatisticCounter
               value={95}
               suffix="+"
-              label="Lighthouse Score"
-              description="Performance & accessibility"
+              label="Page load improvements"
+              description="LCP/FID and Core Web Vitals"
               gradient="primary"
-            />
-            <StatisticCounter
-              value={99}
-              suffix=".9%"
-              label="Uptime SLA"
-              description="Reliable infrastructure"
-              gradient="secondary"
             />
             <StatisticCounter
               value={3}
               suffix="x"
-              label="Faster Load Times"
-              description="Optimized performance"
+              label="Faster time-to-market"
+              description="For features via component reuse"
+              gradient="secondary"
+            />
+            <StatisticCounter
+              value={100}
+              suffix="%"
+              label="Accessibility compliance"
+              description="Improvements achieved"
               gradient="accent"
             />
             <StatisticCounter
@@ -317,8 +281,8 @@ export default function WebAppDevelopmentPage() {
 
       {/* Delivery Timeline */}
       <DeliveryTimeline
-        title="Web Development Process"
-        subtitle="From concept to production in 14 weeks"
+        title="Web delivery process"
+        subtitle="Typical timeline: MVP (4–8 weeks), Enterprise portal (8–16 weeks)"
         steps={deliverySteps}
       />
 
@@ -329,12 +293,12 @@ export default function WebAppDevelopmentPage() {
         description="Schedule a free consultation to discuss your web development needs. We'll help you architect and build a scalable solution."
         buttons={[
           {
-            text: "Get Started Today",
+            text: "Get an MVP Quote",
             href: "/contact",
             variant: "primary"
           },
           {
-            text: "View Our Portfolio",
+            text: "Explore Web Solutions",
             href: "/portfolio",
             variant: "secondary",
             icon: "arrow"

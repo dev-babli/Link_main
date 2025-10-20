@@ -195,7 +195,7 @@ export const demoLinks: NavItemType[] = [
 export default function LinkInnovationsNavbar() {
     return (
         <div className="relative w-full">
-            <div className="bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50 w-full border-b">
+            <div className="bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-[9998] w-full border-b">
                 <div className="container mx-auto flex h-16 items-center justify-between px-4">
                     {/* Logo */}
                     <div className="flex items-center gap-2">
@@ -231,7 +231,7 @@ function DesktopMenu() {
             <NavigationMenuList>
                 <NavigationMenuItem>
                     <NavigationMenuTrigger>Services</NavigationMenuTrigger>
-                    <NavigationMenuContent>
+                    <NavigationMenuContent className="bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border shadow-lg rounded-md !z-[9999] !relative">
                         <div className="grid w-full md:w-5xl md:grid-cols-4 gap-4 p-6">
                             {/* Development Services */}
                             <div className="space-y-2">
@@ -290,7 +290,7 @@ function DesktopMenu() {
 
                 <NavigationMenuItem>
                     <NavigationMenuTrigger>Company</NavigationMenuTrigger>
-                    <NavigationMenuContent>
+                    <NavigationMenuContent className="bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border shadow-lg rounded-md !z-[9999] !relative">
                         <div className="grid w-full md:w-4xl md:grid-cols-[1fr_.40fr]">
                             <ul className="grid grow grid-cols-2 gap-4 p-4 md:border-r">
                                 {companyLinks.slice(0, 2).map((link) => (

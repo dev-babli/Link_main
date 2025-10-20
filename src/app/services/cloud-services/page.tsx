@@ -6,7 +6,7 @@ import {
   Cloud, Server, Database, Shield, Zap, Settings,
   ArrowRight, Star, Award, CheckCircle, Lock, TrendingUp
 } from "lucide-react";
-import LinkInnovationsNavbar from "@/components/LinkInnovationsNavbar";
+import LinkMetomicNavigationHeader from "@/components/link-sections/metomic-navigation-header";
 import { Footer } from "@/components/Footer";
 import {
   ServiceHero,
@@ -25,155 +25,118 @@ import {
  */
 export default function CloudServicesPage() {
   const problems = [
-    { text: "High infrastructure costs with limited scalability" },
-    { text: "Difficulty managing and securing on-premise servers" },
-    { text: "Lack of disaster recovery and business continuity plans" },
-    { text: "Slow deployment cycles hindering innovation" },
-    { text: "Inability to handle traffic spikes and seasonal demands" },
+    { text: "Risky lift-and-shift migrations and long rollback windows" },
+    { text: "High cloud spend due to poor resource sizing" },
+    { text: "Lack of observability and frequent outages" },
+    { text: "Slow, manual infrastructure provisioning" },
   ];
 
   const capabilities = [
     {
       icon: "☁️",
-      title: "Cloud Migration",
-      description: "Seamless migration from on-premise to cloud with zero downtime. Strategy, planning, and execution for AWS, Azure, or Google Cloud.",
+      title: "Cloud Migration & Modernization",
+      description: "Lift-and-shift or refactor strategies and execution.",
       useCases: [
-        "Lift-and-shift migrations",
-        "Re-platforming applications",
-        "Cloud-native transformation",
-        "Hybrid cloud setup"
+        "Legacy apps",
+        "Database migration",
+        "Data replatforming"
       ],
       outcomes: [
-        "40% cost reduction",
-        "Zero downtime migration",
-        "Improved scalability"
+        "Faster deployment",
+        "Modernization path"
       ]
     },
     {
       icon: "🏗️",
-      title: "Infrastructure as Code",
-      description: "Automate infrastructure provisioning with Terraform, CloudFormation, or Pulumi. Version-controlled, repeatable infrastructure.",
+      title: "Infrastructure as Code (IaC) & Automation",
+      description: "Terraform, Pulumi, CDK, and automated environment provisioning.",
       useCases: [
-        "Automated provisioning",
-        "Multi-environment setup",
-        "Disaster recovery automation",
-        "Infrastructure templating"
+        "Repeatable infra",
+        "Blue/green deployments"
       ],
       outcomes: [
-        "90% faster provisioning",
-        "Reduced human errors",
-        "Consistent environments"
+        "Lower error rate",
+        "Faster spin-up of environments"
       ]
     },
     {
-      icon: "🚀",
-      title: "DevOps & CI/CD",
-      description: "Build automated pipelines for continuous integration and deployment. Accelerate releases with GitLab CI, GitHub Actions, or Jenkins.",
+      icon: "💰",
+      title: "Cloud Cost Optimization (FinOps)",
+      description: "Rightsizing, reserved instances, autoscaling and billing automation.",
       useCases: [
-        "Automated testing",
-        "Blue-green deployments",
-        "Rollback strategies",
+        "Cost reduction programs",
+        "Budget alerts"
+      ],
+      outcomes: [
+        "20–40% cost savings typically"
+      ]
+    },
+    {
+      icon: "🔧",
+      title: "Managed Cloud Operations (SRE / DevOps)",
+      description: "Monitoring, incident management, on-call, and runbooks.",
+      useCases: [
+        "Production support",
         "Release automation"
       ],
       outcomes: [
-        "10x faster deployments",
-        "Reduced deployment failures",
-        "Continuous delivery"
+        "Improved uptime",
+        "Faster recovery"
       ]
     },
     {
       icon: "🔒",
-      title: "Cloud Security",
-      description: "Implement enterprise-grade security with identity management, encryption, compliance monitoring, and threat detection.",
+      title: "Cloud Security & Compliance",
+      description: "Secure configurations, encryption, and compliance checks.",
       useCases: [
-        "IAM and access control",
-        "Data encryption at rest/transit",
-        "Compliance automation",
-        "Security audits"
+        "PCI/GDPR readiness",
+        "Security baselines"
       ],
       outcomes: [
-        "Zero security breaches",
-        "Compliance certification",
-        "Reduced vulnerabilities"
-      ]
-    },
-    {
-      icon: "📊",
-      title: "Monitoring & Optimization",
-      description: "Real-time monitoring, alerting, and cost optimization. CloudWatch, Azure Monitor, or Datadog for complete visibility.",
-      useCases: [
-        "Performance monitoring",
-        "Cost optimization",
-        "Log aggregation",
-        "Automated alerting"
-      ],
-      outcomes: [
-        "99.99% uptime",
-        "30% cost savings",
-        "Proactive issue detection"
-      ]
-    },
-    {
-      icon: "🐳",
-      title: "Container Orchestration",
-      description: "Deploy and manage containerized applications with Kubernetes, ECS, or AKS. Scalable microservices architecture.",
-      useCases: [
-        "Kubernetes clusters",
-        "Container registry",
-        "Service mesh",
-        "Auto-scaling workloads"
-      ],
-      outcomes: [
-        "Elastic scaling",
-        "Improved resource utilization",
-        "Simplified deployments"
+        "Secure cloud posture",
+        "Audit readiness"
       ]
     },
   ];
 
   const deliverySteps = [
     {
-      title: "Cloud Assessment",
+      title: "Assess",
       duration: "Week 1-2",
-      description: "Evaluate current infrastructure, identify migration candidates, assess cloud readiness, and create migration strategy."
+      description: "Cloud readiness and TCO analysis."
     },
     {
-      title: "Architecture Design",
+      title: "Architect",
       duration: "Week 3-4",
-      description: "Design cloud architecture, select services, plan security controls, and define cost optimization strategies."
+      description: "Migration plan and reference architectures."
     },
     {
-      title: "Migration & Setup",
+      title: "Migrate & Modernize",
       duration: "Week 5-10",
-      description: "Execute migration plan, configure infrastructure, set up monitoring, and implement security controls."
+      description: "Execution and cutover planning."
     },
     {
-      title: "Testing & Validation",
+      title: "Operate & Optimize",
       duration: "Week 11-12",
-      description: "Comprehensive testing, performance validation, security audits, and disaster recovery testing."
-    },
-    {
-      title: "Go-Live & Optimization",
-      duration: "Week 13-14",
-      description: "Production cutover, post-migration optimization, cost analysis, and ongoing support setup."
+      description: "FinOps and SRE-led operations."
     },
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#000000] via-[#0f1724] to-[#000000]">
-      <LinkInnovationsNavbar />
+      <LinkMetomicNavigationHeader />
 
       {/* Enhanced Hero Section */}
       <ServiceHero
-        title="Cloud Services & DevOps"
-        subtitle="AWS, Azure & Google Cloud Excellence"
-        description="Modernize your infrastructure with enterprise cloud solutions. Migration, DevOps automation, and managed services for scalable, secure operations."
+        title="Cloud Services — Migration, IaC & Managed Operations"
+        subtitle="Cloud-native architecture, infrastructure automation, and cost-efficient operations for scalable systems."
+        description="Migrate, modernize, and operate cloud environments with infrastructure as code, observability, and FinOps practices."
         primaryCTA={{
-          text: "Request Cloud Assessment",
+          text: "Schedule a Cloud Readiness Review",
           href: "/contact"
         }}
         secondaryCTA={{
-          text: "Explore Cloud Solutions",
+          text: "See Cloud Solutions",
           href: "#capabilities"
         }}
         imageUrl="/WhatsApp Image 2025-10-12 at 1.16.43 AM (4).jpeg"
@@ -229,24 +192,24 @@ export default function CloudServicesPage() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <StatisticCounter
-              value={40}
-              suffix="%"
-              label="Cost Reduction"
-              description="Average infrastructure savings"
+              value={3}
+              suffix="x"
+              label="Deployment frequency"
+              description="Improvement with CI/CD and IaC"
               gradient="primary"
             />
             <StatisticCounter
-              value={99}
-              suffix=".99%"
-              label="Uptime Achieved"
-              description="Highly available systems"
-              gradient="secondary"
+              value={40}
+              suffix="%"
+              label="Cost savings",
+            description="Through FinOps measures"
+            gradient="secondary"
             />
             <StatisticCounter
-              value={10}
-              suffix="x"
-              label="Faster Deployments"
-              description="With automation"
+              value={99}
+              suffix=".9%+"
+              label="Uptime & reliability"
+              description="With SRE practices"
               gradient="accent"
             />
             <StatisticCounter
@@ -317,8 +280,8 @@ export default function CloudServicesPage() {
 
       {/* Delivery Timeline */}
       <DeliveryTimeline
-        title="Cloud Migration Process"
-        subtitle="From assessment to optimization in 14 weeks"
+        title="Cloud delivery lifecycle"
+        subtitle="Timeline examples: Readiness review (1–2 weeks), Migration (4–12 weeks), Ongoing managed ops (monthly)"
         steps={deliverySteps}
       />
 
@@ -329,12 +292,12 @@ export default function CloudServicesPage() {
         description="Schedule a free cloud assessment to discover how cloud migration can transform your infrastructure and reduce costs."
         buttons={[
           {
-            text: "Request Assessment",
+            text: "Schedule a Cloud Readiness Review",
             href: "/contact",
             variant: "primary"
           },
           {
-            text: "Learn More",
+            text: "See Cloud Solutions",
             href: "/portfolio",
             variant: "secondary",
             icon: "arrow"
