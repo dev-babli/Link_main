@@ -60,41 +60,13 @@ export const HeroParallax = ({
             className="h-[300vh] py-40 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
             style={{ position: 'relative' }}
         >
-            {/* Enhanced Background with Animated Gradients */}
+            {/* Simplified Background */}
             <div className="absolute inset-0 z-0">
-                {/* Base gradient background */}
-                <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-blue-950/50 to-purple-950/50"></div>
+                {/* Simple dark background */}
+                <div className="absolute inset-0 bg-black"></div>
 
-                {/* Background Image with Overlay */}
-                <Image
-                    src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop"
-                    alt="Technology background"
-                    fill
-                    className="object-cover opacity-10 mix-blend-overlay"
-                    priority={false}
-                />
-
-                {/* Animated gradient orbs */}
-                <div className="absolute inset-0 overflow-hidden">
-                    <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
-                    <div
-                        className="absolute top-3/4 right-1/4 w-[500px] h-[500px] bg-purple-500/20 rounded-full blur-3xl animate-pulse"
-                        style={{ animationDelay: '1s' }}
-                    ></div>
-                    <div
-                        className="absolute top-1/2 left-1/2 w-[400px] h-[400px] bg-cyan-500/15 rounded-full blur-3xl animate-pulse"
-                        style={{ animationDelay: '0.5s' }}
-                    ></div>
-                    <div
-                        className="absolute bottom-1/4 left-1/3 w-[450px] h-[450px] bg-indigo-500/15 rounded-full blur-3xl animate-pulse"
-                        style={{ animationDelay: '1.5s' }}
-                    ></div>
-                </div>
-
-                {/* Radial gradient overlays for depth */}
-                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(59,130,246,0.2),transparent_50%)]"></div>
-                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,rgba(139,92,246,0.2),transparent_50%)]"></div>
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black/80"></div>
+                {/* Subtle gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-br from-accent-cyan/5 via-accent-indigo/5 to-accent-emerald/5"></div>
             </div>
 
             <Header />
@@ -148,13 +120,13 @@ export const Header = () => {
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
             >
-                <h1 className="text-4xl md:text-7xl font-bold text-white mb-4">
-                    <span className="bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent">
+                <h1 className="text-3xl md:text-5xl font-bold text-white mb-4 font-heading">
+                    <span className="bg-gradient-to-r from-accent-cyan via-accent-indigo to-accent-emerald bg-clip-text text-transparent">
                         Our Portfolio of <br /> Innovation
                     </span>
                 </h1>
-                <div className="w-32 h-1.5 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mb-8"></div>
-                <p className="max-w-3xl text-base md:text-xl text-gray-300 leading-relaxed">
+                <div className="w-24 h-1 bg-gradient-to-r from-accent-cyan to-accent-indigo rounded-full mb-6"></div>
+                <p className="max-w-2xl text-base md:text-lg text-white leading-relaxed font-body">
                     Delivering excellence across industries with cutting-edge technology solutions.
                     We are a team of passionate developers and designers that love to build
                     amazing products that drive real business results.
@@ -184,29 +156,27 @@ export const ProductCard = ({
                 y: -20,
             }}
             key={product.title}
-            className="group/product h-96 w-[30rem] relative flex-shrink-0"
+            className="group/product h-80 w-[25rem] relative flex-shrink-0"
         >
             <Link
                 href={product.link}
                 className="block group-hover/product:shadow-2xl group-hover/product:shadow-blue-500/30 transition-all duration-500"
             >
-                {/* Gradient border wrapper */}
-                <div className="relative h-full w-full rounded-2xl p-[2px] bg-gradient-to-br from-blue-500/0 via-purple-500/0 to-cyan-500/0 group-hover/product:from-blue-500/50 group-hover/product:via-purple-500/50 group-hover/product:to-cyan-500/50 transition-all duration-500">
-                    <div className="relative h-full w-full overflow-hidden rounded-2xl bg-transparent">
-                        <Image
-                            src={product.thumbnail}
-                            height="600"
-                            width="600"
-                            className="object-cover object-center absolute h-full w-full inset-0 group-hover/product:scale-110 transition-transform duration-700"
-                            alt={product.title}
-                        />
+                {/* Simplified card wrapper */}
+                <div className="relative h-full w-full rounded-2xl overflow-hidden bg-white/5 backdrop-blur-sm border border-white/10 group-hover/product:border-accent-cyan/50 transition-all duration-500">
+                    <Image
+                        src={product.thumbnail}
+                        height="500"
+                        width="500"
+                        className="object-cover object-center h-full w-full group-hover/product:scale-105 transition-transform duration-500"
+                        alt={product.title}
+                    />
 
-                        {/* Only darken bottom for text readability */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
+                    {/* Minimal overlay for text readability */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
 
-                        {/* Subtle gradient on hover */}
-                        <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 via-purple-500/20 to-cyan-500/20 opacity-0 group-hover/product:opacity-60 transition-opacity duration-500"></div>
-                    </div>
+                    {/* Subtle accent on hover */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-accent-cyan/10 via-accent-indigo/10 to-accent-emerald/10 opacity-0 group-hover/product:opacity-100 transition-opacity duration-500"></div>
                 </div>
             </Link>
 
@@ -215,7 +185,7 @@ export const ProductCard = ({
                 <h2 className="text-xl md:text-2xl font-bold text-white mb-2 transform translate-y-2 group-hover/product:translate-y-0 transition-transform duration-300">
                     {product.title}
                 </h2>
-                <div className="w-0 group-hover/product:w-24 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 rounded-full transition-all duration-500 shadow-lg shadow-blue-500/50"></div>
+                <div className="w-0 group-hover/product:w-24 h-1 bg-gradient-to-r from-accent-cyan via-accent-indigo to-accent-emerald rounded-full transition-all duration-500 shadow-lg shadow-accent-cyan/50"></div>
             </div>
         </motion.div>
     );

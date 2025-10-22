@@ -21,7 +21,7 @@ import {
 } from "@/components/ServiceComponents";
 
 /**
- * AI & Automation Service Page - Enhanced with Modern Design
+ * AI Solutions Service Page - Enhanced with Modern Design
  * Features: Glassmorphism, Gradient Typography, Floating Animations
  * WCAG 2.1 AA Compliant | Optimized Performance
  */
@@ -170,7 +170,7 @@ export default function AIAutomationPage() {
 
       {/* Enhanced Hero Section */}
       <ServiceHero
-        title="AI & Automation Excellence"
+        title="AI Solutions Excellence"
         subtitle="Transform your business with intelligent automation"
         description="Empower your organization with autonomous AI agents, generative intelligence, and workflow automation that delivers real business impact and measurable ROI."
         primaryCTA={{
@@ -281,7 +281,7 @@ export default function AIAutomationPage() {
 
       {/* Service Capabilities Grid */}
       <ServiceCapabilitiesGrid
-        title="AI & Automation Capabilities"
+        title="AI Solutions Capabilities"
         intro="Comprehensive solutions for intelligent enterprise"
         capabilities={capabilities}
       />

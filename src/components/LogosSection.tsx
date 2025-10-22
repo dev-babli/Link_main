@@ -20,7 +20,7 @@ const SERVICES = [
         href: "#cloud-solutions",
     },
     {
-        name: "AI & Automation",
+        name: "AI Solutions",
         description: "Intelligent solutions",
         href: "#ai-automation",
     },
@@ -47,20 +47,6 @@ const LogoSection = () => {
             {/* Subtle Background */}
             <div className="absolute inset-0 z-0 bg-gradient-to-b from-background/50 via-background to-background"></div>
             <div className="relative z-10">
-                <motion.div
-                    initial={{ opacity: 0, y: 50 }}
-                    animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-                    transition={{ duration: 0.8 }}
-                    className="container mx-auto text-center mb-10"
-                >
-                    <h2 className="text-2xl font-light tracking-tight text-white sm:text-3xl">
-                        Link Innovations - Your IT Development Partner
-                        <br />
-                        <span className="text-white/60">
-                            From startup ideas to enterprise solutions
-                        </span>
-                    </h2>
-                </motion.div>
 
                 <div className="relative">
                     <div className="flex w-full">

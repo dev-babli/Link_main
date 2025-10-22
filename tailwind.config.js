@@ -8,6 +8,16 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        // Link Innovations Enterprise Color System
+        'primary': '#0A0E27',
+        'accent-cyan': '#00D9FF',
+        'accent-indigo': '#6366F1',
+        'accent-emerald': '#10B981',
+        'accent-purple': '#8B5CF6',
+        'neutral-dark': '#1E293B',
+        'neutral-light': '#F1F5F9',
+        'neutral-medium': '#64748B',
+        
         // Cortex Theme Colors
         'cortex-primary': '#7877c6',
         'cortex-secondary': '#a78bfa',
@@ -44,6 +54,9 @@ module.exports = {
         'white-300': '#e9ecef',
       },
       fontFamily: {
+        'heading': ['Mango Grotesque', 'Helvetica Neue', 'Arial', 'sans-serif'],
+        'body': ['Inter', 'system-ui', 'sans-serif'],
+        'mono': ['JetBrains Mono', 'Courier New', 'monospace'],
         'inter': ['Inter', 'sans-serif'],
         'jetbrains': ['JetBrains Mono', 'monospace'],
         'orbitron': ['Orbitron', 'sans-serif'],
@@ -51,6 +64,7 @@ module.exports = {
         'poppins': ['Poppins', 'sans-serif'],
       },
       animation: {
+        'orbit': 'orbit calc(var(--duration)*1s) linear infinite',
         'marquee': 'marquee 20s linear infinite',
         'loop-vertically': 'loop-vertically 8s ease-in-out infinite',
         'shimmer': 'shimmer 3s ease-in-out infinite',
@@ -71,6 +85,16 @@ module.exports = {
         'particle-trail': 'particle-trail 2s ease-out infinite',
       },
       keyframes: {
+        orbit: {
+          "0%": {
+            transform:
+              "rotate(0deg) translateY(calc(var(--radius) * 1px)) rotate(0deg)",
+          },
+          "100%": {
+            transform:
+              "rotate(360deg) translateY(calc(var(--radius) * 1px)) rotate(-360deg)",
+          },
+        },
         marquee: {
           '0%': { transform: 'translateX(0%)' },
           '100%': { transform: 'translateX(-100%)' },

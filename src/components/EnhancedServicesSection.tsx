@@ -71,7 +71,7 @@ export function EnhancedServicesSection() {
             link: "/services/cybersecurity"
         },
         {
-            title: "AI & Automation",
+            title: "AI Solutions",
             description: "Intelligent automation and AI solutions to streamline your business processes",
             icon: Sparkles,
             backgroundImage: "/Service Cards images/AI Gen AI.webp",

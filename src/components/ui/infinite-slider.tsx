@@ -12,6 +12,8 @@ type InfiniteSliderProps = {
   direction?: 'horizontal' | 'vertical';
   reverse?: boolean;
   className?: string;
+  speed?: number;
+  speedOnHover?: number;
 };
 
 export function InfiniteSlider({
@@ -22,8 +24,10 @@ export function InfiniteSlider({
   direction = 'horizontal',
   reverse = false,
   className,
+  speed,
+  speedOnHover,
 }: InfiniteSliderProps) {
-  const [currentDuration, setCurrentDuration] = useState(duration);
+  const [currentDuration, setCurrentDuration] = useState(speed || duration);
   const [ref, { width, height }] = useMeasure();
   const translation = useMotionValue(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
@@ -72,17 +76,17 @@ export function InfiniteSlider({
     reverse,
   ]);
 
-  const hoverProps = durationOnHover
+  const hoverProps = (durationOnHover || speedOnHover)
     ? {
-        onHoverStart: () => {
-          setIsTransitioning(true);
-          setCurrentDuration(durationOnHover);
-        },
-        onHoverEnd: () => {
-          setIsTransitioning(true);
-          setCurrentDuration(duration);
-        },
-      }
+      onHoverStart: () => {
+        setIsTransitioning(true);
+        setCurrentDuration(speedOnHover || durationOnHover || currentDuration);
+      },
+      onHoverEnd: () => {
+        setIsTransitioning(true);
+        setCurrentDuration(speed || duration);
+      },
+    }
     : {};
 
   return (
@@ -105,4 +109,3 @@ export function InfiniteSlider({
     </div>
   );
 }
-

@@ -1,0 +1,116 @@
+/**
+ * Link Innovations - Enterprise Color System
+ * Professional, unified color palette
+ */
+
+:root {
+  /* Primary Colors */
+  --color-primary: #0a0e27;
+  --color-primary-rgb: 10, 14, 39;
+
+  /* Accent Colors */
+  --color-accent-cyan: #00d9ff;
+  --color-accent-cyan-rgb: 0, 217, 255;
+
+  --color-accent-indigo: #6366f1;
+  --color-accent-indigo-rgb: 99, 102, 241;
+
+  --color-accent-emerald: #10b981;
+  --color-accent-emerald-rgb: 16, 185, 129;
+
+  --color-accent-purple: #8b5cf6;
+  --color-accent-purple-rgb: 139, 92, 246;
+
+  /* Neutral Colors */
+  --color-neutral-dark: #1e293b;
+  --color-neutral-light: #f1f5f9;
+  --color-neutral-medium: #64748b;
+
+  /* Text Colors */
+  --color-text-primary-dark: #ffffff;
+  --color-text-primary-light: #0f172a;
+  --color-text-secondary-dark: rgba(255, 255, 255, 0.7);
+  --color-text-secondary-light: #64748b;
+  --color-text-tertiary-dark: rgba(255, 255, 255, 0.5);
+  --color-text-tertiary-light: #94a3b8;
+
+  /* Background Colors */
+  --color-bg-primary: #000000;
+  --color-bg-secondary: #0a0e27;
+  --color-bg-tertiary: #1e293b;
+
+  /* Gradient Presets */
+  --gradient-primary: linear-gradient(
+    135deg,
+    var(--color-accent-cyan),
+    var(--color-accent-indigo)
+  );
+  --gradient-secondary: linear-gradient(
+    135deg,
+    var(--color-accent-indigo),
+    var(--color-accent-emerald)
+  );
+  --gradient-tertiary: linear-gradient(
+    135deg,
+    var(--color-accent-emerald),
+    var(--color-accent-cyan)
+  );
+  --gradient-accent: linear-gradient(
+    135deg,
+    var(--color-accent-cyan),
+    var(--color-accent-purple)
+  );
+
+  /* Glass Morphism */
+  --glass-background: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  --shadow-glow-cyan: 0 0 20px rgba(0, 217, 255, 0.3);
+  --shadow-glow-indigo: 0 0 20px rgba(99, 102, 241, 0.3);
+  --shadow-glow-emerald: 0 0 20px rgba(16, 185, 129, 0.3);
+}
+
+/* Utility Classes */
+.text-gradient-primary {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-secondary {
+  background: var(--gradient-secondary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.bg-gradient-primary {
+  background: var(--gradient-primary);
+}
+
+.bg-gradient-secondary {
+  background: var(--gradient-secondary);
+}
+
+.glass-card {
+  background: var(--glass-background);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+}
+
+.glass-card-strong {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}

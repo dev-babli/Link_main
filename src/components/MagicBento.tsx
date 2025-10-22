@@ -79,7 +79,7 @@ const cardData: BentoCardProps[] = [
     },
     {
         color: '#1a1a1a',
-        title: 'AI & Automation',
+        title: 'AI Solutions',
         description: 'Intelligent automation and AI-powered solutions',
         label: 'Innovation',
         icon: AIIcon,

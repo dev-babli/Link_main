@@ -66,7 +66,7 @@ const services = [
         color: "from-emerald-500/20 to-teal-500/20"
     },
     {
-        title: "AI & Automation",
+        title: "AI Solutions",
         description: "Intelligent automation that respects user privacy and provides transparent, ethical AI solutions. No hidden algorithms or data exploitation.",
         icon: "🤖",
         features: [

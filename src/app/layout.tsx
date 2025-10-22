@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono, Orbitron, Exo_2 } from "next/font/google";
 import "./globals.css";
+import "../styles/color-system.css";
+import "../styles/typography.css";
 import VisualEditsMessenger from "../visual-edits/VisualEditsMessenger";
 import ErrorReporter from "@/components/ErrorReporter";
 import Script from "next/script";

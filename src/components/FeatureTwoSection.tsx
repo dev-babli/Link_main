@@ -32,7 +32,7 @@ const features = [
   },
   {
     id: "feature-3",
-    title: "AI & Automation",
+    title: "AI Solutions",
     description:
       "Intelligent automation and predictive analytics that transform operations.",
     icon: Zap,

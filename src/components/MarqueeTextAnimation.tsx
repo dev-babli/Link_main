@@ -219,7 +219,7 @@ export default function MarqueeTextAnimation() {
                             <Wand width={80} height={80} stroke="#ffffff" strokeWidth={1.5} />
                         </div>
                         <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold text-white font-mono">
-                            AI & Automation
+                            AI Solutions
                         </h1>
                         <p className="text-lg md:text-xl text-gray-300 mt-4 max-w-2xl mx-auto">
                             Intelligent solutions that automate and optimize your processes

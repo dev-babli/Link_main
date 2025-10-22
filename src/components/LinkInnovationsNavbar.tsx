@@ -121,7 +121,7 @@ export const securityTestingServices: NavItemType[] = [
 
 export const aiDataServices: NavItemType[] = [
     {
-        title: 'AI & Automation',
+        title: 'AI Solutions',
         href: '/services/ai-automation',
         description: 'Intelligent automation solutions',
         icon: Brain,

@@ -55,7 +55,7 @@ const services = [
     },
     {
         icon: Bot,
-        title: "AI & Automation",
+        title: "AI Solutions",
         description: "Intelligent automation and AI-powered solutions",
         category: "Innovation",
         image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop",

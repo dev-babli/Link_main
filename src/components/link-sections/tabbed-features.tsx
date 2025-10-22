@@ -211,7 +211,7 @@ const LinkTabbedFeatures = () => {
                                 onClick={() => handleTabClick(tab.id)}
                                 className={`relative py-6 text-center transition-all duration-500 group ${tab.id === activeTab
                                     ? 'text-white border-b-2 border-[#4a7856] bg-[#1e3f20]/10'
-                                    : 'text-white/70 hover:text-white hover:bg-[#1e3f20]/5'
+                                    : 'text-white hover:text-white hover:bg-[#1e3f20]/5'
                                     }`}
                             >
                                 <div className="text-xs font-mono tracking-wider mb-2 transition-colors duration-300">

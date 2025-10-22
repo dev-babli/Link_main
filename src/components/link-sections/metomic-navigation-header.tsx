@@ -43,83 +43,83 @@ const navItems: NavItemType[] = [
 ];
 
 const platformSolutions = [
-    { 
-        title: "Web Development", 
+    {
+        title: "Web Development",
         href: "/services/web-development",
         description: "Modern, responsive websites that drive engagement",
         icon: Sparkles,
-        gradient: "from-blue-500 to-cyan-500",
+        gradient: "from-accent-cyan to-accent-indigo",
         image: "https://images.unsplash.com/photo-1547658719-da2b51169166?w=400&h=300&fit=crop"
     },
-    { 
-        title: "Mobile Apps", 
+    {
+        title: "Mobile Apps",
         href: "/services/mobile-apps",
         description: "Native & cross-platform mobile experiences",
         icon: Zap,
-        gradient: "from-purple-500 to-pink-500",
+        gradient: "from-accent-indigo to-accent-purple",
         image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&h=300&fit=crop"
     },
-    { 
-        title: "AI & Machine Learning", 
+    {
+        title: "AI Solutions",
         href: "/services/ai-automation",
         description: "Intelligent automation & predictive analytics",
         icon: Brain,
-        gradient: "from-violet-500 to-purple-500",
+        gradient: "from-accent-emerald to-accent-cyan",
         image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=300&fit=crop"
     },
-    { 
-        title: "Cloud Solutions", 
+    {
+        title: "Cloud Solutions",
         href: "/services/cloud-devops",
         description: "Scalable infrastructure & DevOps excellence",
         icon: Cloud,
-        gradient: "from-cyan-500 to-blue-500",
+        gradient: "from-accent-cyan to-accent-indigo",
         image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&h=300&fit=crop"
     },
-    { 
-        title: "Cybersecurity", 
+    {
+        title: "Cybersecurity",
         href: "/services/cybersecurity",
         description: "Enterprise-grade security & compliance",
         icon: Shield,
-        gradient: "from-red-500 to-orange-500",
+        gradient: "from-accent-emerald to-accent-cyan",
         image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=400&h=300&fit=crop"
     },
-    { 
-        title: "Data Analytics", 
+    {
+        title: "Data Analytics",
         href: "/services/data-analytics",
         description: "Transform data into actionable insights",
         icon: BarChart3,
-        gradient: "from-green-500 to-emerald-500",
+        gradient: "from-accent-indigo to-accent-emerald",
         image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop"
     },
 ];
 
 const platformIntegrations = [
-    { 
-        title: "Healthcare", 
+    {
+        title: "Healthcare",
         href: "/industries/healthcare",
         description: "Digital health solutions that improve patient care",
         image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=400&h=300&fit=crop"
     },
-    { 
-        title: "Banking & Finance", 
+    {
+        title: "Banking & Finance",
         href: "/industries/banking",
         description: "Secure fintech platforms & payment solutions",
         image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400&h=300&fit=crop"
     },
-    { 
-        title: "Retail & E-commerce", 
+    {
+        title: "Retail & E-commerce",
         href: "/industries/retail",
         description: "Seamless shopping experiences that convert",
         image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=300&fit=crop"
     },
-    { 
-        title: "Manufacturing", 
+    {
+        title: "Manufacturing",
         href: "/industries/manufacturing",
         description: "Smart factory & supply chain optimization",
         image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=300&fit=crop"
     },
-    { 
-        title: "Education", 
+    {
+        title: "Education",
         href: "/industries/education",
         description: "E-learning platforms that engage students",
         image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=400&h=300&fit=crop"
@@ -171,7 +171,7 @@ export default function LinkMetomicNavigationHeader() {
     const headerBlur = useTransform(scrollY, [0, 100], [0, 24]);
 
     return (
-        <motion.header 
+        <motion.header
             className="fixed top-0 left-0 right-0 z-50 border-b border-white/10"
             style={{
                 backgroundColor: `rgba(0, 0, 0, ${0.4})`,
@@ -181,7 +181,7 @@ export default function LinkMetomicNavigationHeader() {
             <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-purple-500/5 to-pink-500/5"></div>
             <div className="container mx-auto flex h-16 items-center justify-between px-6 lg:px-20 relative">
                 <Link href="/" aria-label="home" className="flex items-center gap-3 group">
-                    <motion.div 
+                    <motion.div
                         className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/20"
                         whileHover={{ scale: 1.05, rotate: 5 }}
                         transition={{ type: "spring", stiffness: 400, damping: 10 }}
@@ -207,7 +207,7 @@ export default function LinkMetomicNavigationHeader() {
                                     </NavigationMenuTrigger>
                                     <NavigationMenuContent>
                                         {item.title === "Services" ? (
-                                            <motion.div 
+                                            <motion.div
                                                 className="p-8 bg-black/95 backdrop-blur-2xl border border-white/10 w-[70rem] rounded-2xl shadow-2xl overflow-hidden"
                                                 initial={{ opacity: 0, y: 10 }}
                                                 animate={{ opacity: 1, y: 0 }}
@@ -217,7 +217,7 @@ export default function LinkMetomicNavigationHeader() {
                                                 <div className="relative">
                                                     <div className="mb-8">
                                                         <h3 className="text-2xl font-bold text-white mb-2">Our Services</h3>
-                                                        <p className="text-white/60">Transform your business with cutting-edge technology</p>
+                                                        <p className="text-white">Transform your business with cutting-edge technology</p>
                                                     </div>
                                                     <div className="grid grid-cols-3 gap-4 mb-8">
                                                         {platformSolutions.map((sol, index) => {
@@ -240,7 +240,7 @@ export default function LinkMetomicNavigationHeader() {
                                                                                     <Icon className="w-6 h-6 text-white" />
                                                                                 </div>
                                                                                 <h4 className="text-white font-semibold mb-2 group-hover:text-blue-400 transition-colors">{sol.title}</h4>
-                                                                                <p className="text-white/60 text-sm leading-relaxed">{sol.description}</p>
+                                                                                <p className="text-white text-sm leading-relaxed">{sol.description}</p>
                                                                                 <div className="flex items-center gap-2 mt-4 text-blue-400 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
                                                                                     Learn more
                                                                                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -253,7 +253,7 @@ export default function LinkMetomicNavigationHeader() {
                                                         })}
                                                     </div>
                                                     <div className="flex items-center justify-between pt-6 border-t border-white/10">
-                                                        <p className="text-white/60 text-sm">Need a custom solution?</p>
+                                                        <p className="text-white text-sm">Need a custom solution?</p>
                                                         <Link href="/contact" className="px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-medium hover:shadow-lg hover:shadow-blue-500/20 transition-all">
                                                             Contact Us
                                                         </Link>
@@ -261,7 +261,7 @@ export default function LinkMetomicNavigationHeader() {
                                                 </div>
                                             </motion.div>
                                         ) : item.title === "Industries" ? (
-                                            <motion.div 
+                                            <motion.div
                                                 className="p-8 bg-black/95 backdrop-blur-2xl border border-white/10 w-[60rem] rounded-2xl shadow-2xl overflow-hidden"
                                                 initial={{ opacity: 0, y: 10 }}
                                                 animate={{ opacity: 1, y: 0 }}
@@ -271,7 +271,7 @@ export default function LinkMetomicNavigationHeader() {
                                                 <div className="relative">
                                                     <div className="mb-6">
                                                         <h3 className="text-2xl font-bold text-white mb-2">Industries We Serve</h3>
-                                                        <p className="text-white/60">Specialized solutions for every sector</p>
+                                                        <p className="text-white">Specialized solutions for every sector</p>
                                                     </div>
                                                     <div className="grid grid-cols-2 gap-4 mb-6">
                                                         {platformIntegrations.map((industry, index) => (
@@ -290,7 +290,7 @@ export default function LinkMetomicNavigationHeader() {
                                                                         </div>
                                                                         <div className="relative p-5 h-full flex flex-col justify-end">
                                                                             <h4 className="text-white font-bold text-lg mb-1 group-hover:text-blue-400 transition-colors">{industry.title}</h4>
-                                                                            <p className="text-white/70 text-sm">{industry.description}</p>
+                                                                            <p className="text-white text-sm">{industry.description}</p>
                                                                         </div>
                                                                     </motion.div>
                                                                 </Link>
@@ -314,7 +314,7 @@ export default function LinkMetomicNavigationHeader() {
                                                                         <div className="relative p-4 bg-gradient-to-t from-black/90 to-transparent">
                                                                             <div className="text-blue-400 text-xs font-bold mb-1">{study.stats}</div>
                                                                             <div className="text-white text-sm font-semibold mb-1 line-clamp-1">{study.title}</div>
-                                                                            <div className="text-white/60 text-xs line-clamp-2">{study.description}</div>
+                                                                            <div className="text-white text-xs line-clamp-2">{study.description}</div>
                                                                         </div>
                                                                     </motion.div>
                                                                 </Link>
@@ -324,7 +324,7 @@ export default function LinkMetomicNavigationHeader() {
                                                 </div>
                                             </motion.div>
                                         ) : (
-                                            <motion.div 
+                                            <motion.div
                                                 className="p-6 bg-black/95 backdrop-blur-2xl border border-white/10 w-64 rounded-2xl shadow-2xl"
                                                 initial={{ opacity: 0, y: 10 }}
                                                 animate={{ opacity: 1, y: 0 }}
@@ -335,8 +335,8 @@ export default function LinkMetomicNavigationHeader() {
                                                     <p className="text-white/80 text-sm mb-4">
                                                         {item.title} links coming soon
                                                     </p>
-                                                    <Link 
-                                                        href={item.href} 
+                                                    <Link
+                                                        href={item.href}
                                                         className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors text-sm font-medium"
                                                     >
                                                         View all
@@ -414,7 +414,7 @@ export default function LinkMetomicNavigationHeader() {
                                             </AccordionTrigger>
                                             <AccordionContent>
                                                 <div className="pl-4 space-y-3 py-2">
-                                                    <p className="text-white/70">
+                                                    <p className="text-white">
                                                         Links for {item.title}
                                                     </p>
                                                 </div>

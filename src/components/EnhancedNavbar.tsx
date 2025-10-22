@@ -217,13 +217,13 @@ export function EnhancedNavbar() {
                                                         <div className="w-8 h-8 rounded-lg overflow-hidden group-hover:scale-110 transition-transform duration-300">
                                                             <img
                                                                 src="/Service Cards images/AI Gen AI.webp"
-                                                                alt="AI & Automation"
+                                                                alt="AI Solutions"
                                                                 className="w-full h-full object-cover"
                                                             />
                                                         </div>
                                                     </div>
                                                     <div className="flex flex-col items-start justify-center">
-                                                        <h5 className="font-semibold text-white group-hover:text-green-400 transition-colors">AI & Automation</h5>
+                                                        <h5 className="font-semibold text-white group-hover:text-green-400 transition-colors">AI Solutions</h5>
                                                         <p className="text-small text-gray-300 hidden md:block">
                                                             Intelligent automation solutions
                                                         </p>
@@ -369,7 +369,7 @@ export function EnhancedNavbar() {
                                                         <div className="relative w-full pt-[66.66%]">
                                                             <img
                                                                 src="/Service Cards images/AI Gen AI.webp"
-                                                                alt="AI & Automation"
+                                                                alt="AI Solutions"
                                                                 className="absolute inset-0 size-full object-cover rounded-lg"
                                                             />
                                                         </div>

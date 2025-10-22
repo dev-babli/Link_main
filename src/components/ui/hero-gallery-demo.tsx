@@ -20,7 +20,7 @@ const IMAGES = [
     },
     {
         url: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&crop=center",
-        title: "AI & Automation",
+        title: "AI Solutions",
         description: "Intelligent solutions that streamline processes and boost productivity"
     },
     {

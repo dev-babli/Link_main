@@ -31,11 +31,11 @@ export const ParallaxSection = ({
         offset: ["start end", "end start"]
     });
 
-    // Different intensity levels
+    // Different intensity levels - ENHANCED for better visibility
     const intensityMap = {
-        light: { y: [30, -30], opacity: [0.3, 0.6, 0.3], orbY: 75 },
-        medium: { y: [50, -50], opacity: [0.3, 0.7, 0.3], orbY: 100 },
-        heavy: { y: [100, -100], opacity: [0.2, 0.8, 0.2], orbY: 150 }
+        light: { y: [30, -30], opacity: [0.5, 0.8, 0.5], orbY: 75, orbOpacity: 0.3 },
+        medium: { y: [50, -50], opacity: [0.6, 0.9, 0.6], orbY: 100, orbOpacity: 0.4 },
+        heavy: { y: [100, -100], opacity: [0.7, 1, 0.7], orbY: 150, orbOpacity: 0.5 }
     };
 
     const settings = intensityMap[intensity];
@@ -53,15 +53,20 @@ export const ParallaxSection = ({
         >
             {addOrbs && (
                 <>
-                    {/* Left floating orb */}
+                    {/* Left floating orb - ENHANCED */}
                     <motion.div
-                        className={`absolute top-20 left-10 w-64 h-64 bg-gradient-to-br ${orbColors.left} rounded-full blur-3xl pointer-events-none`}
-                        style={{ y: orbY1 }}
+                        className={`absolute top-20 left-10 w-96 h-96 bg-gradient-to-br ${orbColors.left} rounded-full blur-3xl pointer-events-none opacity-${Math.round(settings.orbOpacity * 100)}`}
+                        style={{ y: orbY1, opacity: settings.orbOpacity }}
                     />
-                    {/* Right floating orb */}
+                    {/* Right floating orb - ENHANCED */}
                     <motion.div
-                        className={`absolute bottom-20 right-10 w-80 h-80 bg-gradient-to-br ${orbColors.right} rounded-full blur-3xl pointer-events-none`}
-                        style={{ y: orbY2 }}
+                        className={`absolute bottom-20 right-10 w-[500px] h-[500px] bg-gradient-to-br ${orbColors.right} rounded-full blur-3xl pointer-events-none opacity-${Math.round(settings.orbOpacity * 100)}`}
+                        style={{ y: orbY2, opacity: settings.orbOpacity }}
+                    />
+                    {/* Center ambient glow - NEW */}
+                    <motion.div
+                        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-br from-accent-cyan/10 to-accent-indigo/10 rounded-full blur-3xl pointer-events-none"
+                        style={{ opacity: opacity }}
                     />
                 </>
             )}

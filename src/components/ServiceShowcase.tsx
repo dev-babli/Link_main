@@ -44,7 +44,7 @@ const services = [
     },
     {
         id: "ai-automation",
-        title: "AI & Automation",
+        title: "AI Solutions",
         icon: <Brain size={24} />,
         description: "Leverage artificial intelligence to automate processes, gain insights, and create intelligent solutions that adapt to your business needs.",
         imageUrl: "/herosectionimages/Agentic Ai.webp",

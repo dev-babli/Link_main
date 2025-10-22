@@ -5,65 +5,98 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Badge } from '@/components/ui/badge';
 import { Card } from '@/components/ui/card';
-import { 
-  AnimatedBuilding2,
-  AnimatedShoppingCart,
-  AnimatedHeart,
-  AnimatedBriefcase,
-  AnimatedGraduationCap,
-  AnimatedPlane,
-  EntranceIcon
+import {
+    AnimatedBuilding2,
+    AnimatedShoppingCart,
+    AnimatedHeart,
+    AnimatedBriefcase,
+    AnimatedGraduationCap,
+    AnimatedPlane,
+    EntranceIcon
 } from '@/components/AnimatedIcons';
 
 const industries = [
-  {
-    AnimatedIcon: AnimatedBuilding2,
-    icon: Building2,
-    name: 'Real Estate',
-    description: 'Digital solutions for property management and real estate platforms',
-    projects: '50+ Projects',
-    color: 'from-cyan-500 to-teal-500',
-  },
-  {
-    AnimatedIcon: AnimatedShoppingCart,
-    icon: ShoppingCart,
-    name: 'E-Commerce',
-    description: 'Scalable online stores and marketplace solutions',
-    projects: '80+ Projects',
-    color: 'from-teal-500 to-green-500',
-  },
-  {
-    AnimatedIcon: AnimatedHeart,
-    icon: Heart,
-    name: 'Healthcare',
-    description: 'HIPAA-compliant medical and health tech platforms',
-    projects: '40+ Projects',
-    color: 'from-green-500 to-emerald-500',
-  },
-  {
-    AnimatedIcon: AnimatedBriefcase,
-    icon: Briefcase,
-    name: 'FinTech',
-    description: 'Secure financial technology and payment solutions',
-    projects: '60+ Projects',
-    color: 'from-emerald-500 to-blue-500',
-  },
-  {
-    AnimatedIcon: AnimatedGraduationCap,
-    icon: GraduationCap,
-    name: 'Education',
-    description: 'E-learning platforms and educational technology',
-    projects: '45+ Projects',
-    color: 'from-blue-500 to-purple-500',
-  },
-  {
-    AnimatedIcon: AnimatedPlane,
-    icon: Plane,
-    name: 'Travel & Tourism',
-    description: 'Booking systems and travel management platforms',
-    projects: '35+ Projects',
-    color: 'from-purple-500 to-cyan-500',
-  },
+    {
+        AnimatedIcon: AnimatedBuilding2,
+        icon: Building2,
+        name: 'Real Estate',
+        description: 'Digital solutions for property management and real estate platforms',
+        projects: '50+ Projects',
+        color: 'from-cyan-500 to-teal-500',
+        solutions: ['Property Management Systems', 'Virtual Tours', 'CRM Platforms', 'Market Analytics'],
+    },
+    {
+        AnimatedIcon: AnimatedShoppingCart,
+        icon: ShoppingCart,
+        name: 'E-Commerce',
+        description: 'Scalable online stores and marketplace solutions',
+        projects: '80+ Projects',
+        color: 'from-teal-500 to-green-500',
+        solutions: ['Online Marketplaces', 'Payment Gateways', 'Inventory Management', 'Customer Analytics'],
+    },
+    {
+        AnimatedIcon: AnimatedHeart,
+        icon: Heart,
+        name: 'Healthcare',
+        description: 'HIPAA-compliant medical and health tech platforms',
+        projects: '40+ Projects',
+        color: 'from-green-500 to-emerald-500',
+        solutions: ['Telemedicine Platforms', 'Electronic Health Records', 'Medical Device Integration', 'Health Analytics'],
+    },
+    {
+        AnimatedIcon: AnimatedBriefcase,
+        icon: Briefcase,
+        name: 'FinTech',
+        description: 'Secure financial technology and payment solutions',
+        projects: '60+ Projects',
+        color: 'from-emerald-500 to-blue-500',
+        solutions: ['Digital Banking', 'Payment Processing', 'Risk Management', 'Regulatory Compliance'],
+    },
+    {
+        AnimatedIcon: AnimatedGraduationCap,
+        icon: GraduationCap,
+        name: 'Education',
+        description: 'E-learning platforms and educational technology',
+        projects: '45+ Projects',
+        color: 'from-blue-500 to-purple-500',
+        solutions: ['Learning Management Systems', 'Virtual Classrooms', 'Student Portals', 'Assessment Tools'],
+    },
+    {
+        AnimatedIcon: AnimatedPlane,
+        icon: Plane,
+        name: 'Travel & Tourism',
+        description: 'Booking systems and travel management platforms',
+        projects: '35+ Projects',
+        color: 'from-purple-500 to-cyan-500',
+        solutions: ['Booking Platforms', 'Travel Management', 'Customer Portals', 'Revenue Optimization'],
+    },
+    {
+        AnimatedIcon: AnimatedBuilding2,
+        icon: Building2,
+        name: 'Manufacturing',
+        description: 'IoT and automation solutions for industrial operations',
+        projects: '55+ Projects',
+        color: 'from-orange-500 to-red-500',
+        solutions: ['Smart Manufacturing', 'Supply Chain Management', 'Quality Control', 'Predictive Maintenance'],
+    },
+    {
+        AnimatedIcon: AnimatedHeart,
+        icon: Heart,
+        name: 'Energy & Utilities',
+        description: 'Smart grid and energy management solutions',
+        projects: '30+ Projects',
+        color: 'from-yellow-500 to-orange-500',
+        solutions: ['Smart Grid Systems', 'Energy Analytics', 'Asset Management', 'Customer Portals'],
+    },
+    {
+        AnimatedIcon: AnimatedBriefcase,
+        icon: Briefcase,
+        name: 'Government',
+        description: 'Digital transformation for public sector organizations',
+        projects: '25+ Projects',
+        color: 'from-indigo-500 to-blue-500',
+        solutions: ['Citizen Portals', 'Digital Services', 'Data Management', 'Security Compliance'],
+    },
 ];
 
 export default function IndustrySection() {
@@ -93,13 +126,13 @@ export default function IndustrySection() {
                         Industries We Serve
                     </div>
                     <h2 className="text-4xl font-light tracking-tight text-white sm:text-5xl lg:text-6xl mb-6">
-                        Empowering{' '}
+                        Industries{' '}
                         <span className="font-normal italic bg-gradient-to-r from-white via-purple-200 to-white bg-clip-text text-transparent">
-                            Every Industry
+                            We Serve
                         </span>
                     </h2>
                     <p className="text-xl text-white/60 max-w-3xl mx-auto">
-                        From healthcare to finance, we deliver specialized solutions tailored to your industry's unique challenges and opportunities
+                        We deliver tailored technology solutions across diverse industries, helping businesses transform digitally and achieve measurable results.
                     </p>
                 </motion.div>
 
@@ -114,9 +147,9 @@ export default function IndustrySection() {
                         >
                             <Card className="group p-6 glass-card hover:glass-strong transition-all duration-500 h-full">
                                 {/* Icon */}
-                                <motion.div 
+                                <motion.div
                                     className={`inline-flex p-3 rounded-lg bg-gradient-to-br ${industry.color} mb-4`}
-                                    whileHover={{ 
+                                    whileHover={{
                                         scale: 1.1,
                                         boxShadow: "0 0 20px rgba(255, 255, 255, 0.3)"
                                     }}
@@ -133,6 +166,22 @@ export default function IndustrySection() {
                                     {industry.description}
                                 </p>
 
+                                {/* Solutions List */}
+                                <div className="mb-4">
+                                    <div className="flex flex-wrap gap-1">
+                                        {industry.solutions.slice(0, 2).map((solution, idx) => (
+                                            <span key={idx} className="text-xs bg-white/5 text-white/70 px-2 py-1 rounded-full">
+                                                {solution}
+                                            </span>
+                                        ))}
+                                        {industry.solutions.length > 2 && (
+                                            <span className="text-xs bg-white/5 text-white/70 px-2 py-1 rounded-full">
+                                                +{industry.solutions.length - 2} more
+                                            </span>
+                                        )}
+                                    </div>
+                                </div>
+
                                 {/* Projects Count */}
                                 <div className="flex items-center justify-between pt-4 border-t border-white/10">
                                     <span className={`text-xs font-medium bg-gradient-to-r ${industry.color} bg-clip-text text-transparent`}>
@@ -148,6 +197,39 @@ export default function IndustrySection() {
                         </motion.div>
                     ))}
                 </div>
+
+                {/* Call to Action */}
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+                    transition={{ duration: 0.8, delay: 0.5 }}
+                    className="text-center mt-16"
+                >
+                    <div className="glass-card p-8 max-w-4xl mx-auto">
+                        <h3 className="text-2xl font-medium text-white mb-4">
+                            Ready to Transform Your Industry?
+                        </h3>
+                        <p className="text-white/60 mb-6 max-w-2xl mx-auto">
+                            Let's discuss how our industry-specific solutions can drive your digital transformation and deliver measurable results for your business.
+                        </p>
+                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                            <motion.button
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
+                                className="px-8 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all duration-300"
+                            >
+                                Get Industry Solutions
+                            </motion.button>
+                            <motion.button
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
+                                className="px-8 py-3 border border-white/20 text-white rounded-lg font-medium hover:bg-white/5 transition-all duration-300"
+                            >
+                                View Case Studies
+                            </motion.button>
+                        </div>
+                    </div>
+                </motion.div>
             </div>
         </section>
     );

@@ -18,10 +18,10 @@ const caseStudies = [
         industry: 'Technology',
         description: 'Revolutionized data processing with custom AI solutions',
         image: '/artificial-intelligence1.jpg',
-    metrics: [
-      { icon: TrendingUp, AnimatedIcon: AnimatedTrendingUp, label: '300% Efficiency', color: 'text-green-400' },
-      { icon: Users, AnimatedIcon: AnimatedUsers, label: '50K+ Users', color: 'text-cyan-400' },
-    ],
+        metrics: [
+            { icon: TrendingUp, AnimatedIcon: AnimatedTrendingUp, label: '300% Efficiency', color: 'text-green-400' },
+            { icon: Users, AnimatedIcon: AnimatedUsers, label: '50K+ Users', color: 'text-cyan-400' },
+        ],
         tags: ['AI/ML', 'Cloud', 'Analytics'],
     },
     {
@@ -31,10 +31,10 @@ const caseStudies = [
         industry: 'Healthcare',
         description: 'HIPAA-compliant platform serving 10,000+ patients',
         image: '/chatbot1.jpg',
-    metrics: [
-      { icon: Users, AnimatedIcon: AnimatedUsers, label: '10K+ Patients', color: 'text-purple-400' },
-      { icon: Zap, AnimatedIcon: AnimatedZap, label: '3x Engagement', color: 'text-amber-400' },
-    ],
+        metrics: [
+            { icon: Users, AnimatedIcon: AnimatedUsers, label: '10K+ Patients', color: 'text-purple-400' },
+            { icon: Zap, AnimatedIcon: AnimatedZap, label: '3x Engagement', color: 'text-amber-400' },
+        ],
         tags: ['Healthcare', 'Mobile', 'Security'],
     },
     {
@@ -44,10 +44,10 @@ const caseStudies = [
         industry: 'E-Commerce',
         description: 'Scaled to handle 1M+ daily visitors with 99.9% uptime',
         image: '/app-development3.jpg',
-    metrics: [
-      { icon: TrendingUp, AnimatedIcon: AnimatedTrendingUp, label: '1M+ Visitors', color: 'text-green-400' },
-      { icon: Zap, AnimatedIcon: AnimatedZap, label: '99.9% Uptime', color: 'text-cyan-400' },
-    ],
+        metrics: [
+            { icon: TrendingUp, AnimatedIcon: AnimatedTrendingUp, label: '1M+ Visitors', color: 'text-green-400' },
+            { icon: Zap, AnimatedIcon: AnimatedZap, label: '99.9% Uptime', color: 'text-cyan-400' },
+        ],
         tags: ['E-Commerce', 'Cloud', 'DevOps'],
     },
 ];
@@ -61,7 +61,7 @@ const blogPosts = [
         authorImage: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop',
         date: '2024-01-15',
         readTime: '5 min',
-        category: 'AI & Automation',
+        category: 'AI Solutions',
         image: '/artificial-intelligence.jpg',
     },
     {
@@ -113,8 +113,8 @@ export default function BlogCaseStudiesSection() {
                 >
                     <div className="flex items-center justify-between mb-12">
                         <div>
-              <div className="inline-flex items-center rounded-full glass-button px-4 py-2 text-sm font-medium text-white/80 mb-4">
-                <span className="w-2 h-2 bg-purple-500 rounded-full mr-2 animate-pulse-glow"></span>
+                            <div className="inline-flex items-center rounded-full glass-button px-4 py-2 text-sm font-medium text-white/80 mb-4">
+                                <span className="w-2 h-2 bg-purple-500 rounded-full mr-2 animate-pulse-glow"></span>
                                 Success Stories
                             </div>
                             <h2 className="text-4xl font-light tracking-tight text-white sm:text-5xl mb-2">
@@ -164,15 +164,15 @@ export default function BlogCaseStudiesSection() {
                                             {study.description}
                                         </p>
 
-                    {/* Metrics */}
-                    <div className="flex gap-4 mb-4 text-xs">
-                      {study.metrics.map((metric, idx) => (
-                        <div key={idx} className="flex items-center gap-1">
-                          <metric.AnimatedIcon className={`w-4 h-4 ${metric.color}`} size={16} />
-                          <span className="text-white/60">{metric.label}</span>
-                        </div>
-                      ))}
-                    </div>
+                                        {/* Metrics */}
+                                        <div className="flex gap-4 mb-4 text-xs">
+                                            {study.metrics.map((metric, idx) => (
+                                                <div key={idx} className="flex items-center gap-1">
+                                                    <metric.AnimatedIcon className={`w-4 h-4 ${metric.color}`} size={16} />
+                                                    <span className="text-white/60">{metric.label}</span>
+                                                </div>
+                                            ))}
+                                        </div>
 
                                         {/* Client */}
                                         <div className="flex items-center justify-between pt-4 border-t border-white/10">
@@ -202,8 +202,8 @@ export default function BlogCaseStudiesSection() {
                 >
                     <div className="flex items-center justify-between mb-12">
                         <div>
-              <div className="inline-flex items-center rounded-full glass-button px-4 py-2 text-sm font-medium text-white/80 mb-4">
-                <span className="w-2 h-2 bg-purple-500 rounded-full mr-2 animate-pulse-glow"></span>
+                            <div className="inline-flex items-center rounded-full glass-button px-4 py-2 text-sm font-medium text-white/80 mb-4">
+                                <span className="w-2 h-2 bg-purple-500 rounded-full mr-2 animate-pulse-glow"></span>
                                 Insights & Knowledge
                             </div>
                             <h2 className="text-4xl font-light tracking-tight text-white sm:text-5xl mb-2">

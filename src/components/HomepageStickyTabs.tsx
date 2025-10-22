@@ -236,7 +236,7 @@ export const HomepageStickyTabs: React.FC = () => {
     },
     {
       id: "ai-automation",
-      title: "AI & Automation",
+      title: "AI Solutions",
       icon: <Brain size={32} />,
       description: "Leverage artificial intelligence to automate processes, gain insights, and create intelligent solutions that adapt to your business needs.",
       features: [
