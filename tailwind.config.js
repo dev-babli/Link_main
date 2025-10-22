@@ -53,6 +53,7 @@ module.exports = {
       animation: {
         'marquee': 'marquee 20s linear infinite',
         'loop-vertically': 'loop-vertically 8s ease-in-out infinite',
+        'shimmer': 'shimmer 3s ease-in-out infinite',
         'shimmer-magic': 'shimmer-magic 2s ease-in-out infinite',
         'gradient-flow': 'gradient-flow 3s ease-in-out infinite',
         'ripple-magic': 'ripple-magic 1.5s ease-out infinite',
@@ -77,6 +78,10 @@ module.exports = {
         'loop-vertically': {
           '0%, 100%': { transform: 'translateY(0px)' },
           '50%': { transform: 'translateY(-20px)' },
+        },
+        'shimmer': {
+          '0%': { transform: 'translateX(-100%)' },
+          '100%': { transform: 'translateX(100%)' },
         },
         'shimmer-magic': {
           '0%': { backgroundPosition: '-200% 0' },

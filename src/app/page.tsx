@@ -10,7 +10,6 @@ import { PerformanceOptimizer } from "@/components/PerformanceOptimizer";
 import LinkMetomicNavigationHeader from "@/components/link-sections/metomic-navigation-header";
 import { HeroGeometric } from "@/components/ui/shape-landing-hero";
 import { HeroPreviewWalls } from "@/components/ui/hero-preview-walls";
-import { StaggerTestimonials } from "@/components/ui/stagger-testimonials";
 import { ParallaxSection } from "@/components/ui/parallax-section";
 import LinkCoreValuesSection from "@/components/link-sections/link-core-values-section";
 import InfiniteMenuSection from "@/components/InfiniteMenuSection";
@@ -31,7 +30,6 @@ import { LogoSection } from "@/components/LogosSection";
 import LinkDevexVideoSection from "@/components/link-sections/devex-video-section";
 import { HeroParallax, portfolioProducts } from "@/components/ui/hero-parallax";
 import { HomepageStickyTabs } from "@/components/HomepageStickyTabs";
-import IndustryExpandableSection from "@/components/IndustryExpandableSection";
 import { ServiceShowcase } from "@/components/ServiceShowcase";
 import { CaseStudiesShowcase } from "@/components/CaseStudiesShowcase";
 import { LinkInnovationsHeroDemo } from "@/components/ui/hero-gallery-demo";
@@ -184,10 +182,6 @@ export default function Home() {
           Goal: Show industry-specific solutions and use cases
           ═══════════════════════════════════════════════════════════════ */}
 
-                        <ParallaxSection intensity="medium" orbColors={{ left: "from-amber-500/10 to-orange-500/10", right: "from-rose-500/10 to-red-500/10" }}>
-                                <IndustryExpandableSection />
-                        </ParallaxSection>
-
                         <ParallaxSection intensity="light" orbColors={{ left: "from-green-500/10 to-emerald-500/10", right: "from-blue-500/10 to-cyan-500/10" }}>
                                 <LinkUseCasesAccordion />
                         </ParallaxSection>
@@ -204,9 +198,6 @@ export default function Home() {
                         <ParallaxSection intensity="light" orbColors={{ left: "from-indigo-500/10 to-violet-500/10", right: "from-pink-500/10 to-rose-500/10" }}>
                                 <LinkCustomerStatsCards />
                         </ParallaxSection>
-
-                        {/* Interactive Stagger Testimonials */}
-                        <StaggerTestimonials />
 
                         <ParallaxSection intensity="medium" orbColors={{ left: "from-purple-500/10 to-fuchsia-500/10", right: "from-blue-500/10 to-indigo-500/10" }}>
                                 <LinkTestimonialsCarousel />

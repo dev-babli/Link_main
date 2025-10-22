@@ -63,15 +63,8 @@ const services = [
 ];
 
 const LinkPortfolioShowcase = () => {
-    const [email, setEmail] = useState('');
     const [isHovered, setIsHovered] = useState(false);
     const scrollContainerRef = useRef<HTMLDivElement>(null);
-
-    const handleEmailSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
-        // Handle email subscription logic here
-        console.log('Email submitted:', email);
-    };
 
     // Auto-scroll functionality
     useEffect(() => {
@@ -118,36 +111,31 @@ const LinkPortfolioShowcase = () => {
     }, [isHovered]);
 
     return (
-        <section className="bg-gray-50 py-20 lg:py-32">
-            <div className="container max-w-7xl mx-auto px-4">
-                {/* Newsletter Section - Exact match to reference */}
-                <div className="text-center mb-16">
-                    <h2 className="text-2xl lg:text-3xl font-normal text-gray-800 mb-2">
-                        Get weekly top websites delivered to your inbox, every monday.
-                    </h2>
-                    <p className="text-sm text-gray-500 mb-8">
-                        No spam, only inspiration.
-                    </p>
-                    <p className="text-xs text-gray-400 mb-8">
-                        Unsubscribe anytime.
-                    </p>
+        <section className="relative py-20 lg:py-32 overflow-hidden bg-gradient-to-br from-gray-900 via-slate-800 to-gray-900">
+            {/* Animated background gradient orbs */}
+            <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
+                <div
+                    className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse"
+                    style={{ animationDelay: '1s' }}
+                ></div>
+                <div
+                    className="absolute top-1/2 left-1/2 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"
+                    style={{ animationDelay: '0.5s' }}
+                ></div>
+            </div>
 
-                    <form onSubmit={handleEmailSubmit} className="flex flex-col sm:flex-row gap-0 justify-center items-center max-w-md mx-auto">
-                        <input
-                            type="email"
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                            placeholder="Email address"
-                            className="flex-1 w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm"
-                            required
-                        />
-                        <button
-                            type="submit"
-                            className="w-full sm:w-auto px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-lg transition-colors duration-200 text-sm"
-                        >
-                            Subscribe now
-                        </button>
-                    </form>
+            <div className="container max-w-7xl mx-auto px-4 relative z-10">
+                {/* Portfolio Header Section */}
+                <div className="text-center mb-16">
+                    <h2 className="text-4xl lg:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400">
+                        Our Portfolio of Innovation
+                    </h2>
+                    <p className="text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                        Delivering excellence across industries with cutting-edge technology solutions.
+                        We are a team of passionate developers and designers that love to build amazing
+                        products that drive real business results.
+                    </p>
                 </div>
 
                 {/* Auto-scrolling Services Carousel */}
@@ -180,24 +168,37 @@ const LinkPortfolioShowcase = () => {
                                 key={`${service.id}-${index}`}
                                 className="flex-shrink-0 w-80 lg:w-96 relative group"
                             >
-                                <div className="relative rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+                                <div className="relative rounded-2xl overflow-hidden shadow-2xl hover:shadow-blue-500/20 transition-all duration-500 transform hover:-translate-y-2">
+                                    {/* Gradient border effect */}
+                                    <div className="absolute inset-0 bg-gradient-to-br from-blue-500 via-purple-500 to-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
+                                    <div className="absolute inset-[2px] bg-slate-900 rounded-2xl"></div>
+
                                     <div className="relative h-64 lg:h-80">
                                         <Image
                                             src={service.image}
                                             alt={service.title}
                                             fill
-                                            className="object-cover"
+                                            className="object-cover rounded-2xl"
                                             onError={(e) => {
                                                 const target = e.target as HTMLImageElement;
                                                 target.src = service.fallback;
                                             }}
                                         />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+                                        {/* Multi-layer gradient overlay for depth */}
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-80" />
+                                        <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 via-purple-600/20 to-cyan-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-                                        {/* Overlay Content - Matching reference style */}
-                                        <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                                            <h3 className="text-xl font-bold mb-2">{service.title}</h3>
-                                            <p className="text-xs opacity-90 leading-relaxed">
+                                        {/* Animated gradient border on hover */}
+                                        <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-shimmer"></div>
+                                        </div>
+
+                                        {/* Overlay Content */}
+                                        <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform group-hover:translate-y-0 transition-transform duration-300">
+                                            <h3 className="text-xl font-bold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-cyan-400 group-hover:from-blue-300 group-hover:to-cyan-300 transition-all duration-300">
+                                                {service.title}
+                                            </h3>
+                                            <p className="text-sm opacity-90 leading-relaxed text-gray-200">
                                                 {service.description}
                                             </p>
                                         </div>
@@ -208,8 +209,8 @@ const LinkPortfolioShowcase = () => {
                     </div>
 
                     {/* Fade edges for smooth infinite scroll effect */}
-                    <div className="absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-gray-50 to-transparent pointer-events-none z-10"></div>
-                    <div className="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-gray-50 to-transparent pointer-events-none z-10"></div>
+                    <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-gray-900 via-gray-900/50 to-transparent pointer-events-none z-10"></div>
+                    <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-gray-900 via-gray-900/50 to-transparent pointer-events-none z-10"></div>
                 </div>
             </div>
         </section>
