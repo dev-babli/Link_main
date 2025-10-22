@@ -259,7 +259,7 @@ export const StaggerTestimonials: React.FC = () => {
                 <p className="text-white/60 text-lg max-w-2xl mx-auto">
                     See what our clients have to say about transforming their businesses with Link Innovations
                 </p>
-            </div>
+            </motion.div>
 
             <motion.div
                 className="relative w-full"
@@ -329,4 +329,3 @@ export const StaggerTestimonials: React.FC = () => {
         </section>
     );
 };
-

@@ -201,9 +201,9 @@ export default function CloudServicesPage() {
             <StatisticCounter
               value={40}
               suffix="%"
-              label="Cost savings",
-            description="Through FinOps measures"
-            gradient="secondary"
+              label="Cost savings"
+              description="Through FinOps measures"
+              gradient="secondary"
             />
             <StatisticCounter
               value={99}

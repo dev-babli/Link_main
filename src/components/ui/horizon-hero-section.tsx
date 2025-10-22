@@ -32,7 +32,10 @@ export const Component = () => {
     stars: [],
     nebula: null,
     mountains: [],
-    animationId: null
+    animationId: null,
+    targetCameraX: 0,
+    targetCameraY: 30,
+    targetCameraZ: 100
   });
 
   // Initialize Three.js

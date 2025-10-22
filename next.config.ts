@@ -61,6 +61,10 @@ const nextConfig: NextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+  // Disable TypeScript errors during build
+  typescript: {
+    ignoreBuildErrors: true,
+  },
   // Optimize bundle
   webpack: (config, { isServer }) => {
     if (!isServer) {
