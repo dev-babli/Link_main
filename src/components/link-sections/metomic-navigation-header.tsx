@@ -1,9 +1,10 @@
 "use client";
 
 import * as React from "react";
+import { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
-import { ChevronDown, Menu } from "lucide-react";
+import { ChevronDown, Menu, ArrowRight, Sparkles, Zap, Shield, Brain, Cloud, BarChart3 } from "lucide-react";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 import {
     NavigationMenu,
@@ -11,6 +12,12 @@ import {
     NavigationMenuItem,
     NavigationMenuList,
     NavigationMenuTrigger,
+    NavigationMenuLink,
+    NavGridCard,
+    NavSmallItem,
+    NavLargeItem,
+    NavItemMobile,
+    type NavItemType,
 } from "@/components/ui/navigation-menu";
 import { Button } from "@/components/ui/button";
 import {
@@ -27,53 +34,161 @@ import {
 } from "@/components/ui/accordion";
 import { cn } from "@/lib/utils";
 
-const navItems = [
-    { name: "Services", href: "#" },
-    { name: "Industries", href: "#" },
-    { name: "Portfolio", href: "/portfolio" },
-    { name: "About", href: "/about" },
-    { name: "Contact", href: "/contact" },
+const navItems: NavItemType[] = [
+    { title: "Services", href: "#" },
+    { title: "Industries", href: "#" },
+    { title: "Portfolio", href: "/portfolio" },
+    { title: "About", href: "/about" },
+    { title: "Contact", href: "/contact" },
 ];
 
 const platformSolutions = [
-    { name: "Web Development", href: "/services/web-development" },
-    { name: "Mobile Apps", href: "/services/mobile-apps" },
-    { name: "AI & Machine Learning", href: "/services/ai-automation" },
-    { name: "Cloud Solutions", href: "/services/cloud-devops" },
-    { name: "Cybersecurity", href: "/services/cybersecurity" },
-    { name: "Data Analytics", href: "/services/data-analytics" },
+    { 
+        title: "Web Development", 
+        href: "/services/web-development",
+        description: "Modern, responsive websites that drive engagement",
+        icon: Sparkles,
+        gradient: "from-blue-500 to-cyan-500",
+        image: "https://images.unsplash.com/photo-1547658719-da2b51169166?w=400&h=300&fit=crop"
+    },
+    { 
+        title: "Mobile Apps", 
+        href: "/services/mobile-apps",
+        description: "Native & cross-platform mobile experiences",
+        icon: Zap,
+        gradient: "from-purple-500 to-pink-500",
+        image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&h=300&fit=crop"
+    },
+    { 
+        title: "AI & Machine Learning", 
+        href: "/services/ai-automation",
+        description: "Intelligent automation & predictive analytics",
+        icon: Brain,
+        gradient: "from-violet-500 to-purple-500",
+        image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=300&fit=crop"
+    },
+    { 
+        title: "Cloud Solutions", 
+        href: "/services/cloud-devops",
+        description: "Scalable infrastructure & DevOps excellence",
+        icon: Cloud,
+        gradient: "from-cyan-500 to-blue-500",
+        image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&h=300&fit=crop"
+    },
+    { 
+        title: "Cybersecurity", 
+        href: "/services/cybersecurity",
+        description: "Enterprise-grade security & compliance",
+        icon: Shield,
+        gradient: "from-red-500 to-orange-500",
+        image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=400&h=300&fit=crop"
+    },
+    { 
+        title: "Data Analytics", 
+        href: "/services/data-analytics",
+        description: "Transform data into actionable insights",
+        icon: BarChart3,
+        gradient: "from-green-500 to-emerald-500",
+        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop"
+    },
 ];
 
 const platformIntegrations = [
-    { name: "Healthcare", href: "/industries/healthcare" },
-    { name: "Banking & Finance", href: "/industries/banking" },
-    { name: "Retail & E-commerce", href: "/industries/retail" },
-    { name: "Manufacturing", href: "/industries/manufacturing" },
-    { name: "Education", href: "/industries/education" },
+    { 
+        title: "Healthcare", 
+        href: "/industries/healthcare",
+        description: "Digital health solutions that improve patient care",
+        image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=400&h=300&fit=crop"
+    },
+    { 
+        title: "Banking & Finance", 
+        href: "/industries/banking",
+        description: "Secure fintech platforms & payment solutions",
+        image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400&h=300&fit=crop"
+    },
+    { 
+        title: "Retail & E-commerce", 
+        href: "/industries/retail",
+        description: "Seamless shopping experiences that convert",
+        image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=300&fit=crop"
+    },
+    { 
+        title: "Manufacturing", 
+        href: "/industries/manufacturing",
+        description: "Smart factory & supply chain optimization",
+        image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=300&fit=crop"
+    },
+    { 
+        title: "Education", 
+        href: "/industries/education",
+        description: "E-learning platforms that engage students",
+        image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=400&h=300&fit=crop"
+    },
 ];
 
-const platformAITools = [
-    { name: "Technology", href: "/industries/technology" },
-    { name: "Agriculture", href: "/industries/agriculture" },
-    { name: "Energy", href: "/industries/energy" },
-    { name: "AI Solutions", href: "/services/ai-automation" },
+const caseStudies = [
+    {
+        title: "TechCorp Solutions",
+        category: "SaaS Platform",
+        description: "300% increase in user engagement",
+        href: "/case-studies/techcorp",
+        logo: "TECHCORP",
+        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop",
+        stats: "+300%"
+    },
+    {
+        title: "HealthFlow Systems",
+        category: "Healthcare",
+        description: "Streamlined patient management",
+        href: "/case-studies/healthflow",
+        logo: "HEALTHFLOW",
+        image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400&h=300&fit=crop",
+        stats: "50K+ patients"
+    },
+    {
+        title: "FinanceMax",
+        category: "Fintech",
+        description: "Enterprise-grade security",
+        href: "/case-studies/financemax",
+        logo: "FINANCEMAX",
+        image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=300&fit=crop",
+        stats: "99.9% uptime"
+    },
+    {
+        title: "EduTech Platform",
+        category: "Education",
+        description: "AI-powered learning platform",
+        href: "/case-studies/edutech",
+        logo: "EDUTECH",
+        image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?w=400&h=300&fit=crop",
+        stats: "1M+ students"
+    }
 ];
-
-// As this is a client component, we can define a reusable link component here
-const DropdownLink = ({ href, children }: { href: string, children: React.ReactNode }) => (
-    <li>
-        <Link href={href} className="block text-sm hover:text-[#8B7FE8] transition-colors duration-200">
-            {children}
-        </Link>
-    </li>
-);
 
 export default function LinkMetomicNavigationHeader() {
+    const { scrollY } = useScroll();
+    const headerBg = useTransform(scrollY, [0, 100], [0, 0.95]);
+    const headerBlur = useTransform(scrollY, [0, 100], [0, 24]);
+
     return (
-        <header className="fixed top-0 left-0 right-0 z-50 bg-[#1A1A1A] h-20">
-            <div className="container mx-auto flex h-full items-center justify-between px-6 lg:px-20">
-                <Link href="/" aria-label="home">
-                    <span className="text-2xl font-bold bg-gradient-to-r from-orange-400 to-purple-400 bg-clip-text text-transparent">
+        <motion.header 
+            className="fixed top-0 left-0 right-0 z-50 border-b border-white/10"
+            style={{
+                backgroundColor: `rgba(0, 0, 0, ${0.4})`,
+                backdropFilter: `blur(${12}px) saturate(180%)`,
+            }}
+        >
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-purple-500/5 to-pink-500/5"></div>
+            <div className="container mx-auto flex h-16 items-center justify-between px-6 lg:px-20 relative">
+                <Link href="/" aria-label="home" className="flex items-center gap-3 group">
+                    <motion.div 
+                        className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/20"
+                        whileHover={{ scale: 1.05, rotate: 5 }}
+                        transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                    >
+                        <span className="text-white text-lg font-bold">L</span>
+                    </motion.div>
+                    <span className="text-xl font-semibold text-white group-hover:text-blue-400 transition-colors">
                         Link Innovations
                     </span>
                 </Link>
@@ -81,66 +196,154 @@ export default function LinkMetomicNavigationHeader() {
                 {/* Desktop Navigation */}
                 <nav className="hidden lg:flex flex-1 justify-center">
                     <NavigationMenu>
-                        <NavigationMenuList>
+                        <NavigationMenuList className="flex items-center gap-8">
                             {navItems.map((item) => (
-                                <NavigationMenuItem key={item.name}>
-                                    <NavigationMenuTrigger
-                                        className="bg-transparent text-white text-base font-normal hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent group"
-                                    >
-                                        <span className="relative py-2 after:absolute after:bottom-0 after:left-0 after:h-px after:bg-white after:w-0 after:transition-all after:duration-300 group-hover:after:w-full group-data-[state=open]:after:w-full">
-                                            {item.name}
+                                <NavigationMenuItem key={item.title}>
+                                    <NavigationMenuTrigger className="bg-transparent text-white/90 text-base font-medium hover:text-white hover:bg-white/5 focus:bg-white/5 data-[state=open]:bg-white/5 data-[state=open]:text-white group border-none px-3 py-2 h-auto rounded-lg transition-all">
+                                        <span className="flex items-center gap-1">
+                                            {item.title}
+                                            <ChevronDown className="w-4 h-4 transition-transform duration-300 group-data-[state=open]:rotate-180" />
                                         </span>
                                     </NavigationMenuTrigger>
                                     <NavigationMenuContent>
-                                        {item.name === "Services" ? (
-                                            <div className="p-8 bg-background-secondary text-white w-[56rem] animate-in fade-in">
-                                                <div className="grid grid-cols-3 gap-8 ">
-                                                    <div>
-                                                        <h3 className="text-xs font-semibold tracking-widest text-text-tertiary uppercase mb-4">
-                                                            Core Services
-                                                        </h3>
-                                                        <ul className="space-y-3">
-                                                            {platformSolutions.map((sol) => (
-                                                                <DropdownLink key={sol.name} href={sol.href}>{sol.name}</DropdownLink>
-                                                            ))}
-                                                        </ul>
+                                        {item.title === "Services" ? (
+                                            <motion.div 
+                                                className="p-8 bg-black/95 backdrop-blur-2xl border border-white/10 w-[70rem] rounded-2xl shadow-2xl overflow-hidden"
+                                                initial={{ opacity: 0, y: 10 }}
+                                                animate={{ opacity: 1, y: 0 }}
+                                                transition={{ duration: 0.3 }}
+                                            >
+                                                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-pink-500/10"></div>
+                                                <div className="relative">
+                                                    <div className="mb-8">
+                                                        <h3 className="text-2xl font-bold text-white mb-2">Our Services</h3>
+                                                        <p className="text-white/60">Transform your business with cutting-edge technology</p>
                                                     </div>
-                                                    <div>
-                                                        <h3 className="text-xs font-semibold tracking-widest text-text-tertiary uppercase mb-4">
-                                                            Key Industries
-                                                        </h3>
-                                                        <ul className="space-y-3">
-                                                            {platformIntegrations.map((integ) => (
-                                                                <DropdownLink key={integ.name} href={integ.href}>{integ.name}</DropdownLink>
-                                                            ))}
-                                                            <li>
-                                                                <Link
-                                                                    href="/industries"
-                                                                    className="text-sm font-medium text-accent-purple-primary hover:underline"
-                                                                >
-                                                                    All Industries →
-                                                                </Link>
-                                                            </li>
-                                                        </ul>
+                                                    <div className="grid grid-cols-3 gap-4 mb-8">
+                                                        {platformSolutions.map((sol, index) => {
+                                                            const Icon = sol.icon;
+                                                            return (
+                                                                <NavigationMenuLink key={sol.title} asChild>
+                                                                    <Link href={sol.href}>
+                                                                        <motion.div
+                                                                            className="group relative overflow-hidden rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all duration-300 cursor-pointer"
+                                                                            whileHover={{ scale: 1.02, y: -4 }}
+                                                                            initial={{ opacity: 0, y: 20 }}
+                                                                            animate={{ opacity: 1, y: 0 }}
+                                                                            transition={{ delay: index * 0.05 }}
+                                                                        >
+                                                                            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity">
+                                                                                <img src={sol.image} alt={sol.title} className="w-full h-full object-cover opacity-20" />
+                                                                            </div>
+                                                                            <div className="relative p-5">
+                                                                                <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${sol.gradient} flex items-center justify-center mb-4 shadow-lg`}>
+                                                                                    <Icon className="w-6 h-6 text-white" />
+                                                                                </div>
+                                                                                <h4 className="text-white font-semibold mb-2 group-hover:text-blue-400 transition-colors">{sol.title}</h4>
+                                                                                <p className="text-white/60 text-sm leading-relaxed">{sol.description}</p>
+                                                                                <div className="flex items-center gap-2 mt-4 text-blue-400 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+                                                                                    Learn more
+                                                                                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                                                                                </div>
+                                                                            </div>
+                                                                        </motion.div>
+                                                                    </Link>
+                                                                </NavigationMenuLink>
+                                                            );
+                                                        })}
                                                     </div>
-                                                    <div>
-                                                        <h3 className="text-xs font-semibold tracking-widest text-text-tertiary uppercase mb-4">
-                                                            More Solutions
-                                                        </h3>
-                                                        <ul className="space-y-3">
-                                                            {platformAITools.map((tool) => (
-                                                                <DropdownLink key={tool.name} href={tool.href}>{tool.name}</DropdownLink>
-                                                            ))}
-                                                        </ul>
+                                                    <div className="flex items-center justify-between pt-6 border-t border-white/10">
+                                                        <p className="text-white/60 text-sm">Need a custom solution?</p>
+                                                        <Link href="/contact" className="px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-medium hover:shadow-lg hover:shadow-blue-500/20 transition-all">
+                                                            Contact Us
+                                                        </Link>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </motion.div>
+                                        ) : item.title === "Industries" ? (
+                                            <motion.div 
+                                                className="p-8 bg-black/95 backdrop-blur-2xl border border-white/10 w-[60rem] rounded-2xl shadow-2xl overflow-hidden"
+                                                initial={{ opacity: 0, y: 10 }}
+                                                animate={{ opacity: 1, y: 0 }}
+                                                transition={{ duration: 0.3 }}
+                                            >
+                                                <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-pink-500/10 to-rose-500/10"></div>
+                                                <div className="relative">
+                                                    <div className="mb-6">
+                                                        <h3 className="text-2xl font-bold text-white mb-2">Industries We Serve</h3>
+                                                        <p className="text-white/60">Specialized solutions for every sector</p>
+                                                    </div>
+                                                    <div className="grid grid-cols-2 gap-4 mb-6">
+                                                        {platformIntegrations.map((industry, index) => (
+                                                            <NavigationMenuLink key={industry.title} asChild>
+                                                                <Link href={industry.href}>
+                                                                    <motion.div
+                                                                        className="group relative overflow-hidden rounded-xl border border-white/10 hover:border-white/20 transition-all duration-300 cursor-pointer h-32"
+                                                                        whileHover={{ scale: 1.02 }}
+                                                                        initial={{ opacity: 0, x: -20 }}
+                                                                        animate={{ opacity: 1, x: 0 }}
+                                                                        transition={{ delay: index * 0.05 }}
+                                                                    >
+                                                                        <div className="absolute inset-0">
+                                                                            <img src={industry.image} alt={industry.title} className="w-full h-full object-cover opacity-30 group-hover:opacity-40 group-hover:scale-110 transition-all duration-500" />
+                                                                            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
+                                                                        </div>
+                                                                        <div className="relative p-5 h-full flex flex-col justify-end">
+                                                                            <h4 className="text-white font-bold text-lg mb-1 group-hover:text-blue-400 transition-colors">{industry.title}</h4>
+                                                                            <p className="text-white/70 text-sm">{industry.description}</p>
+                                                                        </div>
+                                                                    </motion.div>
+                                                                </Link>
+                                                            </NavigationMenuLink>
+                                                        ))}
+                                                    </div>
+                                                    <div className="grid grid-cols-4 gap-3 pt-6 border-t border-white/10">
+                                                        {caseStudies.map((study, index) => (
+                                                            <NavigationMenuLink key={index} asChild>
+                                                                <Link href={study.href}>
+                                                                    <motion.div
+                                                                        className="group relative overflow-hidden rounded-lg border border-white/10 hover:border-blue-500/50 transition-all duration-300 cursor-pointer"
+                                                                        whileHover={{ y: -4 }}
+                                                                        initial={{ opacity: 0, scale: 0.9 }}
+                                                                        animate={{ opacity: 1, scale: 1 }}
+                                                                        transition={{ delay: index * 0.05 + 0.2 }}
+                                                                    >
+                                                                        <div className="absolute inset-0">
+                                                                            <img src={study.image} alt={study.title} className="w-full h-full object-cover opacity-20 group-hover:opacity-30 transition-opacity" />
+                                                                        </div>
+                                                                        <div className="relative p-4 bg-gradient-to-t from-black/90 to-transparent">
+                                                                            <div className="text-blue-400 text-xs font-bold mb-1">{study.stats}</div>
+                                                                            <div className="text-white text-sm font-semibold mb-1 line-clamp-1">{study.title}</div>
+                                                                            <div className="text-white/60 text-xs line-clamp-2">{study.description}</div>
+                                                                        </div>
+                                                                    </motion.div>
+                                                                </Link>
+                                                            </NavigationMenuLink>
+                                                        ))}
+                                                    </div>
+                                                </div>
+                                            </motion.div>
                                         ) : (
-                                            <div className="p-4 bg-background-secondary text-white w-64 animate-in fade-in">
-                                                <p className="text-sm text-text-tertiary">
-                                                    Links for {item.name}
-                                                </p>
-                                            </div>
+                                            <motion.div 
+                                                className="p-6 bg-black/95 backdrop-blur-2xl border border-white/10 w-64 rounded-2xl shadow-2xl"
+                                                initial={{ opacity: 0, y: 10 }}
+                                                animate={{ opacity: 1, y: 0 }}
+                                                transition={{ duration: 0.3 }}
+                                            >
+                                                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-2xl"></div>
+                                                <div className="relative">
+                                                    <p className="text-white/80 text-sm mb-4">
+                                                        {item.title} links coming soon
+                                                    </p>
+                                                    <Link 
+                                                        href={item.href} 
+                                                        className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors text-sm font-medium"
+                                                    >
+                                                        View all
+                                                        <ArrowRight className="w-4 h-4" />
+                                                    </Link>
+                                                </div>
+                                            </motion.div>
                                         )}
                                     </NavigationMenuContent>
                                 </NavigationMenuItem>
@@ -149,14 +352,23 @@ export default function LinkMetomicNavigationHeader() {
                     </NavigationMenu>
                 </nav>
 
-                {/* CTA Button */}
-                <div className="hidden lg:flex items-center">
+                {/* CTA Buttons */}
+                <div className="hidden lg:flex items-center gap-3">
                     <Link
-                        href="/contact"
-                        className="flex items-center justify-center gap-2 bg-[#FF8B5F] text-white font-medium py-3 px-6 rounded-[8px] transition-all hover:bg-[#FF8F6B] hover:scale-[1.02] transform duration-200"
+                        href="/login"
+                        className="text-white/80 hover:text-white font-medium transition-colors px-4 py-2 rounded-lg hover:bg-white/5"
                     >
-                        <span>Get Started</span>
+                        Login
                     </Link>
+                    <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                        <Link
+                            href="/contact"
+                            className="inline-flex items-center justify-center px-6 py-2.5 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-blue-500/25 transition-all"
+                        >
+                            Get Started
+                            <ArrowRight className="ml-2 w-4 h-4" />
+                        </Link>
+                    </motion.div>
                 </div>
 
                 {/* Mobile Navigation */}
@@ -166,7 +378,7 @@ export default function LinkMetomicNavigationHeader() {
                             <Button
                                 variant="ghost"
                                 size="icon"
-                                className="text-white hover:bg-zinc-800 focus:bg-zinc-800"
+                                className="text-white hover:bg-white/10 border-none"
                             >
                                 <Menu className="h-6 w-6" />
                                 <span className="sr-only">Open menu</span>
@@ -174,53 +386,66 @@ export default function LinkMetomicNavigationHeader() {
                         </SheetTrigger>
                         <SheetContent
                             side="right"
-                            className="bg-[#1A1A1A] border-l-border-subtle text-white w-full max-w-sm p-0"
+                            className="bg-black/95 backdrop-blur-2xl border-l border-white/10 text-white w-full max-w-sm p-0"
                         >
                             <div className="p-6">
                                 <SheetClose asChild>
-                                    <Link href="/" aria-label="home">
-                                        <span className="text-2xl font-bold bg-gradient-to-r from-orange-400 to-purple-400 bg-clip-text text-transparent">
+                                    <Link href="/" aria-label="home" className="flex items-center gap-3">
+                                        <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center shadow-lg">
+                                            <span className="text-white text-lg font-bold">L</span>
+                                        </div>
+                                        <span className="text-xl font-semibold text-white">
                                             Link Innovations
                                         </span>
                                     </Link>
                                 </SheetClose>
                             </div>
-                            <div className="h-px bg-border-subtle"></div>
+                            <div className="h-px bg-white/10"></div>
                             <div className="p-6">
                                 <Accordion type="single" collapsible className="w-full">
                                     {navItems.map((item) => (
                                         <AccordionItem
-                                            key={item.name}
-                                            value={item.name}
-                                            className="border-b border-border-subtle"
+                                            key={item.title}
+                                            value={item.title}
+                                            className="border-b border-white/10"
                                         >
-                                            <AccordionTrigger className="py-4 text-base font-normal hover:no-underline">
-                                                {item.name}
+                                            <AccordionTrigger className="py-4 text-base font-medium hover:no-underline text-white hover:text-blue-400 transition-colors">
+                                                {item.title}
                                             </AccordionTrigger>
                                             <AccordionContent>
                                                 <div className="pl-4 space-y-3 py-2">
-                                                    <p className="text-text-tertiary">
-                                                        Links for {item.name}
+                                                    <p className="text-white/70">
+                                                        Links for {item.title}
                                                     </p>
                                                 </div>
                                             </AccordionContent>
                                         </AccordionItem>
                                     ))}
                                 </Accordion>
-                                <SheetClose asChild>
-                                    <Link
-                                        href="/contact"
-                                        className="mt-6 w-full flex items-center justify-center gap-2 bg-[#FF8B5F] text-white font-medium py-3 px-6 rounded-[8px] transition-all hover:bg-[#FF8F6B]"
-                                    >
-                                        <span>Get Started</span>
-                                    </Link>
-                                </SheetClose>
+                                <div className="mt-6 space-y-3">
+                                    <SheetClose asChild>
+                                        <Link
+                                            href="/login"
+                                            className="block w-full text-center py-3 text-white/80 hover:text-white font-medium transition-colors border border-white/10 rounded-lg hover:bg-white/5"
+                                        >
+                                            Login
+                                        </Link>
+                                    </SheetClose>
+                                    <SheetClose asChild>
+                                        <Link
+                                            href="/contact"
+                                            className="flex items-center justify-center gap-2 w-full text-center py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-blue-500/25 transition-all"
+                                        >
+                                            Get Started
+                                            <ArrowRight className="w-4 h-4" />
+                                        </Link>
+                                    </SheetClose>
+                                </div>
                             </div>
                         </SheetContent>
                     </Sheet>
                 </div>
             </div>
-        </header>
+        </motion.header>
     );
 }
-

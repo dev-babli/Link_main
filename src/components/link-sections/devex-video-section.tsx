@@ -27,16 +27,7 @@ const LinkDevexVideoSection = () => {
             <div className="container mx-auto px-6 md:px-12 lg:px-16">
                 <div className="flex flex-col items-center justify-center gap-10 text-center lg:gap-14">
                     <div className="flex flex-col items-center gap-6">
-                        <h2 className="text-3xl font-bold tracking-tight text-text-primary md:text-5xl lg:text-[48px] lg:leading-[1.2]">
-                            Link Innovations Development Excellence
-                        </h2>
-                        <p className="max-w-4xl text-lg leading-relaxed text-text-secondary">
-                            Excellence is the foundation of Link Innovations. From cutting-edge AI solutions
-                            to enterprise-grade cloud infrastructure, we deliver technology that transforms
-                            businesses. Our proven development process ensures your software is secure,
-                            scalable, and future-ready. Partner with Link Innovations for results that
-                            drive real business growth.
-                        </p>
+                        {/* Removed top heading and content - now only in video overlay */}
                     </div>
 
                     <div className="relative w-full max-w-[420px] lg:max-w-none">
@@ -66,6 +57,30 @@ const LinkDevexVideoSection = () => {
                                 className="relative block w-full lg:hidden"
                                 unoptimized
                             />
+
+                            {/* Content Overlay on Video with Parallax Effect */}
+                            <div className="absolute inset-0 z-20 flex items-center justify-center bg-black/25 backdrop-blur-[2px] lg:block">
+                                <div className="hidden lg:flex lg:flex-col lg:items-center lg:justify-center lg:h-full lg:p-8 lg:text-center">
+                                    <div className="max-w-2xl transform transition-transform duration-1000 ease-out hover:scale-105">
+                                        <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 font-orbitron">
+                                            Link Innovations Development Excellence
+                                        </h3>
+                                        <p className="text-lg text-white/95 leading-relaxed font-light">
+                                            Excellence is the foundation of Link Innovations. From cutting-edge AI solutions to enterprise-grade cloud infrastructure, we deliver technology that transforms businesses. Our proven development process ensures your software is secure, scalable, and future-ready. Partner with Link Innovations for results that drive real business growth.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                {/* Mobile overlay with parallax */}
+                                <div className="lg:hidden absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/70 to-transparent backdrop-blur-[1px]">
+                                    <h3 className="text-xl font-bold text-white mb-3 font-orbitron">
+                                        Development Excellence
+                                    </h3>
+                                    <p className="text-sm text-white/95 leading-relaxed font-light">
+                                        Excellence is the foundation of Link Innovations. We deliver technology that transforms businesses with secure, scalable, and future-ready solutions.
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
 

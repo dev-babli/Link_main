@@ -6,7 +6,7 @@ import {
   Code, Database, Shield, Zap, Cpu, Globe,
   ArrowRight, Star, Award, CheckCircle, Layers, Server
 } from "lucide-react";
-import LinkMetomicNavigationHeader from "@/components/link-sections/metomic-navigation-header";
+import EnhancedNavigation from "@/components/ui/enhanced-navigation";
 import { Footer } from "@/components/Footer";
 import {
   ServiceHero,
@@ -125,7 +125,7 @@ export default function WebAppDevelopmentPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#000000] via-[#0f1724] to-[#000000]">
-      <LinkMetomicNavigationHeader />
+      <EnhancedNavigation />
 
       {/* Enhanced Hero Section */}
       <ServiceHero

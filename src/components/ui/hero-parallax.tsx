@@ -57,9 +57,23 @@ export const HeroParallax = ({
     return (
         <div
             ref={ref}
-            className="h-[300vh] py-40 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d] bg-black"
+            className="h-[300vh] py-40 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
             style={{ position: 'relative' }}
         >
+            {/* Background Image with Overlay */}
+            <div className="absolute inset-0 z-0">
+                <Image
+                    src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop"
+                    alt="Technology background"
+                    fill
+                    className="object-cover opacity-20"
+                    priority={false}
+                />
+                <div className="absolute inset-0 bg-gradient-to-b from-black via-black/95 to-black"></div>
+                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(59,130,246,0.15),transparent_50%)]"></div>
+                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,rgba(139,92,246,0.15),transparent_50%)]"></div>
+            </div>
+
             <Header />
             <motion.div
                 style={{
@@ -68,7 +82,7 @@ export const HeroParallax = ({
                     translateY,
                     opacity,
                 }}
-                className=""
+                className="relative z-10"
             >
                 <motion.div className="flex flex-row-reverse space-x-reverse space-x-20 mb-20">
                     {firstRow.map((product) => (
@@ -104,15 +118,25 @@ export const HeroParallax = ({
 
 export const Header = () => {
     return (
-        <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full left-0 top-0">
-            <h1 className="text-2xl md:text-7xl font-bold dark:text-white">
-                Our Portfolio of <br /> Innovation
-            </h1>
-            <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200">
-                Delivering excellence across industries with cutting-edge technology solutions.
-                We are a team of passionate developers and designers that love to build
-                amazing products that drive real business results.
-            </p>
+        <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full left-0 top-0 z-20">
+            <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+            >
+                <h1 className="text-4xl md:text-7xl font-bold text-white mb-4">
+                    <span className="bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent">
+                        Our Portfolio of <br /> Innovation
+                    </span>
+                </h1>
+                <div className="w-32 h-1.5 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mb-8"></div>
+                <p className="max-w-3xl text-base md:text-xl text-gray-300 leading-relaxed">
+                    Delivering excellence across industries with cutting-edge technology solutions.
+                    We are a team of passionate developers and designers that love to build
+                    amazing products that drive real business results.
+                </p>
+            </motion.div>
         </div>
     );
 };
@@ -141,20 +165,31 @@ export const ProductCard = ({
         >
             <Link
                 href={product.link}
-                className="block group-hover/product:shadow-2xl"
+                className="block group-hover/product:shadow-2xl group-hover/product:shadow-blue-500/20 transition-all duration-300"
             >
-                <Image
-                    src={product.thumbnail}
-                    height="600"
-                    width="600"
-                    className="object-cover object-left-top absolute h-full w-full inset-0 rounded-2xl"
-                    alt={product.title}
-                />
+                <div className="relative h-full w-full overflow-hidden rounded-2xl border border-gray-800/50 bg-gray-900">
+                    <Image
+                        src={product.thumbnail}
+                        height="600"
+                        width="600"
+                        className="object-cover object-center absolute h-full w-full inset-0 group-hover/product:scale-110 transition-transform duration-500"
+                        alt={product.title}
+                    />
+                    {/* Gradient Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-60 group-hover/product:opacity-80 transition-opacity duration-300"></div>
+
+                    {/* Blue/Purple Gradient on Hover */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover/product:opacity-100 transition-opacity duration-300"></div>
+                </div>
             </Link>
-            <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-black pointer-events-none rounded-2xl"></div>
-            <h2 className="absolute bottom-4 left-4 opacity-0 group-hover/product:opacity-100 text-white text-xl font-semibold">
-                {product.title}
-            </h2>
+
+            {/* Title - Always visible at bottom */}
+            <div className="absolute bottom-0 left-0 right-0 p-6 pointer-events-none">
+                <h2 className="text-white text-xl md:text-2xl font-bold mb-2 transform translate-y-2 group-hover/product:translate-y-0 transition-transform duration-300">
+                    {product.title}
+                </h2>
+                <div className="w-0 group-hover/product:w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full transition-all duration-300"></div>
+            </div>
         </motion.div>
     );
 };

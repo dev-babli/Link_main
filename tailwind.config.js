@@ -159,6 +159,9 @@ module.exports = {
       backdropBlur: {
         'xs': '2px',
       },
+      perspective: {
+        '1000': '1000px',
+      },
     },
   },
   plugins: [],

@@ -1,4 +1,4 @@
-import Navigation from "@/components/cortex-sections/navigation";
+import EnhancedNavigation from "@/components/ui/enhanced-navigation";
 import HeroSection from "@/components/cortex-sections/hero-section";
 import TabbedFeatures from "@/components/cortex-sections/tabbed-features";
 import CustomerStatsCards from "@/components/cortex-sections/customer-stats-cards";
@@ -22,7 +22,7 @@ export const metadata = {
 export default function CortexShowcase() {
     return (
         <div className="min-h-screen bg-black text-white cortex-theme">
-            <Navigation />
+            <EnhancedNavigation />
 
             <main className="pt-20 sm:pt-28">
                 <HeroSection />

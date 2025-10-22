@@ -113,8 +113,8 @@ export const ServiceShowcase: React.FC = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, delay: index * 0.1 }}
                         >
-                            <CardCurtainReveal className="h-[500px] w-full border border-gray-800/50 bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-sm text-white shadow-2xl hover:shadow-blue-500/10 transition-all duration-300">
-                                <CardCurtainRevealBody className="relative">
+                            <CardCurtainReveal className="h-[560px] w-full border border-gray-800/50 bg-black text-white shadow-2xl hover:shadow-blue-500/10 transition-all duration-300">
+                                <CardCurtainRevealBody className="bg-gradient-to-br from-gray-900 to-black">
                                     {/* Service Icon */}
                                     <div className="flex items-center space-x-3 mb-4">
                                         <div className="p-2 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-lg border border-blue-500/30">
@@ -125,20 +125,20 @@ export const ServiceShowcase: React.FC = () => {
                                         <div className="w-12 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></div>
                                     </div>
 
-                                    {/* Service Title */}
-                                    <CardCurtainRevealTitle className="text-2xl font-bold mb-4 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+                                    {/* Service Title - Animates up on hover */}
+                                    <CardCurtainRevealTitle className="text-3xl font-bold tracking-tight mb-4 text-white">
                                         {service.title}
                                     </CardCurtainRevealTitle>
 
-                                    {/* Service Description */}
-                                    <CardCurtainRevealDescription className="mb-6">
+                                    {/* Service Description - Reveals on hover */}
+                                    <CardCurtainRevealDescription className="my-4">
                                         <p className="text-gray-300 text-sm leading-relaxed">
                                             {service.description}
                                         </p>
                                     </CardCurtainRevealDescription>
 
-                                    {/* Features */}
-                                    <div className="mb-6">
+                                    {/* Features - Reveals on hover */}
+                                    <CardCurtainRevealDescription className="my-4">
                                         <h4 className="text-sm font-semibold text-white mb-3 flex items-center">
                                             <Zap className="w-4 h-4 text-yellow-400 mr-2" />
                                             Key Features
@@ -147,11 +147,11 @@ export const ServiceShowcase: React.FC = () => {
                                             {service.features.map((feature, featureIndex) => (
                                                 <div key={featureIndex} className="flex items-center space-x-2">
                                                     <div className="w-1.5 h-1.5 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full"></div>
-                                                    <span className="text-gray-400 text-xs">{feature}</span>
+                                                    <span className="text-gray-300 text-xs">{feature}</span>
                                                 </div>
                                             ))}
                                         </div>
-                                    </div>
+                                    </CardCurtainRevealDescription>
 
                                     {/* CTA Button */}
                                     <Link href={service.link}>
@@ -164,17 +164,17 @@ export const ServiceShowcase: React.FC = () => {
                                         </Button>
                                     </Link>
 
-                                    {/* Curtain Effect */}
-                                    <CardCurtain className="bg-gradient-to-br from-blue-500/10 to-purple-500/10" />
+                                    {/* Curtain Effect - Creates the reveal animation */}
+                                    <CardCurtain className="bg-gradient-to-br from-blue-500/30 via-purple-500/20 to-pink-500/30" />
                                 </CardCurtainRevealBody>
 
-                                {/* Service Image */}
+                                {/* Service Image Footer - Reveals from center on hover */}
                                 <CardCurtainRevealFooter className="mt-auto">
                                     <img
                                         width="100%"
                                         height="100%"
                                         alt={`${service.title} showcase`}
-                                        className="object-cover h-32"
+                                        className="object-cover w-full h-full"
                                         src={service.imageUrl}
                                     />
                                 </CardCurtainRevealFooter>

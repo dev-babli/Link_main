@@ -1,5 +1,5 @@
 import AnnouncementBanner from "@/components/metomic-sections/announcement-banner";
-import NavigationHeader from "@/components/metomic-sections/navigation-header";
+import EnhancedNavigation from "@/components/ui/enhanced-navigation";
 import HeroSection from "@/components/metomic-sections/hero-section";
 import DashboardPreview from "@/components/metomic-sections/dashboard-preview";
 import ActivityFeedCarousel from "@/components/metomic-sections/activity-feed-carousel";
@@ -22,7 +22,7 @@ export default function MetomicShowcase() {
     return (
         <div className="metomic-theme">
             <AnnouncementBanner />
-            <NavigationHeader />
+            <EnhancedNavigation />
             <main className="min-h-screen bg-background-primary">
                 <div className="pt-20">
                     <HeroSection />

@@ -8,7 +8,7 @@
 // Link Innovations Components (39)
 // Cortex-based Components (15)
 import LinkAnnouncementBanner from "@/components/link-sections/announcement-banner";
-import LinkNavigation from "@/components/link-sections/navigation";
+// import LinkNavigation from "@/components/link-sections/navigation"; // Replaced with LinkMetomicNavigationHeader
 import LinkHeroSection from "@/components/link-sections/hero-section";
 import LinkTabbedFeatures from "@/components/link-sections/tabbed-features";
 import LinkCustomerStatsCards from "@/components/link-sections/customer-stats-cards";

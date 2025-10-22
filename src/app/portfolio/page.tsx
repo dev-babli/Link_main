@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import LinkMetomicNavigationHeader from "@/components/link-sections/metomic-navigation-header";
+import EnhancedNavigation from "@/components/ui/enhanced-navigation";
 import { Footer } from "@/components/Footer";
 
 export const metadata: Metadata = {
@@ -20,7 +20,7 @@ const projects = [
 export default function PortfolioPage() {
   return (
     <div className="min-h-screen bg-black text-white">
-      <LinkMetomicNavigationHeader />
+      <EnhancedNavigation />
       <main className="mx-auto max-w-6xl px-6 pt-32 pb-20 lg:px-12">
         <div className="mb-10 max-w-2xl">
           <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">Portfolio</h1>

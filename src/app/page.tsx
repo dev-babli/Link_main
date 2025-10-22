@@ -9,7 +9,10 @@
 import { PerformanceOptimizer } from "@/components/PerformanceOptimizer";
 import LinkMetomicNavigationHeader from "@/components/link-sections/metomic-navigation-header";
 import { HeroGeometric } from "@/components/ui/shape-landing-hero";
-import LinkMetomicTrustedBySection from "@/components/link-sections/metomic-trusted-by-section";
+import { HeroPreviewWalls } from "@/components/ui/hero-preview-walls";
+import { StaggerTestimonials } from "@/components/ui/stagger-testimonials";
+import { ParallaxSection } from "@/components/ui/parallax-section";
+import LinkCoreValuesSection from "@/components/link-sections/link-core-values-section";
 import InfiniteMenuSection from "@/components/InfiniteMenuSection";
 import LinkLogoMarquee from "@/components/link-sections/logo-marquee";
 import LinkTabbedFeatures from "@/components/link-sections/tabbed-features";
@@ -48,9 +51,9 @@ export default function Home() {
                         {/* Hero Section with Interactive Parallax Elements */}
                         <div className="relative">
                                 <HeroGeometric
-                                        badge="Link Innovations - Digital Excellence"
-                                        title1="Transform Your Business"
-                                        title2="With Cutting-Edge Technology"
+                                        badge="Link Innovations - Innovation at Scale"
+                                        title1="Engineering Digital Excellence"
+                                        title2="That Transforms Business"
                                 />
 
                                 {/* Interactive Parallax Floating Elements */}
@@ -96,34 +99,55 @@ export default function Home() {
                         </div>
 
                         {/* ═══════════════════════════════════════════════════════════════
+          HERO PREVIEW WALLS
+          Goal: Showcase core capabilities with interactive card previews
+          ═══════════════════════════════════════════════════════════════ */}
+
+                        <HeroPreviewWalls />
+
+                        {/* ═══════════════════════════════════════════════════════════════
           HERO GALLERY SCROLL ANIMATION
           Goal: Showcase technology and innovation with scroll-triggered animations
           ═══════════════════════════════════════════════════════════════ */}
 
-                        <LinkInnovationsHeroDemo />
+                        <ParallaxSection intensity="medium" orbColors={{ left: "from-indigo-500/10 to-blue-500/10", right: "from-purple-500/10 to-pink-500/10" }}>
+                                <LinkInnovationsHeroDemo />
+                        </ParallaxSection>
 
                         {/* ═══════════════════════════════════════════════════════════════
           PHASE 2: TRUST BUILDING (3-10 seconds)
           Goal: Establish credibility with metrics and trust indicators
           ═══════════════════════════════════════════════════════════════ */}
 
-                        <LinkMetomicTrustedBySection />
+                        <ParallaxSection intensity="light" orbColors={{ left: "from-cyan-500/10 to-blue-500/10", right: "from-indigo-500/10 to-purple-500/10" }}>
+                                <LinkCoreValuesSection />
+                        </ParallaxSection>
 
                         {/* ═══════════════════════════════════════════════════════════════
           PHASE 3: SERVICE DISCOVERY (10-30 seconds)
           Goal: Showcase all services and technology stack
           ═══════════════════════════════════════════════════════════════ */}
 
-                        <InfiniteMenuSection />
-                        <LinkLogoMarquee />
-                        <TechnologyLogos />
+                        <ParallaxSection intensity="medium" orbColors={{ left: "from-blue-500/10 to-cyan-500/10", right: "from-purple-500/10 to-violet-500/10" }}>
+                                <InfiniteMenuSection />
+                        </ParallaxSection>
+
+                        <ParallaxSection intensity="light" addOrbs={false}>
+                                <LinkLogoMarquee />
+                        </ParallaxSection>
+
+                        <ParallaxSection intensity="medium" orbColors={{ left: "from-emerald-500/10 to-green-500/10", right: "from-cyan-500/10 to-blue-500/10" }}>
+                                <TechnologyLogos />
+                        </ParallaxSection>
 
                         {/* ═══════════════════════════════════════════════════════════════
           PHASE 4: DETAILED SHOWCASE (30-60 seconds)
           Goal: Deep dive into service-specific capabilities
           ═══════════════════════════════════════════════════════════════ */}
 
-                        <LinkTabbedFeatures />
+                        <ParallaxSection intensity="heavy" orbColors={{ left: "from-violet-500/10 to-purple-500/10", right: "from-fuchsia-500/10 to-pink-500/10" }}>
+                                <LinkTabbedFeatures />
+                        </ParallaxSection>
 
                         {/* Service Showcase with Interactive Elements */}
                         <div className="relative">
@@ -147,26 +171,50 @@ export default function Home() {
                                 </Floating>
                         </div>
 
-                        <HomepageStickyTabs />
-                        <LinkDevexVideoSection />
+                        <ParallaxSection intensity="medium" orbColors={{ left: "from-blue-500/10 to-indigo-500/10", right: "from-rose-500/10 to-pink-500/10" }}>
+                                <HomepageStickyTabs />
+                        </ParallaxSection>
+
+                        <ParallaxSection intensity="light" orbColors={{ left: "from-cyan-500/10 to-teal-500/10", right: "from-purple-500/10 to-indigo-500/10" }}>
+                                <LinkDevexVideoSection />
+                        </ParallaxSection>
 
                         {/* ═══════════════════════════════════════════════════════════════
           PHASE 5: INDUSTRY EXPERTISE (60-90 seconds)
           Goal: Show industry-specific solutions and use cases
           ═══════════════════════════════════════════════════════════════ */}
 
-                        <IndustryExpandableSection />
-                        <LinkUseCasesAccordion />
-                        <LogoSection />
+                        <ParallaxSection intensity="medium" orbColors={{ left: "from-amber-500/10 to-orange-500/10", right: "from-rose-500/10 to-red-500/10" }}>
+                                <IndustryExpandableSection />
+                        </ParallaxSection>
+
+                        <ParallaxSection intensity="light" orbColors={{ left: "from-green-500/10 to-emerald-500/10", right: "from-blue-500/10 to-cyan-500/10" }}>
+                                <LinkUseCasesAccordion />
+                        </ParallaxSection>
+
+                        <ParallaxSection intensity="medium" addOrbs={false}>
+                                <LogoSection />
+                        </ParallaxSection>
 
                         {/* ═══════════════════════════════════════════════════════════════
           PHASE 6: SOCIAL PROOF & PORTFOLIO (90-120 seconds)
           Goal: Build trust through testimonials and showcase work
           ═══════════════════════════════════════════════════════════════ */}
 
-                        <LinkCustomerStatsCards />
-                        <LinkTestimonialsCarousel />
-                        <CaseStudiesShowcase />
+                        <ParallaxSection intensity="light" orbColors={{ left: "from-indigo-500/10 to-violet-500/10", right: "from-pink-500/10 to-rose-500/10" }}>
+                                <LinkCustomerStatsCards />
+                        </ParallaxSection>
+
+                        {/* Interactive Stagger Testimonials */}
+                        <StaggerTestimonials />
+
+                        <ParallaxSection intensity="medium" orbColors={{ left: "from-purple-500/10 to-fuchsia-500/10", right: "from-blue-500/10 to-indigo-500/10" }}>
+                                <LinkTestimonialsCarousel />
+                        </ParallaxSection>
+
+                        <ParallaxSection intensity="heavy" orbColors={{ left: "from-cyan-500/10 to-blue-500/10", right: "from-violet-500/10 to-purple-500/10" }}>
+                                <CaseStudiesShowcase />
+                        </ParallaxSection>
 
                         {/* Portfolio Showcase with Interactive Elements */}
                         <div className="relative">
@@ -190,14 +238,18 @@ export default function Home() {
                                 </Floating>
                         </div>
 
-                        <HeroParallax products={portfolioProducts} />
+                        <ParallaxSection intensity="heavy" orbColors={{ left: "from-blue-500/10 to-cyan-500/10", right: "from-purple-500/10 to-pink-500/10" }}>
+                                <HeroParallax products={portfolioProducts} />
+                        </ParallaxSection>
 
                         {/* ═══════════════════════════════════════════════════════════════
           PHASE 7: CONVERSION (120+ seconds)
           Goal: Drive action with clear call-to-action
           ═══════════════════════════════════════════════════════════════ */}
 
-                        <CtaSection />
+                        <ParallaxSection intensity="medium" orbColors={{ left: "from-indigo-500/10 to-blue-500/10", right: "from-rose-500/10 to-pink-500/10" }}>
+                                <CtaSection />
+                        </ParallaxSection>
 
                         {/* Footer */}
                         <Footer />

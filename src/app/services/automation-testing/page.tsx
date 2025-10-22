@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import LinkMetomicNavigationHeader from "@/components/link-sections/metomic-navigation-header";
+import EnhancedNavigation from "@/components/ui/enhanced-navigation";
 import { Footer } from "@/components/Footer";
 import { motion } from "motion/react";
 import { CheckCircle, Code, Smartphone, Zap, BarChart3, GitBranch, ArrowRight, Star, Award, Mail, Phone, MapPin, Send, Shield } from "lucide-react";
@@ -9,7 +9,7 @@ import { CheckCircle, Code, Smartphone, Zap, BarChart3, GitBranch, ArrowRight, S
 export default function AutomationTestingPage() {
   return (
     <div className="min-h-screen bg-black">
-      <LinkMetomicNavigationHeader />
+      <EnhancedNavigation />
       <section className="relative bg-black text-white py-20 md:py-32 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
