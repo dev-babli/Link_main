@@ -10,42 +10,42 @@ const caseStudiesData: Gallery4Item[] = [
         title: "E-Commerce Platform Transformation",
         description: "Transformed a traditional retail business into a modern e-commerce platform, increasing online sales by 300% and improving user experience with cutting-edge web technologies.",
         href: "/case-studies/e-commerce-platform",
-        image: "/herosectionimages/Digital Technology.webp"
+        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop&q=80"
     },
     {
         id: "mobile-banking-app",
         title: "Mobile Banking Application",
         description: "Developed a secure, feature-rich mobile banking application that serves over 100,000 users with real-time transactions, biometric authentication, and seamless user experience.",
         href: "/case-studies/mobile-banking-app",
-        image: "/herosectionimages/3.webp"
+        image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&auto=format&fit=crop&q=80"
     },
     {
         id: "ai-powered-analytics",
         title: "AI-Powered Business Analytics",
         description: "Implemented machine learning solutions for a Fortune 500 company, providing predictive analytics that improved decision-making and increased operational efficiency by 40%.",
         href: "/case-studies/ai-powered-analytics",
-        image: "/herosectionimages/Agentic Ai.webp"
+        image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&auto=format&fit=crop&q=80"
     },
     {
         id: "cloud-migration",
         title: "Enterprise Cloud Migration",
         description: "Successfully migrated a legacy enterprise system to the cloud, reducing infrastructure costs by 60% while improving scalability and performance for 50,000+ users.",
         href: "/case-studies/cloud-migration",
-        image: "/herosectionimages/cloud.webp"
+        image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&auto=format&fit=crop&q=80"
     },
     {
         id: "cybersecurity-implementation",
         title: "Comprehensive Cybersecurity Solution",
         description: "Deployed enterprise-grade security solutions for a financial institution, implementing zero-trust architecture and advanced threat detection systems.",
         href: "/case-studies/cybersecurity-implementation",
-        image: "/herosectionimages/Cyber Security.webp"
+        image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&auto=format&fit=crop&q=80"
     },
     {
         id: "data-visualization-dashboard",
         title: "Real-Time Data Visualization Dashboard",
         description: "Created an interactive dashboard for a manufacturing company, providing real-time insights into production metrics and helping reduce downtime by 25%.",
         href: "/case-studies/data-visualization-dashboard",
-        image: "/herosectionimages/Data & Analytics.webp"
+        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80"
     }
 ];
 

@@ -37,6 +37,8 @@ import { ServiceShowcase } from "@/components/ServiceShowcase";
 import { CaseStudiesShowcase } from "@/components/CaseStudiesShowcase";
 import TechnologyLogos from "@/components/TechnologyLogos";
 import LazySection from "@/components/ui/lazy-section";
+import { Skiper52 } from "@/components/ui/skiper-ui/skiper52";
+import { Skiper31 } from "@/components/ui/skiper-ui/skiper31";
 
 export default function Home() {
         return (
@@ -109,6 +111,13 @@ export default function Home() {
                         {/* SECTION 2: Hero Preview Walls */}
                         <div className="glass-card">
                                 <HeroPreviewWalls />
+                        </div>
+
+                        {/* SECTION 2B: Interactive Image Gallery */}
+                        <div className="glass-strong">
+                                <ParallaxSection intensity="light" orbColors={{ left: "from-accent-cyan/20 to-accent-indigo/20", right: "from-accent-indigo/20 to-accent-emerald/20" }}>
+                                        <Skiper52 />
+                                </ParallaxSection>
                         </div>
 
                         {/* SECTION 2A: Technology Partners - Immediate Credibility */}
@@ -219,6 +228,13 @@ export default function Home() {
                         <LazySection>
                                 <div className="glass-magic">
                                         <GalleryDemo />
+                                </div>
+                        </LazySection>
+
+                        {/* SECTION 13.5: Scroll Animation Showcase */}
+                        <LazySection>
+                                <div className="glass-magic">
+                                        <Skiper31 />
                                 </div>
                         </LazySection>
 

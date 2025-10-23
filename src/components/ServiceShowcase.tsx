@@ -29,7 +29,7 @@ const services = [
         title: "Web Development",
         icon: <Code size={24} />,
         description: "Transform your digital presence with cutting-edge web applications. We build responsive, scalable, and performant websites that drive business growth.",
-        imageUrl: "/herosectionimages/Digital Technology.webp",
+        imageUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop&q=80",
         features: ["React & Next.js", "TypeScript", "Tailwind CSS", "Performance Optimization"],
         link: "/services/web-development"
     },
@@ -38,7 +38,7 @@ const services = [
         title: "Mobile Apps",
         icon: <Smartphone size={24} />,
         description: "Create powerful mobile experiences that engage users and drive results. From iOS to Android, we deliver native and cross-platform solutions.",
-        imageUrl: "/herosectionimages/3.webp",
+        imageUrl: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&auto=format&fit=crop&q=80",
         features: ["React Native", "Flutter", "iOS & Android", "App Store Optimization"],
         link: "/services/mobile-apps"
     },
@@ -47,7 +47,7 @@ const services = [
         title: "AI Solutions",
         icon: <Brain size={24} />,
         description: "Leverage artificial intelligence to automate processes, gain insights, and create intelligent solutions that adapt to your business needs.",
-        imageUrl: "/herosectionimages/Agentic Ai.webp",
+        imageUrl: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&auto=format&fit=crop&q=80",
         features: ["Machine Learning", "Process Automation", "NLP", "Computer Vision"],
         link: "/services/ai-automation"
     },
@@ -56,7 +56,7 @@ const services = [
         title: "Cloud Services",
         icon: <Cloud size={24} />,
         description: "Scale your infrastructure with cloud solutions that provide reliability, security, and cost-effectiveness for your growing business.",
-        imageUrl: "/herosectionimages/cloud.webp",
+        imageUrl: "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&auto=format&fit=crop&q=80",
         features: ["AWS & Azure", "Serverless", "DevOps", "Container Orchestration"],
         link: "/services/cloud-devops"
     },
@@ -65,7 +65,7 @@ const services = [
         title: "Cybersecurity",
         icon: <Shield size={24} />,
         description: "Protect your digital assets with comprehensive security solutions. From threat assessment to incident response, we keep your business secure.",
-        imageUrl: "/herosectionimages/Cyber Security.webp",
+        imageUrl: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&auto=format&fit=crop&q=80",
         features: ["Security Audits", "Penetration Testing", "Compliance", "Incident Response"],
         link: "/services/cybersecurity"
     },
@@ -74,7 +74,7 @@ const services = [
         title: "Data Analytics",
         icon: <BarChart3 size={24} />,
         description: "Turn your data into actionable insights with advanced analytics solutions. Make data-driven decisions that drive business success.",
-        imageUrl: "/herosectionimages/Data & Analytics.webp",
+        imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80",
         features: ["Business Intelligence", "Real-time Processing", "Predictive Modeling", "Data Visualization"],
         link: "/services/data-analytics"
     }
