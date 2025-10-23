@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.box-container {
+  overflow: hidden;
+}
+section {
+  height: 100vh;
+  text-align: center;
+  line-height: 100vh;
+  font-size: 2em;
+  position: relative;
+}
+.img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  height: 100vh;
+  background-size: cover;
+}
+
+.one {
+  background-image: url("https://assets.codepen.io/16327/portrait-pattern-2.jpg");
+}
+.two {
+  background-image: url("https://assets.codepen.io/16327/portrait-pattern-3.jpg");
+}
+.three {
+  background-image: url("https://assets.codepen.io/16327/portrait-pattern-4.jpg");
+}
+.four {
+  background-image: url("https://assets.codepen.io/16327/portrait-pattern-2.jpg");
+}
+
+section p {
+  font-size: 50vw;
+  color: var(--light)
+}

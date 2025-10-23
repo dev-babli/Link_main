@@ -29,7 +29,7 @@ const services = [
         title: "Web Development",
         icon: <Code size={24} />,
         description: "Transform your digital presence with cutting-edge web applications. We build responsive, scalable, and performant websites that drive business growth.",
-        imageUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop&q=80",
+        imageUrl: "/Service Cards images/Cloud and Application Service.webp",
         features: ["React & Next.js", "TypeScript", "Tailwind CSS", "Performance Optimization"],
         link: "/services/web-development"
     },
@@ -38,7 +38,7 @@ const services = [
         title: "Mobile Apps",
         icon: <Smartphone size={24} />,
         description: "Create powerful mobile experiences that engage users and drive results. From iOS to Android, we deliver native and cross-platform solutions.",
-        imageUrl: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&auto=format&fit=crop&q=80",
+        imageUrl: "/Service Cards images/IOT Tech.webp",
         features: ["React Native", "Flutter", "iOS & Android", "App Store Optimization"],
         link: "/services/mobile-apps"
     },
@@ -47,7 +47,7 @@ const services = [
         title: "AI Solutions",
         icon: <Brain size={24} />,
         description: "Leverage artificial intelligence to automate processes, gain insights, and create intelligent solutions that adapt to your business needs.",
-        imageUrl: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&auto=format&fit=crop&q=80",
+        imageUrl: "/Service Cards images/AI Gen AI.webp",
         features: ["Machine Learning", "Process Automation", "NLP", "Computer Vision"],
         link: "/services/ai-automation"
     },
@@ -56,7 +56,7 @@ const services = [
         title: "Cloud Services",
         icon: <Cloud size={24} />,
         description: "Scale your infrastructure with cloud solutions that provide reliability, security, and cost-effectiveness for your growing business.",
-        imageUrl: "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&auto=format&fit=crop&q=80",
+        imageUrl: "/Service Cards images/Cloud and Application Service.webp",
         features: ["AWS & Azure", "Serverless", "DevOps", "Container Orchestration"],
         link: "/services/cloud-devops"
     },
@@ -65,7 +65,7 @@ const services = [
         title: "Cybersecurity",
         icon: <Shield size={24} />,
         description: "Protect your digital assets with comprehensive security solutions. From threat assessment to incident response, we keep your business secure.",
-        imageUrl: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&auto=format&fit=crop&q=80",
+        imageUrl: "/Service Cards images/Digital Security.webp",
         features: ["Security Audits", "Penetration Testing", "Compliance", "Incident Response"],
         link: "/services/cybersecurity"
     },
@@ -74,7 +74,7 @@ const services = [
         title: "Data Analytics",
         icon: <BarChart3 size={24} />,
         description: "Turn your data into actionable insights with advanced analytics solutions. Make data-driven decisions that drive business success.",
-        imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80",
+        imageUrl: "/Service Cards images/Data Analytics.webp",
         features: ["Business Intelligence", "Real-time Processing", "Predictive Modeling", "Data Visualization"],
         link: "/services/data-analytics"
     }
@@ -114,70 +114,69 @@ export const ServiceShowcase: React.FC = () => {
                             transition={{ duration: 0.6, delay: index * 0.1 }}
                         >
                             <CardCurtainReveal className="h-[560px] w-full border border-gray-800/50 bg-black text-white shadow-2xl hover:shadow-blue-500/10 transition-all duration-300">
-                                <CardCurtainRevealBody className="bg-gradient-to-br from-gray-900 to-black">
+                                <CardCurtainRevealBody
+                                    className="bg-cover bg-center bg-no-repeat relative h-full"
+                                    style={{
+                                        backgroundImage: `url(${service.imageUrl})`,
+                                        backgroundSize: 'cover',
+                                        backgroundPosition: 'center'
+                                    }}
+                                >
                                     {/* Service Icon */}
-                                    <div className="flex items-center space-x-3 mb-4">
-                                        <div className="p-2 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-lg border border-blue-500/30">
-                                            <div className="text-blue-400">
+                                    <div className="relative z-10 flex items-center space-x-4 mb-6">
+                                        <div className="p-3 bg-white/20 backdrop-blur-md rounded-xl border border-white/30 shadow-lg">
+                                            <div className="text-white text-xl">
                                                 {service.icon}
                                             </div>
                                         </div>
-                                        <div className="w-12 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></div>
+                                        <div className="w-16 h-1 bg-gradient-to-r from-white to-blue-200 rounded-full"></div>
                                     </div>
 
                                     {/* Service Title - Animates up on hover */}
-                                    <CardCurtainRevealTitle className="text-3xl font-bold tracking-tight mb-4 text-white">
+                                    <CardCurtainRevealTitle className="relative z-10 text-4xl font-bold tracking-tight mb-6 text-white drop-shadow-lg">
                                         {service.title}
                                     </CardCurtainRevealTitle>
 
                                     {/* Service Description - Reveals on hover */}
-                                    <CardCurtainRevealDescription className="my-4">
-                                        <p className="text-white text-sm leading-relaxed">
+                                    <CardCurtainRevealDescription className="relative z-10 my-6">
+                                        <p className="text-white text-base leading-relaxed font-medium drop-shadow-md bg-black/20 backdrop-blur-sm rounded-lg p-4">
                                             {service.description}
                                         </p>
                                     </CardCurtainRevealDescription>
 
                                     {/* Features - Reveals on hover */}
-                                    <CardCurtainRevealDescription className="my-4">
-                                        <h4 className="text-sm font-semibold text-white mb-3 flex items-center">
-                                            <Zap className="w-4 h-4 text-yellow-400 mr-2" />
+                                    <CardCurtainRevealDescription className="relative z-10 my-6">
+                                        <h4 className="text-lg font-bold text-white mb-4 flex items-center drop-shadow-md">
+                                            <Zap className="w-5 h-5 text-yellow-300 mr-3" />
                                             Key Features
                                         </h4>
-                                        <div className="space-y-2">
+                                        <div className="space-y-3 bg-black/20 backdrop-blur-sm rounded-lg p-4">
                                             {service.features.map((feature, featureIndex) => (
-                                                <div key={featureIndex} className="flex items-center space-x-2">
-                                                    <div className="w-1.5 h-1.5 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full"></div>
-                                                    <span className="text-white text-xs">{feature}</span>
+                                                <div key={featureIndex} className="flex items-center space-x-3">
+                                                    <div className="w-2 h-2 bg-gradient-to-r from-yellow-300 to-yellow-400 rounded-full shadow-sm"></div>
+                                                    <span className="text-white text-sm font-medium drop-shadow-sm">{feature}</span>
                                                 </div>
                                             ))}
                                         </div>
                                     </CardCurtainRevealDescription>
 
                                     {/* CTA Button */}
-                                    <Link href={service.link}>
-                                        <Button
-                                            variant="secondary"
-                                            size="icon"
-                                            className="aspect-square rounded-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 border-0 shadow-lg hover:shadow-blue-500/25 transition-all duration-300"
-                                        >
-                                            <ArrowUpRight className="w-4 h-4" />
-                                        </Button>
-                                    </Link>
+                                    <div className="relative z-10 mt-8">
+                                        <Link href={service.link}>
+                                            <Button
+                                                variant="secondary"
+                                                size="icon"
+                                                className="aspect-square rounded-full bg-white/20 backdrop-blur-md hover:bg-white/30 border border-white/30 shadow-xl hover:shadow-2xl transition-all duration-300"
+                                            >
+                                                <ArrowUpRight className="w-5 h-5 text-white" />
+                                            </Button>
+                                        </Link>
+                                    </div>
 
                                     {/* Curtain Effect - Creates the reveal animation */}
                                     <CardCurtain className="bg-gradient-to-br from-blue-500/30 via-purple-500/20 to-pink-500/30" />
                                 </CardCurtainRevealBody>
 
-                                {/* Service Image Footer - Reveals from center on hover */}
-                                <CardCurtainRevealFooter className="mt-auto">
-                                    <img
-                                        width="100%"
-                                        height="100%"
-                                        alt={`${service.title} showcase`}
-                                        className="object-cover w-full h-full"
-                                        src={service.imageUrl}
-                                    />
-                                </CardCurtainRevealFooter>
                             </CardCurtainReveal>
                         </motion.div>
                     ))}

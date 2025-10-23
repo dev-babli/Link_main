@@ -1,0 +1,78 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+section {
+  position: relative;
+  min-height: 813px;
+  border-top: 1px dashed var(--mid);
+}
+
+section > .contain {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 1182px;
+  /*   width: calc(100% - 2rem); */
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  transfrom: translate(-50%, -50%);
+}
+
+section .content {
+  max-width: 500px;
+  width: 100%;
+}
+
+.pin-spacer {
+  z-index: 1 !important;
+}
+
+.difffImgContainer {
+  width: 50%;
+}
+.diffImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+}
+
+.diffSecImg {
+  position: absolute;
+  top: 0;
+  transform: translateY(100%);
+}
+
+.bgImg {
+  position: relative;
+  height: 376px;
+  z-index: 1;
+}
+
+.bgImg img {
+  left: 0;
+  height: 376px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.diffImgContainer {
+  width: 85% !important;
+  height: 376px !important;
+  overflow: hidden;
+  position: relative;
+}
+
+.bgImg img:nth-child(2) {
+  z-index: 2;
+}
+.bgImg img:nth-child(3) {
+  z-index: 3;
+}
+.bgImg img:nth-child(4) {
+  z-index: 4;
+}

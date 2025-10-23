@@ -1,0 +1,21 @@
+section {
+  position: relative;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+h1 {
+  color: var(--light);
+  z-index: 1;
+  font-size: 3em;
+  font-weight: 600;
+}

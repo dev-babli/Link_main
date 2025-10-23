@@ -8,15 +8,22 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Link Innovations Enterprise Color System
-        'primary': '#0A0E27',
-        'accent-cyan': '#00D9FF',
-        'accent-indigo': '#6366F1',
-        'accent-emerald': '#10B981',
-        'accent-purple': '#8B5CF6',
-        'neutral-dark': '#1E293B',
-        'neutral-light': '#F1F5F9',
-        'neutral-medium': '#64748B',
+        // Modern Color Palette
+        'thistle': '#f0d3f7',
+        'puce': '#b98ea7',
+        'mountbatten-pink': '#a57982',
+        'space-cadet': '#302f4d',
+        'russian-violet': '#120d31',
+        
+        // Legacy colors for compatibility
+        'primary': '#120d31', // russian-violet
+        'accent-cyan': '#f0d3f7', // thistle
+        'accent-indigo': '#302f4d', // space-cadet
+        'accent-emerald': '#a57982', // mountbatten-pink
+        'accent-purple': '#b98ea7', // puce
+        'neutral-dark': '#302f4d', // space-cadet
+        'neutral-light': '#f0d3f7', // thistle
+        'neutral-medium': '#a57982', // mountbatten-pink
         
         // Cortex Theme Colors
         'cortex-primary': '#7877c6',

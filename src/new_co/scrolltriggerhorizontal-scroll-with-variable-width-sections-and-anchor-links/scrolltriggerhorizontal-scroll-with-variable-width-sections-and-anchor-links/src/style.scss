@@ -1,0 +1,17 @@
+.wrapper {
+	height: 100vh;
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.section {
+  width: 100vw;
+  flex-shrink: 0;
+  &--large {
+    width: 150vw;
+  }
+
+  &--small {
+    width: 46rem;
+  }
+}

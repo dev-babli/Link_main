@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+section {
+  height: 100vh;
+}
+
+.intro {
+  display:flex;align-items:center;justify-content:center;
+}
+
+.marquee {
+  display: flex;
+  margin: auto;
+  overflow: hidden;
+  user-select: none;
+
+  &__content {
+    flex-shrink: 0;
+    display: flex;
+  }
+
+  &__item {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 33vw;
+    height: 33vw;
+  }
+}

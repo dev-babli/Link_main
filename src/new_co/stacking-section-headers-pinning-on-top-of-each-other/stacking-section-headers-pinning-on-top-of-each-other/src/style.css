@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+  border-top: dashed 1px var(--mid)
+}
+.row .left {
+  width: 40%;
+}
+.row .right {
+  width: 60%;
+}
+.row + .row {
+  margin-top: 50px;
+}
+.pin-spacer {
+  /* to get around an odd browser rounding issue that happens when it gets converted to pixels */
+  width: 40% !important;
+}
+
+h1 {
+  padding: 0;
+  margin: 0;
+}

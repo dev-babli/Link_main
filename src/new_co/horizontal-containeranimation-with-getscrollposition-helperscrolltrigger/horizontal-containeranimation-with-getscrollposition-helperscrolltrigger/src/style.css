@@ -1,0 +1,23 @@
+.box.active {
+  background: var(--gradient-orange-crush),
+  url('https://assets.codepen.io/16327/noise.png');
+      background-blend-mode: color-dodge;
+}
+
+.description, .final {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  width: 500%;
+  height: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+p {
+  max-width: 75ch;
+}

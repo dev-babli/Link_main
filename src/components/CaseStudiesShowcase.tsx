@@ -57,7 +57,7 @@ export const CaseStudiesShowcase: React.FC = () => {
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(59,130,246,0.05),transparent_50%)]"></div>
 
             {/* Section Header */}
-            <div className="relative z-10 pt-20 pb-10">
+            <div className="relative z-10 pt-8 pb-6">
                 <div className="container mx-auto px-4">
                     <motion.div
                         className="text-center mb-16"

@@ -1,0 +1,74 @@
+
+<div class="container">
+  <div class="jumps">Jump to: <a href="#end" id="link">bottom</a> | <a href="#top">top</a></div>
+  
+	<section class="panel pin">
+		<div class="standard">
+			<h2>Standard behavior</h2>
+			<div class="boxes">
+				<div class="box box-1 gradient-blue">1</div>
+				<div class="box box-2 gradient-red">2</div>
+				<div class="box box-3 gradient-green">3</div>
+				<div class="box box-4 gradient-purple">4</div>
+				<div class="box box-5">5</div>
+			</div>
+		</div>
+		<div class="features">
+			<div class="boxes">
+				<div class="box box-1 gradient-blue">1</div>
+				<div class="box box-2 gradient-red">2</div>
+				<div class="box box-3 gradient-green">3</div>
+				<div class="box box-4 gradient-purple">4</div>
+				<div class="box box-5">5</div>
+			</div>
+			<h2>With features:</h2>
+			<div style="display: inline-block">
+				<div id="checkboxes">
+					<label><input id="checkboxPO" type="checkbox" value="preventOverlaps" checked/>&nbsp;<code>preventOverlaps</code></label>
+					<label><input id="checkboxFSE" type="checkbox" value="fastScrollEnd" checked/>&nbsp;<code>fastScrollEnd</code></label>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="panel move-1 gray"></section>
+	<section class="panel move-2 gradient-blue"></section>
+	<section class="panel move-3 gradient-red"></section>
+	<section class="panel move-4 gradient-green"></section>
+	<section class="panel move-5 gradient-purple"></section>
+	<section class="panel spacer gray"></section>
+  <a name="end"></a>
+</div>
+<div class="explanation-container">
+<div class="explanation">
+	<div class="tab green">Explanation</div>
+	<div class="content">
+	<section>
+		<div>
+      <p>Scroll down <strong>slowly</strong> to trigger <i>non-scrubbing</i> animations. Looks great, right? Then try scrolling <i>fast</i> and notice how the animations overlap! </p>
+			<ul>
+				<li><code>preventOverlaps: true</code> kicks in when the ScrollTrigger is about to affect its animation (e.g. a toggleAction) - it finds other [prior] ScrollTrigger-based animations and forces them to their end state to avoid overlaps.</li>
+				<li> <code>fastScrollEnd: true</code> kicks in only when you <strong>LEAVE</strong> the ScrollTrigger's area; it simply says <i>"how fast was the scroll onLeave/onLeaveBack? If it's above the 2500px/second, force the animation to its end immediately"</i>.</li>
+			</ul>
+		</div>
+	</section>
+	<section>
+		<div>
+			<h3>Advanced configuration</h3>
+			<ul>
+        <li>If <code>preventOverlaps</code> is a <strong>string</strong>, it acts as a group name so that you can control which ScrollTriggers affect each other's preventOverlaps behavior. It's like setting <code>preventOverlaps: true</code> but only for other ScrollTriggers with the matching string. For example, you could assign <code>preventOverlaps: "group1"</code> (or any arbitrary string) to 3 of your ScrollTriggers so that each of them only prevents overlaps from the other ScrollTriggers that have that same "group1" value.
+				</li>
+        
+				<li>If <code>preventOverlaps</code> is a <strong>function</strong>, it'll be called <i>before</i> the non-scrub animation is affected (unlike other callbacks which occur <i>after</i> it's affected), so you can do whatever you want in preparation. All ScrollTriggers have a <code>getTrailing()</code> method you can use to get an Array of all ScrollTriggers that precede this one in the updating order according to the current scroll direction. Use the <code>endAnimation()</code> method to force a ScrollTrigger's animation to jump to its end state according to its direction (so if it's going backwards, it'll <code>.progress(0)</code> if it's forward, it'll <code>.progress(1)</code>).
+					<pre class="code-block"><code class="language-js">preventOverlaps: (self) => {
+  self.getTrailing().forEach((trigger) => {
+    trigger.endAnimation();
+  });
+}</code></pre>
+				</li>
+				<li>If <code>fastScrollEnd</code> is a <strong>number</strong>, it will be interpreted as the velocity threshold in pixels-per-second, like <code>fastScrollEnd: 1000</code> would only activate if the velocity is more than 1000 px/second in either direction when leaving the ScrollTrigger's active area.</li>
+			</ul>
+		</div>
+	</section>
+	</div>
+</div>
+</div>

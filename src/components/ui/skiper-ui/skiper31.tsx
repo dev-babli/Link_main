@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
-import ReactLenis from "lenis/react";
+import { ReactLenis } from "lenis/dist/lenis-react";
 import React, { useRef } from "react";
 
 import { cn } from "@/lib/utils";
@@ -36,7 +36,7 @@ const CharacterV1 = ({
 
   return (
     <motion.span
-      className={cn("inline-block text-orange-500", isSpace && "w-4")}
+      className={cn("inline-block bg-gradient-to-r from-[#f0d3f7] to-[#b98ea7] bg-clip-text text-transparent", isSpace && "w-4")}
       style={{
         x,
         rotateX,
@@ -138,37 +138,37 @@ const Skiper31 = () => {
     target: targetRef3,
   });
 
-  const text = "see more from gxuri";
+  const text = "Our Services Excellence";
   const characters = text.split("");
   const centerIndex = Math.floor(characters.length / 2);
 
-  const macIcon = [
-    "/mac/Discord.png",
-    "/mac/figma.png",
-    "/mac/Framer.png",
-    "/mac/Github.png",
-    "/mac/Monog.png",
-    "/mac/notion.png",
-    "/mac/Pieces.png",
-    "/mac/Postman.png",
-    "/mac/vsCode.png",
+  const serviceIcons = [
+    "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=100&auto=format&fit=crop&q=80",
+    "https://images.unsplash.com/photo-1552664730-d307ca884978?w=100&auto=format&fit=crop&q=80",
+    "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=100&auto=format&fit=crop&q=80",
+    "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=100&auto=format&fit=crop&q=80",
+    "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=100&auto=format&fit=crop&q=80",
+    "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=100&auto=format&fit=crop&q=80",
+    "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=100&auto=format&fit=crop&q=80",
+    "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=100&auto=format&fit=crop&q=80",
+    "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80",
   ];
-  const iconCenterIndex = Math.floor(macIcon.length / 2);
+  const iconCenterIndex = Math.floor(serviceIcons.length / 2);
 
   return (
     <ReactLenis root>
-      <main className="w-full bg-white">
-        <div className="top-22 absolute left-1/2 z-10 grid -translate-x-1/2 content-start justify-items-center gap-6 text-center text-black">
-          <span className="relative max-w-[12ch] text-xs uppercase leading-tight opacity-40 after:absolute after:left-1/2 after:top-full after:h-16 after:w-px after:bg-gradient-to-b after:from-[#f5f4f3] after:to-black after:content-['']">
+      <main className="w-full bg-gradient-to-br from-[#120d31] via-[#302f4d] to-[#a57982]">
+        <div className="top-22 absolute left-1/2 z-10 grid -translate-x-1/2 content-start justify-items-center gap-6 text-center text-white">
+          <span className="relative max-w-[12ch] text-xs uppercase leading-tight opacity-60 after:absolute after:left-1/2 after:top-full after:h-16 after:w-px after:bg-gradient-to-b after:from-[#f0d3f7] after:to-[#b98ea7] after:content-['']">
             Scroll to see more
           </span>
         </div>
         <div
           ref={targetRef}
-          className="relative box-border flex h-[210vh] items-center justify-center gap-[2vw] overflow-hidden bg-[#f5f4f3] p-[2vw]"
+          className="relative box-border flex h-[210vh] items-center justify-center gap-[2vw] overflow-hidden bg-gradient-to-br from-[#120d31] via-[#302f4d] to-[#a57982] p-[2vw]"
         >
           <div
-            className="font-geist w-full max-w-4xl text-center text-6xl font-bold uppercase tracking-tighter text-black"
+            className="font-geist w-full max-w-4xl text-center text-6xl font-bold uppercase tracking-tighter bg-gradient-to-r from-[#f0d3f7] via-[#b98ea7] to-[#a57982] bg-clip-text text-transparent"
             style={{
               perspective: "500px",
             }}
@@ -186,17 +186,17 @@ const Skiper31 = () => {
         </div>
         <div
           ref={targetRef2}
-          className="relative -mt-[100vh] box-border flex h-[210vh] flex-col items-center justify-center gap-[2vw] overflow-hidden bg-[#f5f4f3] p-[2vw]"
+          className="relative -mt-[100vh] box-border flex h-[210vh] flex-col items-center justify-center gap-[2vw] overflow-hidden bg-gradient-to-br from-[#302f4d] via-[#a57982] to-[#b98ea7] p-[2vw]"
         >
-          <p className="font-geist flex items-center justify-center gap-3 text-2xl font-medium tracking-tight text-black">
-            <Bracket className="h-12 text-black" />
+          <p className="font-geist flex items-center justify-center gap-3 text-2xl font-medium tracking-tight text-white">
+            <Bracket className="h-12 text-[#f0d3f7]" />
             <span className="font-geist font-medium">
-              intergrate with your fav tech stack
+              integrate with your favorite services
             </span>
-            <Bracket className="h-12 scale-x-[-1] text-black" />
+            <Bracket className="h-12 scale-x-[-1] text-[#f0d3f7]" />
           </p>
-          <div className="font-geist w-full max-w-4xl text-center text-6xl font-bold uppercase tracking-tighter text-black">
-            {macIcon.map((char, index) => (
+          <div className="font-geist w-full max-w-4xl text-center text-6xl font-bold uppercase tracking-tighter text-white">
+            {serviceIcons.map((char, index) => (
               <CharacterV2
                 key={index}
                 char={char}
@@ -209,23 +209,22 @@ const Skiper31 = () => {
         </div>
         <div
           ref={targetRef3}
-          className="relative -mt-[95vh] box-border flex h-[210vh] flex-col items-center justify-center gap-[2vw] overflow-hidden bg-[#f5f4f3] p-[2vw]"
+          className="relative -mt-[95vh] box-border flex h-[210vh] flex-col items-center justify-center gap-[2vw] overflow-hidden bg-gradient-to-br from-[#a57982] via-[#b98ea7] to-[#f0d3f7] p-[2vw]"
         >
-          {" "}
-          <p className="font-geist flex items-center justify-center gap-3 text-2xl font-medium tracking-tight text-black">
-            <Bracket className="h-12 text-black" />
+          <p className="font-geist flex items-center justify-center gap-3 text-2xl font-medium tracking-tight text-white">
+            <Bracket className="h-12 text-[#302f4d]" />
             <span className="font-geist font-medium">
-              intergrate with your fav tech stack
+              discover our comprehensive solutions
             </span>
-            <Bracket className="h-12 scale-x-[-1] text-black" />
+            <Bracket className="h-12 scale-x-[-1] text-[#302f4d]" />
           </p>
           <div
-            className="font-geist w-full max-w-4xl text-center text-6xl font-bold uppercase tracking-tighter text-black"
+            className="font-geist w-full max-w-4xl text-center text-6xl font-bold uppercase tracking-tighter text-white"
             style={{
               perspective: "500px",
             }}
           >
-            {macIcon.map((char, index) => (
+            {serviceIcons.map((char, index) => (
               <CharacterV3
                 key={index}
                 char={char}

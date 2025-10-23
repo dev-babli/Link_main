@@ -2,65 +2,101 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import React, { useState } from "react";
-import "swiper/css";
-import "swiper/css/effect-creative";
-import "swiper/css/pagination";
-import "swiper/css/autoplay";
-
+import { Building2, ShoppingCart, Heart, Briefcase, GraduationCap, Plane, Factory, Zap } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const Skiper52 = () => {
-  const images = [
+  const industries = [
     {
-      src: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&auto=format&fit=crop&q=80",
-      alt: "Modern Technology Solutions",
-      code: "# 01",
+      src: "/Industry Card images/Realestate-and-property.webp",
+      alt: "Real Estate Technology",
+      title: "Real Estate",
+      description: "Property management and real estate platforms",
+      icon: Building2,
+      projects: "50+ Projects",
+      color: "from-[#f0d3f7] to-[#b98ea7]",
     },
     {
-      src: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop&q=80",
-      alt: "Data Analytics Dashboard",
-      code: "# 02",
-    },
-    {
-      src: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&auto=format&fit=crop&q=80",
-      alt: "AI and Machine Learning",
-      code: "# 03",
-    },
-    {
-      src: "https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&auto=format&fit=crop&q=80",
-      alt: "Cloud Infrastructure",
-      code: "# 04",
-    },
-    {
-      src: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&auto=format&fit=crop&q=80",
-      alt: "Cybersecurity Solutions",
-      code: "# 05",
-    },
-    {
-      src: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80",
-      alt: "Business Intelligence",
-      code: "# 06",
-    },
-    {
-      src: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&auto=format&fit=crop&q=80",
-      alt: "Digital Transformation",
-      code: "# 07",
-    },
-    {
-      src: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&auto=format&fit=crop&q=80",
-      alt: "Mobile App Development",
-      code: "# 08",
-    },
-    {
-      src: "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&auto=format&fit=crop&q=80",
+      src: "/Industry Card images/Retail and Ecommerce.webp",
       alt: "E-Commerce Solutions",
-      code: "# 09",
+      title: "E-Commerce",
+      description: "Online stores and marketplace solutions",
+      icon: ShoppingCart,
+      projects: "80+ Projects",
+      color: "from-[#b98ea7] to-[#a57982]",
+    },
+    {
+      src: "/Industry Card images/Healthcar and Lifesciences.webp",
+      alt: "Healthcare Technology",
+      title: "Healthcare",
+      description: "HIPAA-compliant medical platforms",
+      icon: Heart,
+      projects: "40+ Projects",
+      color: "from-[#a57982] to-[#302f4d]",
+    },
+    {
+      src: "/Industry Card images/Baking and Financial.webp",
+      alt: "Financial Technology",
+      title: "FinTech",
+      description: "Secure financial technology solutions",
+      icon: Briefcase,
+      projects: "60+ Projects",
+      color: "from-[#302f4d] to-[#120d31]",
+    },
+    {
+      src: "/Industry Card images/Education and Training.webp",
+      alt: "Educational Technology",
+      title: "Education",
+      description: "E-learning platforms and educational tech",
+      icon: GraduationCap,
+      projects: "45+ Projects",
+      color: "from-[#120d31] to-[#f0d3f7]",
+    },
+    {
+      src: "/Industry Card images/Logotstic and Transportation.webp",
+      alt: "Travel & Tourism",
+      title: "Travel & Tourism",
+      description: "Booking systems and travel management",
+      icon: Plane,
+      projects: "35+ Projects",
+      color: "from-[#f0d3f7] to-[#b98ea7]",
+    },
+    {
+      src: "/Industry Card images/Manufacturing and Automotive.webp",
+      alt: "Manufacturing Technology",
+      title: "Manufacturing",
+      description: "IoT and automation solutions",
+      icon: Factory,
+      projects: "55+ Projects",
+      color: "from-[#b98ea7] to-[#a57982]",
+    },
+    {
+      src: "/Industry Card images/Energy and Utilities.webp",
+      alt: "Energy & Utilities",
+      title: "Energy & Utilities",
+      description: "Smart grid and energy management",
+      icon: Zap,
+      projects: "30+ Projects",
+      color: "from-[#a57982] to-[#302f4d]",
     },
   ];
 
   return (
-    <div className="flex h-full w-full items-center justify-center overflow-hidden bg-[#f5f4f3]">
-      <HoverExpand_001 className="" images={images} />{" "}
+    <div className="flex h-full w-full items-center justify-center overflow-hidden bg-gradient-to-br from-[#120d31] via-[#302f4d] to-[#a57982]">
+      <div className="w-full max-w-7xl mx-auto px-4 py-20">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-light tracking-tight text-white sm:text-5xl lg:text-6xl mb-6">
+            Industries{' '}
+            <span className="font-normal italic bg-gradient-to-r from-[#f0d3f7] via-[#b98ea7] to-[#a57982] bg-clip-text text-transparent">
+              We Serve
+            </span>
+          </h2>
+          <p className="text-xl text-white/60 max-w-3xl mx-auto">
+            We deliver tailored technology solutions across diverse industries, helping businesses transform digitally and achieve measurable results.
+          </p>
+        </div>
+        <HoverExpand_001 className="" industries={industries} />
+      </div>
     </div>
   );
 };
@@ -68,13 +104,21 @@ const Skiper52 = () => {
 export { Skiper52 };
 
 const HoverExpand_001 = ({
-  images,
+  industries,
   className,
 }: {
-  images: { src: string; alt: string; code: string }[];
+  industries: {
+    src: string;
+    alt: string;
+    title: string;
+    description: string;
+    icon: any;
+    projects: string;
+    color: string;
+  }[];
   className?: string;
 }) => {
-  const [activeImage, setActiveImage] = useState<number | null>(1);
+  const [activeIndustry, setActiveIndustry] = useState<number | null>(1);
 
   return (
     <motion.div
@@ -93,50 +137,81 @@ const HoverExpand_001 = ({
         className="w-full"
       >
         <div className="flex w-full items-center justify-center gap-1">
-          {images.map((image, index) => (
-            <motion.div
-              key={index}
-              className="relative cursor-pointer overflow-hidden rounded-3xl"
-              initial={{ width: "2.5rem", height: "20rem" }}
-              animate={{
-                width: activeImage === index ? "24rem" : "5rem",
-                height: activeImage === index ? "24rem" : "24rem",
-              }}
-              transition={{ duration: 0.3, ease: "easeInOut" }}
-              onClick={() => setActiveImage(index)}
-              onHoverStart={() => setActiveImage(index)}
-            >
-              <AnimatePresence>
-                {activeImage === index && (
-                  <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    className="absolute h-full w-full bg-gradient-to-t from-black/40 to-transparent"
-                  />
-                )}
-              </AnimatePresence>
-              <AnimatePresence>
-                {activeImage === index && (
-                  <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    className="absolute flex h-full w-full flex-col items-end justify-end p-4"
-                  >
-                    <p className="text-left text-xs text-white/50">
-                      {image.code}
-                    </p>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-              <img
-                src={image.src}
-                className="size-full object-cover"
-                alt={image.alt}
-              />
-            </motion.div>
-          ))}
+          {industries.map((industry, index) => {
+            const IconComponent = industry.icon;
+            return (
+              <motion.div
+                key={index}
+                className="relative cursor-pointer overflow-hidden rounded-3xl glass-card"
+                initial={{ width: "2.5rem", height: "20rem" }}
+                animate={{
+                  width: activeIndustry === index ? "24rem" : "5rem",
+                  height: activeIndustry === index ? "24rem" : "24rem",
+                }}
+                transition={{ duration: 0.3, ease: "easeInOut" }}
+                onClick={() => setActiveIndustry(index)}
+                onHoverStart={() => setActiveIndustry(index)}
+              >
+                <AnimatePresence>
+                  {activeIndustry === index && (
+                    <motion.div
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      transition={{ duration: 0.3, ease: "easeInOut" }}
+                      className="absolute h-full w-full bg-black/70 z-10"
+                    />
+                  )}
+                </AnimatePresence>
+                <AnimatePresence>
+                  {activeIndustry === index && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 30 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: 30 }}
+                      transition={{ duration: 0.4, ease: "easeOut" }}
+                      className="absolute flex h-full w-full flex-col items-start justify-end p-6 z-20"
+                    >
+                      <motion.div
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.3, delay: 0.1 }}
+                        className="flex items-center gap-3 mb-3"
+                      >
+                        <div className={`p-2 rounded-full bg-gradient-to-br ${industry.color} text-white shadow-lg`}>
+                          <IconComponent className="w-6 h-6" />
+                        </div>
+                        <span className="text-sm font-medium text-white bg-black/30 px-3 py-1 rounded-full backdrop-blur-sm border border-white/20">
+                          {industry.projects}
+                        </span>
+                      </motion.div>
+                      <motion.h3
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.4, delay: 0.2 }}
+                        className="text-2xl font-bold text-white mb-2 drop-shadow-lg"
+                      >
+                        {industry.title}
+                      </motion.h3>
+                      <motion.p
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.4, delay: 0.3 }}
+                        className="text-sm text-white/90 leading-relaxed drop-shadow-md"
+                      >
+                        {industry.description}
+                      </motion.p>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+                <img
+                  src={industry.src}
+                  className="size-full object-cover"
+                  alt={industry.alt}
+                />
+              </motion.div>
+            );
+          })}
         </div>
       </motion.div>
     </motion.div>

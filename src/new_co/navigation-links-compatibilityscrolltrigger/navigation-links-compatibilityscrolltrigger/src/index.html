@@ -1,0 +1,49 @@
+<div id="one" class="description panel plain">
+    <div><h1>Navigation links with smooth scrolling</h1>
+      <p>ScrollTrigger works great with navigation links within the page! Try clicking one of the links above and see how ScrollTrigger stays perfectly synced.</p>
+      <div class="scroll-down">Scroll down<div class="arrow"></div></div>
+    </div>
+  </div>
+
+
+  <section id="two" class="panel red">
+     <div class="line-cont">
+      <span class="line line-1"></span>
+    </div>
+    <p></span>This line's animation will begin when it enters the viewport and finish when its top edge hits the top of the viewport, staying perfectly in sync with the scrollbar because it has <code>scrub:&nbsp;true</code></p>
+  </section>
+
+
+  <section id="three" class="panel orange">
+     <div class="line-cont">
+      <span class="line line-2"></span>
+    </div>
+    <p></span>This orange panel gets pinned when its top edge hits the top of the viewport, then the line's animation is linked with the scroll position until it has traveled 100% of the viewport's height (<code>end: "+=100%"</code>), then the orange panel is unpinned and normal scrolling resumes.</p><p>Padding is added automatically to push the rest of the content down so that it catches up with the scroll when it unpins. You can set <code>pinSpacing: false</code> to prevent that if you prefer.</p>
+  </section>
+
+
+  <section id="four" class="panel green">
+     <div class="line-cont">
+      <span class="line line-3"></span>
+    </div>
+    <p>This panel gets pinned in a similar way, and has a more involved animation that's wrapped in a timeline, spinning a shape in addition to the line, all synced with the scroll position perfectly.</p>
+    <div class="flair flair--3"></div>  
+</section>
+
+
+
+<section id="five" class="panel plain">
+  DONE!
+</section>
+
+
+
+
+
+<nav class="fixed-nav">
+  <div><a href="#one">one</a></div>
+  <div><a href="#two">two</a></div>
+  <div><a href="#three">three</a></div>
+  <div><a href="#four">four</a></div>
+  <div><a href="#five">five</a></div>
+</nav>

@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.container {
+  width: 400px;
+  height: 400px;
+  border: 1px dashed var(--color-surface75);
+}
+
+.container.no-overflow {
+  overflow: hidden;
+}
+
+.content,
+.content .section {
+  width: 100%;
+  height: 100%;
+}
+
+.content {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.content .section {
+  flex: 1 0 100%;
+}
+
+.content .section .panel {
+  width: 100%;
+  height: 100%;
+  min-height: unset;
+  color: var(--dark);
+}
+
+.buttons {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  margin-top: 20px;
+  gap: 10px;
+  z-index: 10;
+}
+
+h3 {
+  font-size: 16px;
+  text-align: center;
+}

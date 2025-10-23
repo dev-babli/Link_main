@@ -22,7 +22,7 @@ const industries = [
         name: 'Real Estate',
         description: 'Digital solutions for property management and real estate platforms',
         projects: '50+ Projects',
-        color: 'from-cyan-500 to-teal-500',
+        color: 'from-thistle to-puce',
         solutions: ['Property Management Systems', 'Virtual Tours', 'CRM Platforms', 'Market Analytics'],
     },
     {
@@ -31,7 +31,7 @@ const industries = [
         name: 'E-Commerce',
         description: 'Scalable online stores and marketplace solutions',
         projects: '80+ Projects',
-        color: 'from-teal-500 to-green-500',
+        color: 'from-puce to-mountbatten-pink',
         solutions: ['Online Marketplaces', 'Payment Gateways', 'Inventory Management', 'Customer Analytics'],
     },
     {
@@ -40,7 +40,7 @@ const industries = [
         name: 'Healthcare',
         description: 'HIPAA-compliant medical and health tech platforms',
         projects: '40+ Projects',
-        color: 'from-green-500 to-emerald-500',
+        color: 'from-mountbatten-pink to-space-cadet',
         solutions: ['Telemedicine Platforms', 'Electronic Health Records', 'Medical Device Integration', 'Health Analytics'],
     },
     {
@@ -49,7 +49,7 @@ const industries = [
         name: 'FinTech',
         description: 'Secure financial technology and payment solutions',
         projects: '60+ Projects',
-        color: 'from-emerald-500 to-blue-500',
+        color: 'from-space-cadet to-russian-violet',
         solutions: ['Digital Banking', 'Payment Processing', 'Risk Management', 'Regulatory Compliance'],
     },
     {
@@ -58,7 +58,7 @@ const industries = [
         name: 'Education',
         description: 'E-learning platforms and educational technology',
         projects: '45+ Projects',
-        color: 'from-blue-500 to-purple-500',
+        color: 'from-russian-violet to-thistle',
         solutions: ['Learning Management Systems', 'Virtual Classrooms', 'Student Portals', 'Assessment Tools'],
     },
     {
@@ -67,7 +67,7 @@ const industries = [
         name: 'Travel & Tourism',
         description: 'Booking systems and travel management platforms',
         projects: '35+ Projects',
-        color: 'from-purple-500 to-cyan-500',
+        color: 'from-thistle to-puce',
         solutions: ['Booking Platforms', 'Travel Management', 'Customer Portals', 'Revenue Optimization'],
     },
     {
@@ -76,7 +76,7 @@ const industries = [
         name: 'Manufacturing',
         description: 'IoT and automation solutions for industrial operations',
         projects: '55+ Projects',
-        color: 'from-orange-500 to-red-500',
+        color: 'from-puce to-mountbatten-pink',
         solutions: ['Smart Manufacturing', 'Supply Chain Management', 'Quality Control', 'Predictive Maintenance'],
     },
     {
