@@ -49,7 +49,7 @@ export default function LinkUnifiedStatsSection() {
                     transition={{ duration: 0.8 }}
                     className="text-center mb-16"
                 >
-                    <div className="inline-flex items-center rounded-full glass-button px-4 py-2 text-sm font-medium text-white/80 mb-6 font-body">
+                    <div className="inline-flex items-center rounded-full glass-button px-4 py-2 text-sm font-medium text-white mb-6 font-body">
                         <span className="w-2 h-2 bg-accent-cyan rounded-full mr-2 animate-pulse-glow"></span>
                         Trusted by Industry Leaders
                     </div>

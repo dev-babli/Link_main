@@ -65,14 +65,6 @@ export const CaseStudiesShowcase: React.FC = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
                     >
-                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 font-heading">
-                            <span className="bg-gradient-to-r from-accent-cyan via-accent-indigo to-accent-emerald bg-clip-text text-transparent">
-                                Success Stories
-                            </span>
-                        </h2>
-                        <p className="text-xl text-white max-w-3xl mx-auto leading-relaxed">
-                            Discover how we've helped businesses transform their digital presence and achieve remarkable results through innovative technology solutions.
-                        </p>
                         <div className="flex justify-center mt-8">
                             <div className="w-24 h-1 bg-gradient-to-r from-accent-cyan to-accent-indigo rounded-full"></div>
                         </div>

@@ -130,7 +130,7 @@ export const CardSlide = ({
                             <div className="font-semibold text-lg sm:text-xl md:text-2xl text-white">
                                 {card.name}
                             </div>
-                            <div className="text-white/80 text-sm sm:text-base leading-relaxed">
+                            <div className="text-white text-sm sm:text-base leading-relaxed">
                                 {card.content}
                             </div>
 
@@ -145,7 +145,7 @@ export const CardSlide = ({
                         </div>
 
                         <div className="pt-3 border-t border-white/10 mt-4">
-                            <p className="text-white/70 font-medium text-sm sm:text-base">
+                            <p className="text-white font-medium text-sm sm:text-base">
                                 {card.designation}
                             </p>
                         </div>
@@ -182,8 +182,8 @@ export const CardSlide = ({
                                     setTimeout(() => setIsPaused(false), 3000);
                                 }}
                                 className={`h-2 rounded-full transition-all ${index === activeIndex
-                                        ? 'w-8 bg-gradient-to-r from-blue-500 to-purple-500'
-                                        : 'w-2 bg-white/30 hover:bg-white/50'
+                                    ? 'w-8 bg-gradient-to-r from-blue-500 to-purple-500'
+                                    : 'w-2 bg-white/30 hover:bg-white/50'
                                     }`}
                             />
                         ))}
@@ -203,7 +203,7 @@ export const CardSlide = ({
             {/* Auto-rotation indicator */}
             {!isPaused && (
                 <motion.div
-                    className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white/40 text-xs z-40"
+                    className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white text-xs z-40"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}

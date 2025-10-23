@@ -88,30 +88,30 @@ const Footer = ({
                 <Code />
                 Link Innovations
               </div>
-              <p className="mt-4 text-base font-medium">{tagline}</p>
+              <p className="mt-4 text-base font-medium text-white">{tagline}</p>
             </div>
             {menuItems.map((section, sectionIdx) => (
               <div key={sectionIdx}>
-                <h3 className="mb-4 font-medium text-lg">{section.title}</h3>
-                <ul className="text-muted-foreground space-y-4">
+                <h3 className="mb-4 font-medium text-lg text-white">{section.title}</h3>
+                <ul className="text-white space-y-4">
                   {section.links.map((link, linkIdx) => (
                     <li
                       key={linkIdx}
                       className="hover:text-primary font-medium"
                     >
-                      <a href={link.url}>{link.text}</a>
+                      <a href={link.url} className="text-white hover:text-accent-cyan">{link.text}</a>
                     </li>
                   ))}
                 </ul>
               </div>
             ))}
           </div>
-          <div className="text-muted-foreground mt-24 flex flex-col justify-between gap-4 border-t pt-8 text-sm font-medium md:flex-row md:items-center">
-            <p>{copyright}</p>
+          <div className="text-white mt-24 flex flex-col justify-between gap-4 border-t pt-8 text-sm font-medium md:flex-row md:items-center">
+            <p className="text-white">{copyright}</p>
             <ul className="flex gap-4">
               {bottomLinks.map((link, linkIdx) => (
                 <li key={linkIdx} className="hover:text-primary underline">
-                  <a href={link.url}>{link.text}</a>
+                  <a href={link.url} className="text-white hover:text-accent-cyan">{link.text}</a>
                 </li>
               ))}
             </ul>

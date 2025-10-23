@@ -96,7 +96,7 @@ export const ServiceShowcase: React.FC = () => {
                             Our Services
                         </span>
                     </h2>
-                    <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                    <p className="text-xl text-white max-w-3xl mx-auto leading-relaxed">
                         Discover how our cutting-edge technology solutions can transform your business and drive unprecedented growth
                     </p>
                     <div className="flex justify-center mt-8">
@@ -132,7 +132,7 @@ export const ServiceShowcase: React.FC = () => {
 
                                     {/* Service Description - Reveals on hover */}
                                     <CardCurtainRevealDescription className="my-4">
-                                        <p className="text-gray-300 text-sm leading-relaxed">
+                                        <p className="text-white text-sm leading-relaxed">
                                             {service.description}
                                         </p>
                                     </CardCurtainRevealDescription>
@@ -147,7 +147,7 @@ export const ServiceShowcase: React.FC = () => {
                                             {service.features.map((feature, featureIndex) => (
                                                 <div key={featureIndex} className="flex items-center space-x-2">
                                                     <div className="w-1.5 h-1.5 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full"></div>
-                                                    <span className="text-gray-300 text-xs">{feature}</span>
+                                                    <span className="text-white text-xs">{feature}</span>
                                                 </div>
                                             ))}
                                         </div>

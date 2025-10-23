@@ -4,48 +4,48 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 import Image from 'next/image';
 import { motion, useInView } from 'framer-motion';
 
-const tabData = [
+const timelineData = [
     {
         id: 0,
         number: '01',
-        label: 'AI & Gen AI',
-        title: ['Transform your business with ', 'artificial intelligence solutions'],
-        subtitle: 'Intelligent Automation',
-        description: 'Harness the power of AI and machine learning to automate processes, gain insights, and make data-driven decisions that drive business growth.',
-        features: ['Machine Learning Models', 'Natural Language Processing', 'Predictive Analytics'],
+        label: 'Discovery & Planning',
+        title: ['Start your journey with ', 'strategic planning and analysis'],
+        subtitle: 'Project Foundation',
+        description: 'We begin by understanding your business goals, analyzing requirements, and creating a comprehensive roadmap for your digital transformation.',
+        features: ['Business Analysis', 'Technical Requirements', 'Project Roadmap'],
         image: '/herosectionimages/Agentic Ai.webp',
         fallback: '/herosectionimages/ai-human-collaboration.jpg',
     },
     {
         id: 1,
         number: '02',
-        label: 'Cloud & Application',
-        title: ['Scale seamlessly with ', 'enterprise cloud infrastructure'],
-        subtitle: 'Scalable Infrastructure',
-        description: 'Build resilient, scalable cloud infrastructure on AWS, Azure, and GCP with DevOps best practices and automated deployment pipelines.',
-        features: ['Cloud Migration', 'DevOps Automation', 'Microservices Architecture'],
+        label: 'Design & Development',
+        title: ['Build with precision using ', 'modern development practices'],
+        subtitle: 'Implementation Phase',
+        description: 'Our expert team designs and develops your solution using cutting-edge technologies, following agile methodologies and best practices.',
+        features: ['UI/UX Design', 'Frontend Development', 'Backend Development'],
         image: '/herosectionimages/Intellectt SE Sliders/Cloud Application.webp',
         fallback: '/herosectionimages/cloud-computing-illustration.jpg',
     },
     {
         id: 2,
         number: '03',
-        label: 'Data Analytics',
-        title: ['Unlock insights with ', 'advanced data analytics solutions'],
-        subtitle: 'Business Intelligence',
-        description: 'Turn your data into actionable insights with custom dashboards, real-time analytics, and advanced data visualization tools.',
-        features: ['Data Warehousing', 'Real-time Analytics', 'Business Intelligence'],
+        label: 'Testing & Quality Assurance',
+        title: ['Ensure excellence through ', 'comprehensive testing protocols'],
+        subtitle: 'Quality Validation',
+        description: 'We rigorously test every aspect of your solution to ensure reliability, performance, and security before deployment.',
+        features: ['Automated Testing', 'Performance Testing', 'Security Audits'],
         image: '/herosectionimages/Intellectt SE Sliders/Data & Analytics.webp',
         fallback: '/herosectionimages/Data & Analytics.webp',
     },
     {
         id: 3,
         number: '04',
-        label: 'Digital Security',
-        title: ['Secure your digital assets with ', 'advanced protection systems'],
-        subtitle: 'Enterprise Security',
-        description: 'Implement robust security measures, compliance frameworks, and threat protection to safeguard your digital assets and customer data.',
-        features: ['Cybersecurity Assessment', 'Compliance Management', 'Threat Detection'],
+        label: 'Deployment & Launch',
+        title: ['Go live with confidence using ', 'enterprise-grade deployment'],
+        subtitle: 'Production Launch',
+        description: 'We handle the complete deployment process, ensuring smooth transition to production with monitoring and support.',
+        features: ['Cloud Deployment', 'CI/CD Pipeline', 'Monitoring Setup'],
         image: '/herosectionimages/Intellectt SE Sliders/Cyber security.webp',
         fallback: '/herosectionimages/Cyber Security.webp',
     },
@@ -53,11 +53,10 @@ const tabData = [
 
 const ProgressNotch = () => (
     <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M3 0L6 3L3 6H0V0H3Z" fill="currentColor" className="text-[#4a7856]"></path>
-        <path d="M6 3L8 5V1L6 3Z" fill="currentColor" className="text-[#4a7856]/50"></path>
+        <path d="M3 0L6 3L3 6H0V0H3Z" fill="currentColor" className="text-[#ff3333]"></path>
+        <path d="M6 3L8 5V1L6 3Z" fill="currentColor" className="text-[#ff3333]/50"></path>
     </svg>
 );
-
 
 const ProgressBar: React.FC<{ status: 'past' | 'present' | 'future'; progress: number }> = ({ status, progress }) => {
     const baseClasses = "relative mb-3 h-1.5 w-full overflow-hidden rounded-[1.5px]";
@@ -65,15 +64,15 @@ const ProgressBar: React.FC<{ status: 'past' | 'present' | 'future'; progress: n
     if (status === 'past') {
         return (
             <div className={baseClasses}>
-                <div className="absolute inset-0 bg-[#4a7856] opacity-50" />
+                <div className="absolute inset-0 bg-[#ff3333] opacity-50" />
             </div>
         );
     }
     if (status === 'present') {
         return (
-            <div className={`${baseClasses} bg-[#1e3f20]/20`}>
+            <div className={`${baseClasses} bg-[#ff3333]/20`}>
                 <div
-                    className="h-full bg-[#4a7856] flex justify-end items-center"
+                    className="h-full bg-[#ff3333] flex justify-end items-center"
                     style={{ width: `${progress}%`, transition: 'width 50ms linear' }}
                 >
                     <div className="h-1.5 w-2 flex-shrink-0" style={{ transform: 'translateX(100%)' }}>
@@ -84,10 +83,10 @@ const ProgressBar: React.FC<{ status: 'past' | 'present' | 'future'; progress: n
         );
     }
     // 'future' status
-    return <div className={`${baseClasses} bg-[#1e3f20]/20`} />;
+    return <div className={`${baseClasses} bg-[#ff3333]/20`} />;
 }
 
-const LinkTabbedFeatures = () => {
+const LinkTimelineSection = () => {
     const [activeTab, setActiveTab] = useState(1);
     const [progress, setProgress] = useState(0);
     const [isPaused, setIsPaused] = useState(false);
@@ -104,7 +103,7 @@ const LinkTabbedFeatures = () => {
     const isContentInView = useInView(contentRef, { once: true, margin: "-100px" });
 
     const handleNextTab = useCallback(() => {
-        setActiveTab((prev) => (prev + 1) % tabData.length);
+        setActiveTab((prev) => (prev + 1) % timelineData.length);
     }, []);
 
     const animate = useCallback((time: number) => {
@@ -149,7 +148,7 @@ const LinkTabbedFeatures = () => {
     }
 
     return (
-        <section className="py-16 bg-black">
+        <section className="py-16" style={{ backgroundColor: 'var(--background)', color: 'var(--foreground)' }}>
             {/* Swiss Typography Header - Minimal & Functional */}
             <motion.div
                 ref={headerRef}
@@ -165,24 +164,26 @@ const LinkTabbedFeatures = () => {
                         transition={{ duration: 0.6, delay: 0.2 }}
                         className="flex items-center gap-4 mb-6"
                     >
-                        <div className="w-8 h-0.5 bg-[#4a7856]"></div>
-                        <span className="text-xs font-mono text-white tracking-[0.2em] uppercase">Services</span>
+                        <div className="w-8 h-0.5" style={{ backgroundColor: 'var(--primary)' }}></div>
+                        <span className="text-xs font-mono tracking-[0.2em] uppercase" style={{ color: 'var(--foreground)' }}>Process</span>
                     </motion.div>
                     <motion.h2
                         initial={{ opacity: 0, y: 30 }}
                         animate={isHeaderInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                         transition={{ duration: 0.8, delay: 0.3 }}
-                        className="text-4xl md:text-5xl font-light text-white mb-4 tracking-tight leading-none"
+                        className="text-4xl md:text-5xl font-light mb-4 tracking-tight leading-none"
+                        style={{ color: 'var(--foreground)' }}
                     >
-                        Technology Solutions
+                        Development Timeline
                     </motion.h2>
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
                         animate={isHeaderInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                         transition={{ duration: 0.6, delay: 0.4 }}
-                        className="text-base text-white font-light leading-relaxed max-w-2xl"
+                        className="text-base font-light leading-relaxed max-w-2xl"
+                        style={{ color: 'var(--muted-foreground)' }}
                     >
-                        Comprehensive technology services for modern businesses
+                        Our proven development process ensures successful project delivery
                     </motion.p>
                 </div>
             </motion.div>
@@ -201,8 +202,8 @@ const LinkTabbedFeatures = () => {
                     onMouseLeave={() => setIsPaused(false)}
                 >
                     {/* Enhanced Tab Navigation */}
-                    <div className="grid grid-cols-4 gap-1 mb-12 border-b border-gray-800/50">
-                        {tabData.map((tab, index) => (
+                    <div className="grid grid-cols-4 gap-1 mb-12 border-b" style={{ borderColor: 'var(--border)' }}>
+                        {timelineData.map((tab, index) => (
                             <motion.button
                                 key={tab.id}
                                 initial={{ opacity: 0, y: 20 }}
@@ -210,9 +211,14 @@ const LinkTabbedFeatures = () => {
                                 transition={{ duration: 0.5, delay: 0.1 * index }}
                                 onClick={() => handleTabClick(tab.id)}
                                 className={`relative py-6 text-center transition-all duration-500 group ${tab.id === activeTab
-                                    ? 'text-white border-b-2 border-[#4a7856] bg-[#1e3f20]/10'
-                                    : 'text-white hover:text-white hover:bg-[#1e3f20]/5'
+                                    ? 'border-b-2'
+                                    : 'hover:opacity-80'
                                     }`}
+                                style={{
+                                    color: 'var(--foreground)',
+                                    borderBottomColor: tab.id === activeTab ? 'var(--primary)' : 'transparent',
+                                    backgroundColor: tab.id === activeTab ? 'var(--muted)' : 'transparent'
+                                }}
                             >
                                 <div className="text-xs font-mono tracking-wider mb-2 transition-colors duration-300">
                                     {tab.number}
@@ -227,7 +233,10 @@ const LinkTabbedFeatures = () => {
                                     />
                                 )}
                                 {/* Hover Effect */}
-                                <div className="absolute inset-0 bg-gradient-to-r from-[#4a7856]/5 to-[#345830]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                <div
+                                    className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                                    style={{ backgroundColor: 'var(--muted)' }}
+                                ></div>
                             </motion.button>
                         ))}
                     </div>
@@ -240,7 +249,7 @@ const LinkTabbedFeatures = () => {
                         transition={{ duration: 0.8, delay: 0.3 }}
                         className="relative min-h-[600px]"
                     >
-                        {tabData.map((tab) => (
+                        {timelineData.map((tab) => (
                             <motion.div
                                 key={tab.id}
                                 initial={{ opacity: 0, y: 20 }}
@@ -259,18 +268,27 @@ const LinkTabbedFeatures = () => {
                                     >
                                         {/* Swiss Number Badge */}
                                         <div className="flex items-center gap-4">
-                                            <div className="w-12 h-12 bg-[#4a7856] rounded-full flex items-center justify-center">
+                                            <div
+                                                className="w-12 h-12 rounded-full flex items-center justify-center"
+                                                style={{ backgroundColor: 'var(--primary)' }}
+                                            >
                                                 <span className="text-white font-mono text-sm font-bold">{tab.number}</span>
                                             </div>
-                                            <div className="w-16 h-0.5 bg-[#4a7856]"></div>
+                                            <div className="w-16 h-0.5" style={{ backgroundColor: 'var(--primary)' }}></div>
                                         </div>
 
                                         {/* Swiss Typography Hierarchy */}
                                         <div className="space-y-6">
-                                            <h3 className="text-4xl md:text-5xl font-light text-white leading-tight tracking-tight">
+                                            <h3
+                                                className="text-4xl md:text-5xl font-light leading-tight tracking-tight"
+                                                style={{ color: 'var(--foreground)' }}
+                                            >
                                                 {tab.subtitle}
                                             </h3>
-                                            <p className="text-lg text-white leading-relaxed max-w-lg">
+                                            <p
+                                                className="text-lg leading-relaxed max-w-lg"
+                                                style={{ color: 'var(--muted-foreground)' }}
+                                            >
                                                 {tab.description}
                                             </p>
                                         </div>
@@ -288,9 +306,13 @@ const LinkTabbedFeatures = () => {
                                                     initial={{ opacity: 0, x: -20 }}
                                                     animate={tab.id === activeTab ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
                                                     transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
-                                                    className="flex items-center gap-3 text-white"
+                                                    className="flex items-center gap-3"
+                                                    style={{ color: 'var(--foreground)' }}
                                                 >
-                                                    <div className="w-2 h-2 bg-[#4a7856] rounded-full flex-shrink-0"></div>
+                                                    <div
+                                                        className="w-2 h-2 rounded-full flex-shrink-0"
+                                                        style={{ backgroundColor: 'var(--primary)' }}
+                                                    ></div>
                                                     <span className="text-base font-light">{feature}</span>
                                                 </motion.div>
                                             ))}
@@ -317,15 +339,27 @@ const LinkTabbedFeatures = () => {
                                                 }}
                                             />
                                             {/* Swiss Design Overlay */}
-                                            <div className="absolute inset-0 bg-gradient-to-br from-[#4a7856]/10 to-transparent"></div>
+                                            <div
+                                                className="absolute inset-0"
+                                                style={{ background: `linear-gradient(to bottom right, var(--primary)/10, transparent)` }}
+                                            ></div>
                                         </div>
 
                                         {/* Swiss Design Elements */}
-                                        <div className="absolute -top-4 -right-4 w-24 h-24 bg-[#4a7856]/20 rounded-full blur-xl"></div>
-                                        <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-[#345830]/30 rounded-full blur-lg"></div>
+                                        <div
+                                            className="absolute -top-4 -right-4 w-24 h-24 rounded-full blur-xl"
+                                            style={{ backgroundColor: 'var(--primary)/20' }}
+                                        ></div>
+                                        <div
+                                            className="absolute -bottom-4 -left-4 w-16 h-16 rounded-full blur-lg"
+                                            style={{ backgroundColor: 'var(--accent)/30' }}
+                                        ></div>
 
                                         {/* Swiss Accent Line */}
-                                        <div className="mt-6 w-full h-1 bg-gradient-to-r from-[#4a7856] to-[#345830]"></div>
+                                        <div
+                                            className="mt-6 w-full h-1"
+                                            style={{ background: `linear-gradient(to right, var(--primary), var(--accent))` }}
+                                        ></div>
                                     </motion.div>
                                 </div>
                             </motion.div>
@@ -337,4 +371,4 @@ const LinkTabbedFeatures = () => {
     );
 };
 
-export default LinkTabbedFeatures;
+export default LinkTimelineSection;

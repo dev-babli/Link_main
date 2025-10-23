@@ -96,11 +96,11 @@ const LinkDevexVideoSection = () => {
                                         className="h-5 w-5 flex-shrink-0"
                                         unoptimized
                                     />
-                                    <h3 className="text-xl font-semibold leading-snug text-text-primary">
+                                    <h3 className="text-xl font-semibold leading-snug text-white">
                                         {card.title}
                                     </h3>
                                 </div>
-                                <p className="text-base text-text-tertiary">
+                                <p className="text-base text-white">
                                     {card.description}
                                 </p>
                             </div>

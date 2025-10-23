@@ -55,7 +55,7 @@ const ServiceContent: React.FC<{
 
       {/* Description */}
       <motion.p
-        className="text-gray-300 text-xl leading-relaxed"
+        className="text-white text-xl leading-relaxed"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.2 }}
@@ -84,7 +84,7 @@ const ServiceContent: React.FC<{
               transition={{ duration: 0.4, delay: 0.1 * index }}
             >
               <div className="w-2 h-2 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full flex-shrink-0"></div>
-              <span className="text-gray-300 text-sm">{feature}</span>
+              <span className="text-white text-sm">{feature}</span>
             </motion.div>
           ))}
         </div>
@@ -104,7 +104,7 @@ const ServiceContent: React.FC<{
           {technologies.map((tech, index) => (
             <motion.span
               key={index}
-              className="px-4 py-2 bg-gradient-to-r from-gray-800/50 to-gray-700/50 border border-gray-600/50 rounded-full text-sm text-gray-300 hover:border-blue-500/50 hover:text-blue-300 transition-all duration-300 backdrop-blur-sm"
+              className="px-4 py-2 bg-gradient-to-r from-gray-800/50 to-gray-700/50 border border-gray-600/50 rounded-full text-sm text-white hover:border-blue-500/50 hover:text-blue-300 transition-all duration-300 backdrop-blur-sm"
               whileHover={{ scale: 1.05, y: -2 }}
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
@@ -164,7 +164,7 @@ const ServiceContent: React.FC<{
             <div className="absolute bottom-6 left-6 right-6">
               <div className="bg-black/40 backdrop-blur-sm rounded-xl p-4 border border-white/10">
                 <h4 className="text-white font-semibold mb-2">Professional {title}</h4>
-                <p className="text-gray-300 text-sm">Delivering excellence in every project</p>
+                <p className="text-white text-sm">Delivering excellence in every project</p>
               </div>
             </div>
           </div>
@@ -320,7 +320,7 @@ export const HomepageStickyTabs: React.FC = () => {
                 Our Services
               </span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-white max-w-3xl mx-auto leading-relaxed">
               Discover how our cutting-edge technology solutions can transform your business and drive unprecedented growth
             </p>
             <div className="flex justify-center mt-8">
@@ -331,7 +331,7 @@ export const HomepageStickyTabs: React.FC = () => {
       </div>
 
       <StickyTabs
-        mainNavHeight="var(--spacing-phi-xl)"
+        mainNavHeight="4.236rem"
         rootClassName="bg-transparent text-white relative z-10"
         navSpacerClassName="border-b border-white/20 bg-black/80 backdrop-blur-sm"
         sectionClassName="bg-gradient-to-b from-gray-900/50 to-black/50 backdrop-blur-sm"

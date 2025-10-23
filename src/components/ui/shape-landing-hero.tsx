@@ -188,7 +188,7 @@ function HeroGeometric({
                         className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/[0.05] border border-white/[0.12] mb-8 md:mb-12 backdrop-blur-sm shadow-lg shadow-indigo-500/10"
                     >
                         <Circle className="h-2 w-2 fill-rose-500/80 animate-pulse" />
-                        <span className="text-sm text-white/70 tracking-wide font-medium">
+                        <span className="text-sm text-white tracking-wide font-medium">
                             {badge}
                         </span>
                     </motion.div>
@@ -219,7 +219,7 @@ function HeroGeometric({
                         animate="visible"
                         transition={{ duration: 1, ease: "easeOut", delay: 0.4 }}
                     >
-                        <p className="text-base sm:text-lg md:text-xl text-white/50 mb-8 leading-relaxed font-light tracking-wide max-w-2xl mx-auto px-4">
+                        <p className="text-base sm:text-lg md:text-xl text-white mb-8 leading-relaxed font-light tracking-wide max-w-2xl mx-auto px-4">
                             We turn complex challenges into intelligent solutions that drive business growth and technological advancement. From concept to deployment, we're your innovation partners.
                         </p>
                     </motion.div>

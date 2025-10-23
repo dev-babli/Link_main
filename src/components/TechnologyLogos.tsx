@@ -6,113 +6,113 @@ import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
 
 const techLogos = [
-    { 
+    {
         node: (
             <motion.div whileHover={{ scale: 1.2, rotate: 360 }} transition={{ duration: 0.5 }}>
                 <SiReact className="text-cyan-400" />
             </motion.div>
-        ), 
-        title: "React", 
-        href: "https://react.dev" 
+        ),
+        title: "React",
+        href: "https://react.dev"
     },
-    { 
+    {
         node: (
             <motion.div whileHover={{ scale: 1.2, y: -5 }} transition={{ duration: 0.3 }}>
                 <SiNextdotjs className="text-white" />
             </motion.div>
-        ), 
-        title: "Next.js", 
-        href: "https://nextjs.org" 
+        ),
+        title: "Next.js",
+        href: "https://nextjs.org"
     },
-    { 
+    {
         node: (
             <motion.div whileHover={{ scale: 1.2, filter: "drop-shadow(0 0 8px rgb(96, 165, 250))" }} transition={{ duration: 0.3 }}>
                 <SiTypescript className="text-blue-400" />
             </motion.div>
-        ), 
-        title: "TypeScript", 
-        href: "https://www.typescriptlang.org" 
+        ),
+        title: "TypeScript",
+        href: "https://www.typescriptlang.org"
     },
-    { 
+    {
         node: (
             <motion.div whileHover={{ scale: 1.2, rotate: -10 }} transition={{ duration: 0.3 }}>
                 <SiTailwindcss className="text-cyan-300" />
             </motion.div>
-        ), 
-        title: "Tailwind CSS", 
-        href: "https://tailwindcss.com" 
+        ),
+        title: "Tailwind CSS",
+        href: "https://tailwindcss.com"
     },
-    { 
+    {
         node: (
             <motion.div whileHover={{ scale: 1.2, y: -5 }} transition={{ duration: 0.3 }}>
                 <SiNodedotjs className="text-green-400" />
             </motion.div>
-        ), 
-        title: "Node.js", 
-        href: "https://nodejs.org" 
+        ),
+        title: "Node.js",
+        href: "https://nodejs.org"
     },
-    { 
+    {
         node: (
             <motion.div whileHover={{ scale: 1.2, rotate: 10 }} transition={{ duration: 0.3 }}>
                 <SiMongodb className="text-green-300" />
             </motion.div>
-        ), 
-        title: "MongoDB", 
-        href: "https://www.mongodb.com" 
+        ),
+        title: "MongoDB",
+        href: "https://www.mongodb.com"
     },
-    { 
+    {
         node: (
             <motion.div whileHover={{ scale: 1.2, filter: "drop-shadow(0 0 8px rgb(147, 197, 253))" }} transition={{ duration: 0.3 }}>
                 <SiPostgresql className="text-blue-300" />
             </motion.div>
-        ), 
-        title: "PostgreSQL", 
-        href: "https://www.postgresql.org" 
+        ),
+        title: "PostgreSQL",
+        href: "https://www.postgresql.org"
     },
-    { 
+    {
         node: (
             <motion.div whileHover={{ scale: 1.2, y: -8 }} transition={{ duration: 0.3, type: "spring" }}>
                 <SiDocker className="text-blue-400" />
             </motion.div>
-        ), 
-        title: "Docker", 
-        href: "https://www.docker.com" 
+        ),
+        title: "Docker",
+        href: "https://www.docker.com"
     },
-    { 
+    {
         node: (
             <motion.div whileHover={{ scale: 1.2, rotate: 360 }} transition={{ duration: 0.5 }}>
                 <SiGit className="text-orange-400" />
             </motion.div>
-        ), 
-        title: "Git", 
-        href: "https://git-scm.com" 
+        ),
+        title: "Git",
+        href: "https://git-scm.com"
     },
-    { 
+    {
         node: (
             <motion.div whileHover={{ scale: 1.2, filter: "drop-shadow(0 0 8px rgb(255, 255, 255))" }} transition={{ duration: 0.3 }}>
                 <SiGithub className="text-white" />
             </motion.div>
-        ), 
-        title: "GitHub", 
-        href: "https://github.com" 
+        ),
+        title: "GitHub",
+        href: "https://github.com"
     },
-    { 
+    {
         node: (
             <motion.div whileHover={{ scale: 1.2, y: -5 }} transition={{ duration: 0.3 }}>
                 <SiVercel className="text-white" />
             </motion.div>
-        ), 
-        title: "Vercel", 
-        href: "https://vercel.com" 
+        ),
+        title: "Vercel",
+        href: "https://vercel.com"
     },
-    { 
+    {
         node: (
             <motion.div whileHover={{ scale: 1.2, filter: "drop-shadow(0 0 8px rgb(192, 132, 252))" }} transition={{ duration: 0.3 }}>
                 <SiFigma className="text-purple-400" />
             </motion.div>
-        ), 
-        title: "Figma", 
-        href: "https://www.figma.com" 
+        ),
+        title: "Figma",
+        href: "https://www.figma.com"
     },
 ];
 
@@ -138,7 +138,7 @@ export default function TechnologyLogos() {
                     transition={{ duration: 0.8 }}
                     className="text-center mb-12"
                 >
-                    <div className="inline-flex items-center rounded-full glass-button px-4 py-2 text-sm font-medium text-white/80 mb-6">
+                    <div className="inline-flex items-center rounded-full glass-button px-4 py-2 text-sm font-medium text-white mb-6">
                         <span className="w-2 h-2 bg-purple-500 rounded-full mr-2 animate-pulse-glow"></span>
                         Technology Stack
                     </div>
@@ -148,7 +148,7 @@ export default function TechnologyLogos() {
                             Modern Technologies
                         </span>
                     </h2>
-                    <p className="text-white/60 max-w-2xl mx-auto">
+                    <p className="text-white max-w-2xl mx-auto">
                         Our solutions are powered by the latest and most reliable technologies
                     </p>
                 </motion.div>

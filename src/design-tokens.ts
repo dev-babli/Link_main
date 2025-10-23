@@ -33,9 +33,9 @@ export const gradients = {
   
   // Text gradients
   text: {
-    primary: 'linear-gradient(135deg, #ffffff 0%, #e6f0f6 100%)',
+    primary: 'linear-gradient(135deg, #ffffff 0%, #ffffff 100%)',
     accent: 'linear-gradient(135deg, #00D1BF 0%, #FF4FD8 100%)',
-    secondary: 'linear-gradient(135deg, #a8b3be 0%, #ffffff 100%)',
+    secondary: 'linear-gradient(135deg, #ffffff 0%, #ffffff 100%)',
   }
 };
 
@@ -284,25 +284,28 @@ export const zIndex = {
   tooltip: 1800,
 };
 
-// Glassmorphism utilities
+  // Glassmorphism utilities
 export const glassmorphism = {
   light: {
     background: 'rgba(255, 255, 255, 0.1)',
     backdropFilter: 'blur(20px)',
     border: '1px solid rgba(255, 255, 255, 0.2)',
     boxShadow: '0 8px 32px rgba(255, 255, 255, 0.1)',
+    color: '#ffffff',
   },
   dark: {
     background: 'rgba(0, 0, 0, 0.1)',
     backdropFilter: 'blur(20px)',
     border: '1px solid rgba(255, 255, 255, 0.1)',
     boxShadow: '0 8px 32px rgba(0, 0, 0, 0.2)',
+    color: '#ffffff',
   },
   colorful: {
     background: 'rgba(0, 209, 191, 0.1)',
     backdropFilter: 'blur(20px)',
     border: '1px solid rgba(0, 209, 191, 0.2)',
     boxShadow: '0 8px 32px rgba(0, 209, 191, 0.1)',
+    color: '#ffffff',
   }
 };
 

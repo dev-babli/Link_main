@@ -131,7 +131,7 @@ const LinkPortfolioShowcase = () => {
                     <h2 className="text-4xl lg:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400">
                         Our Portfolio of Innovation
                     </h2>
-                    <p className="text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                    <p className="text-lg text-white max-w-3xl mx-auto leading-relaxed">
                         Delivering excellence across industries with cutting-edge technology solutions.
                         We are a team of passionate developers and designers that love to build amazing
                         products that drive real business results.
@@ -198,7 +198,7 @@ const LinkPortfolioShowcase = () => {
                                             <h3 className="text-xl font-bold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-cyan-400 group-hover:from-blue-300 group-hover:to-cyan-300 transition-all duration-300">
                                                 {service.title}
                                             </h3>
-                                            <p className="text-sm opacity-90 leading-relaxed text-gray-200">
+                                            <p className="text-sm opacity-90 leading-relaxed text-white">
                                                 {service.description}
                                             </p>
                                         </div>

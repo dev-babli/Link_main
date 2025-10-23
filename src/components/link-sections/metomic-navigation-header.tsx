@@ -172,10 +172,10 @@ export default function LinkMetomicNavigationHeader() {
 
     return (
         <motion.header
-            className="fixed top-0 left-0 right-0 z-50 border-b border-white/10"
+            className="fixed top-0 left-0 right-0 z-50 border-b border-white/10 glass-magic"
             style={{
                 backgroundColor: `rgba(0, 0, 0, ${0.4})`,
-                backdropFilter: `blur(${12}px) saturate(180%)`,
+                backdropFilter: `blur(${20}px) saturate(180%)`,
             }}
         >
             <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-purple-500/5 to-pink-500/5"></div>
