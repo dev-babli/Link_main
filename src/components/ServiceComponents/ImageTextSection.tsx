@@ -3,6 +3,7 @@
 import React from "react";
 import { motion } from "motion/react";
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 
 interface ImageTextSectionProps {
     title: string;
@@ -32,9 +33,9 @@ export default function ImageTextSection({
 }: ImageTextSectionProps) {
     const isImageRight = imagePosition === "right";
 
-  return (
-    <section className={`py-16 lg:py-24 bg-[#0a0a0f] ${className}`}>
-      <div className="container mx-auto px-6 lg:px-8">
+    return (
+        <section className={`py-16 lg:py-24 bg-[#0a0a0f] ${className}`}>
+            <div className="container mx-auto px-6 lg:px-8">
                 <div className={`grid lg:grid-cols-2 gap-12 lg:gap-16 items-center ${!isImageRight ? 'lg:grid-flow-dense' : ''}`}>
                     {/* Content */}
                     <motion.div
@@ -44,13 +45,13 @@ export default function ImageTextSection({
                         transition={{ duration: 0.6 }}
                         className={isImageRight ? "" : "lg:col-start-2"}
                     >
-            {badge && (
-              <div className="inline-block mb-4">
-                <span className="text-sm font-semibold text-[#7877c6] uppercase tracking-wider font-['Inter']">
-                  {badge}
-                </span>
-              </div>
-            )}
+                        {badge && (
+                            <div className="inline-block mb-4">
+                                <span className="text-sm font-semibold text-[#7877c6] uppercase tracking-wider font-['Inter']">
+                                    {badge}
+                                </span>
+                            </div>
+                        )}
 
                         <h2 className="text-4xl lg:text-5xl font-bold text-[#FAFAFA] mb-6 leading-tight font-['Orbitron']">
                             {title}
@@ -61,10 +62,10 @@ export default function ImageTextSection({
                         </p>
 
                         {ctaText && ctaLink && (
-              <a
-                href={ctaLink}
-                className="inline-flex items-center gap-2 text-[#7877c6] font-semibold hover:gap-4 transition-all duration-300 font-['Inter']"
-              >
+                            <a
+                                href={ctaLink}
+                                className="inline-flex items-center gap-2 text-[#7877c6] font-semibold hover:gap-4 transition-all duration-300 font-['Inter']"
+                            >
                                 {ctaText}
                                 <ArrowRight className="w-5 h-5" />
                             </a>
@@ -81,11 +82,14 @@ export default function ImageTextSection({
                     >
                         <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-[#27272A]">
                             {imageUrl ? (
-                                <img
+                                <Image
                                     src={imageUrl}
-                                    alt=""
+                                    alt={`${title} - ${description}`}
+                                    width={600}
+                                    height={450}
                                     className="w-full h-full object-cover"
                                     loading="lazy"
+                                    unoptimized={false}
                                 />
                             ) : (
                                 <div className="w-full h-full flex items-center justify-center">

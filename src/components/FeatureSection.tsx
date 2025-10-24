@@ -18,8 +18,8 @@ const features = [
     description:
       "Build scalable, secure solutions tailored to your business needs.",
     icon: Code,
-    image: "/images/services/li-service-web-development-dashboard-v1.webp",
-    fallback: "/images/services/li-service-web-development-dashboard-v1.jpg",
+    image: "/images/homepage/feature-section/custom-software-development.webp",
+    fallback: "/images/homepage/feature-section/custom-software-development.webp",
   },
   {
     id: "feature-2",
@@ -27,16 +27,16 @@ const features = [
     description:
       "Deploy reliable, scalable cloud solutions for modern businesses.",
     icon: Database,
-    image: "/images/services/li-service-cloud-devops-dashboard-v1.webp",
-    fallback: "/images/services/li-service-cloud-devops-dashboard-v1.jpg",
+    image: "/images/homepage/feature-section/cloud-infrastructure.webp",
+    fallback: "/images/homepage/feature-section/cloud-infrastructure.webp",
   },
   {
     id: "feature-3",
     title: "Mobile Development",
     description: "Native and cross-platform mobile apps that users love.",
     icon: Smartphone,
-    image: "/images/services/li-service-mobile-app-development-dashboard-v1.webp",
-    fallback: "/images/services/li-service-mobile-app-development-dashboard-v1.jpg",
+    image: "/images/homepage/feature-section/mobile-app-development.webp",
+    fallback: "/images/homepage/feature-section/mobile-app-development.webp",
   },
 ];
 

@@ -18,8 +18,8 @@ const features = [
     description:
       "Modern, responsive websites built with React, Next.js, and cutting-edge technologies.",
     icon: Globe,
-    image: "/images/services/li-service-web-development-dashboard-v1.webp",
-    fallback: "/images/services/li-service-web-development-dashboard-v1.jpg",
+    image: "/images/homepage/feature-section-two/web-development.webp",
+    fallback: "/images/homepage/feature-section-two/web-development.webp",
   },
   {
     id: "feature-2",
@@ -27,8 +27,8 @@ const features = [
     description:
       "Native iOS & Android apps with seamless user experiences.",
     icon: Smartphone,
-    image: "/images/services/li-service-mobile-app-development-dashboard-v1.webp",
-    fallback: "/images/services/li-service-mobile-app-development-dashboard-v1.jpg",
+    image: "/images/homepage/feature-section-two/mobile-applications.webp",
+    fallback: "/images/homepage/feature-section-two/mobile-applications.webp",
   },
   {
     id: "feature-3",
@@ -36,8 +36,8 @@ const features = [
     description:
       "Intelligent automation and predictive analytics that transform operations.",
     icon: Zap,
-    image: "/images/services/li-service-ai-automation-dashboard-v1.webp",
-    fallback: "/images/services/li-service-ai-automation-dashboard-v1.jpg",
+    image: "/images/homepage/feature-section-two/ai-automation.webp",
+    fallback: "/images/homepage/feature-section-two/ai-automation.webp",
   },
 ];
 

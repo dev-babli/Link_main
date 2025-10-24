@@ -1,0 +1,28 @@
+
+/* 
+- Thank you for using Colors Palette Visualizer ❤️.
+- Exported from: https://colors-visualizer.vercel.app/00ADB5-AAE3E2-EEEEEE-AC7DD2-222831-fdf6fd
+- Palette: #00ADB5-#AAE3E2-#EEEEEE-#AC7DD2-#222831-#fdf6fd
+- Share link https://colors-visualizer.vercel.app/00ADB5-AAE3E2-EEEEEE-AC7DD2-222831-fdf6fd
+*/
+
+:root {
+  --primary:#00ADB5;
+  --secondary:#AAE3E2;
+  --text:#EEEEEE;
+  --accent:#AC7DD2;
+  --bg:#222831;
+  --defaultColor:#fdf6fd;;
+}
+body { background-color: var(--bg); }
+
+h1,h2,h3,h4,h5,h6 { color: var(--text); }
+
+p { color: var(--text); }
+
+span { color: var(--accent); }
+
+button {
+  background-color: var(--primary);
+  color: var(--text);
+}

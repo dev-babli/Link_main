@@ -139,7 +139,7 @@ export default function MobileAppDevelopmentPage() {
           text: "See Mobile Cases",
           href: "#capabilities"
         }}
-        imageUrl="/WhatsApp Image 2025-10-12 at 1.16.43 AM (5).jpeg"
+        imageUrl="/images/services/mobile-app-development/hero-mobile-apps.jpg"
       />
 
       {/* Technology Logos */}

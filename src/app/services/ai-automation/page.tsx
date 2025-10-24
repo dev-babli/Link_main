@@ -181,7 +181,7 @@ export default function AIAutomationPage() {
           text: "Explore AI Solutions",
           href: "#capabilities"
         }}
-        imageUrl="/WhatsApp Image 2025-10-12 at 1.16.43 AM.jpeg"
+        imageUrl="/images/services/ai-automation/hero-ai-automation.jpg"
         className=""
       />
 

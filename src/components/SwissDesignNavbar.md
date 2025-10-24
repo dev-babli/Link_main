@@ -190,3 +190,4 @@ Neutral palette with semantic meaning:
 ---
 
 _This navbar component embodies the timeless principles of Swiss design while providing modern functionality and excellent user experience._
+

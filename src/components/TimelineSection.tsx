@@ -1,4 +1,5 @@
 import { Code, Users, Rocket, Zap, Building } from "lucide-react";
+import Image from "next/image";
 
 import { cn } from "@/lib/utils";
 
@@ -11,9 +12,9 @@ const DATA = [
       "We analyze your needs and create a comprehensive development roadmap.",
     icon: Building,
     image: {
-      src: "/images/services/li-service-web-development-dashboard-v1.webp",
-      fallback: "/images/services/li-service-web-development-dashboard-v1.jpg",
-      alt: "Discovery & Planning",
+      src: "/images/homepage/timeline-section/discovery-planning.webp",
+      fallback: "/images/homepage/timeline-section/discovery-planning.webp",
+      alt: "Discovery & Planning - Comprehensive analysis and roadmap creation",
     },
   },
   {
@@ -21,9 +22,9 @@ const DATA = [
     description: "Build scalable solutions using cutting-edge technologies and frameworks.",
     icon: Code,
     image: {
-      src: "/images/services/li-service-mobile-app-development-dashboard-v1.webp",
-      fallback: "/images/services/li-service-mobile-app-development-dashboard-v1.jpg",
-      alt: "Custom Development",
+      src: "/images/homepage/timeline-section/custom-development.webp",
+      fallback: "/images/homepage/timeline-section/custom-development.webp",
+      alt: "Custom Development - Building scalable solutions with modern technologies",
     },
     reverse: true,
   },
@@ -33,9 +34,9 @@ const DATA = [
       "Deploy high-performance applications with ongoing support and maintenance.",
     icon: Zap,
     image: {
-      src: "/images/services/li-service-cloud-devops-dashboard-v1.webp",
-      fallback: "/images/services/li-service-cloud-devops-dashboard-v1.jpg",
-      alt: "Deployment & Support",
+      src: "/images/homepage/timeline-section/deployment-support.webp",
+      fallback: "/images/homepage/timeline-section/deployment-support.webp",
+      alt: "Deployment & Support - High-performance application deployment and maintenance",
     },
   },
 ];
@@ -98,18 +99,14 @@ const TimelineSection = () => {
                     </div>
                     <div className="relative grid grid-cols-[auto_1fr_auto] items-stretch">
                       <DiagonalPattern className="h-full w-6 lg:w-10" />
-                      <img
+                      <Image
                         src={item.image.src}
-                        onError={(e) => {
-                          const target = e.target as HTMLImageElement;
-                          if (target.src !== item.image.fallback) {
-                            target.src = item.image.fallback;
-                          }
-                        }}
                         width={400}
                         height={500}
                         alt={item.image.alt}
                         className="object-contain dark:invert"
+                        loading="lazy"
+                        unoptimized={false}
                       />
                       <DiagonalPattern className="w-6 lg:w-10" />
                     </div>

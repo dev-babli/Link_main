@@ -1,0 +1,28 @@
+
+/* 
+- Thank you for using Colors Palette Visualizer ❤️.
+- Exported from: https://colors-visualizer.vercel.app/6c35de-a364ff-ffffff-cb80ff-241b35-ffc7ff
+- Palette: #6c35de-#a364ff-#ffffff-#cb80ff-#241b35-#ffc7ff
+- Share link https://colors-visualizer.vercel.app/6c35de-a364ff-ffffff-cb80ff-241b35-ffc7ff
+*/
+
+:root {
+  --primary:#6c35de;
+  --secondary:#a364ff;
+  --text:#ffffff;
+  --accent:#cb80ff;
+  --bg:#241b35;
+  --defaultColor:#ffc7ff;;
+}
+body { background-color: var(--bg); }
+
+h1,h2,h3,h4,h5,h6 { color: var(--text); }
+
+p { color: var(--text); }
+
+span { color: var(--accent); }
+
+button {
+  background-color: var(--primary);
+  color: var(--text);
+}

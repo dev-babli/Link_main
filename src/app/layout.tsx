@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, JetBrains_Mono, Orbitron, Exo_2 } from "next/font/google";
+import { Inter, JetBrains_Mono, Orbitron, Exo_2, Playfair_Display, Source_Sans_3, Righteous, Open_Sans, Russo_One, Nunito, Bungee, Raleway } from "next/font/google";
 import "./globals.css";
 import "../styles/color-system.css";
 import "../styles/typography.css";
@@ -31,6 +31,58 @@ const exo2 = Exo_2({
   variable: "--font-exo2",
   subsets: ["latin"],
   weight: ["400", "600", "700", "800", "900"],
+});
+
+// Homepage 1 - Purple Mystic fonts
+const playfairDisplay = Playfair_Display({
+  variable: "--font-playfair",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800", "900"],
+});
+
+const sourceSans3 = Source_Sans_3({
+  variable: "--font-source-sans",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
+});
+
+// Homepage 2 - Teal Tech fonts
+const righteous = Righteous({
+  variable: "--font-righteous",
+  subsets: ["latin"],
+  weight: ["400"],
+});
+
+const openSans = Open_Sans({
+  variable: "--font-open-sans",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800"],
+});
+
+// Homepage 3 - Electric Blue fonts
+const russoOne = Russo_One({
+  variable: "--font-russo-one",
+  subsets: ["latin"],
+  weight: ["400"],
+});
+
+const nunito = Nunito({
+  variable: "--font-nunito",
+  subsets: ["latin"],
+  weight: ["200", "300", "400", "500", "600", "700", "800", "900"],
+});
+
+// Homepage 4 - Cyber Purple fonts
+const bungee = Bungee({
+  variable: "--font-bungee",
+  subsets: ["latin"],
+  weight: ["400"],
+});
+
+const raleway = Raleway({
+  variable: "--font-raleway",
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
 export const metadata: Metadata = {
@@ -86,7 +138,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body
-        className={`${inter.variable} ${jetbrainsMono.variable} ${orbitron.variable} ${exo2.variable} antialiased bg-black-100`}
+        className={`${inter.variable} ${jetbrainsMono.variable} ${orbitron.variable} ${exo2.variable} ${playfairDisplay.variable} ${sourceSans3.variable} ${righteous.variable} ${openSans.variable} ${russoOne.variable} ${nunito.variable} ${bungee.variable} ${raleway.variable} antialiased bg-black-100`}
       >
         <ErrorReporter />
         <Script

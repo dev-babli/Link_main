@@ -1,5 +1,6 @@
 import { PocketKnife, Code, Database, Link } from "lucide-react";
 import React from "react";
+import Image from "next/image";
 
 import { Badge } from "@/components/ui/badge";
 
@@ -8,22 +9,22 @@ const DATA = [
     title: "Custom Software Solutions",
     description: "Tailored applications built for your business needs.",
     icon: Code,
-    image: "/images/services/li-service-web-development-dashboard-v1.webp",
-    fallback: "/images/services/li-service-web-development-dashboard-v1.jpg",
+    image: "/images/homepage/feature-section-three/custom-software-solutions.webp",
+    fallback: "/images/homepage/feature-section-three/custom-software-solutions.webp",
   },
   {
     title: "Cloud Infrastructure",
     description: "Scalable and secure cloud solutions for growth.",
     icon: Database,
-    image: "/images/services/li-service-cloud-devops-dashboard-v1.webp",
-    fallback: "/images/services/li-service-cloud-devops-dashboard-v1.jpg",
+    image: "/images/homepage/feature-section-three/cloud-infrastructure-platform.webp",
+    fallback: "/images/homepage/feature-section-three/cloud-infrastructure-platform.webp",
   },
   {
     title: "Enterprise Integration",
     description: "Seamless connectivity across your tech ecosystem.",
     icon: Link,
-    image: "/images/services/li-service-ai-automation-dashboard-v1.webp",
-    fallback: "/images/services/li-service-ai-automation-dashboard-v1.jpg",
+    image: "/images/homepage/feature-section-three/enterprise-integration.webp",
+    fallback: "/images/homepage/feature-section-three/enterprise-integration.webp",
   },
 ];
 const FeatureSectionThree = () => {
@@ -62,16 +63,14 @@ const FeatureSectionThree = () => {
                   {item.description}
                 </p>
                 <div className="border-t max-h-88 overflow-hidden">
-                  <img
+                  <Image
                     src={item.image}
-                    alt={item.title}
+                    alt={`${item.title} - ${item.description}`}
+                    width={400}
+                    height={300}
                     className="bg-muted object-cover dark:invert"
-                    onError={(e) => {
-                      const target = e.target as HTMLImageElement;
-                      if (target.src !== item.fallback) {
-                        target.src = item.fallback;
-                      }
-                    }}
+                    loading="lazy"
+                    unoptimized={false}
                   />
                 </div>
               </div>
