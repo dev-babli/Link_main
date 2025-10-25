@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 const Skiper52 = () => {
   const industries = [
     {
-      src: "/Industry%20Card%20images/Aerospace%20and%20Defense.webp",
+      src: "/images/industry_cards/Aerospace and Defense.webp",
       alt: "Aerospace Technology",
       title: "Aerospace & Defense",
       description: "Advanced aerospace and defense solutions",
@@ -17,7 +17,7 @@ const Skiper52 = () => {
       color: "from-[#f0d3f7] to-[#b98ea7]",
     },
     {
-      src: "/Industry%20Card%20images/Retail%20and%20Ecommerce.webp",
+      src: "/images/industry_cards/Retail and Ecommerce.webp",
       alt: "E-Commerce Solutions",
       title: "E-Commerce",
       description: "Online stores and marketplace solutions",
@@ -26,7 +26,7 @@ const Skiper52 = () => {
       color: "from-[#b98ea7] to-[#a57982]",
     },
     {
-      src: "/Industry%20Card%20images/Healthcar%20and%20Lifesciences.webp",
+      src: "/images/industry_cards/Healthcar and Lifesciences.webp",
       alt: "Healthcare Technology",
       title: "Healthcare",
       description: "HIPAA-compliant medical platforms",
@@ -35,7 +35,7 @@ const Skiper52 = () => {
       color: "from-[#a57982] to-[#302f4d]",
     },
     {
-      src: "/Industry%20Card%20images/Baking%20and%20Financial.webp",
+      src: "/images/industry_cards/Baking and Financial.webp",
       alt: "Financial Technology",
       title: "FinTech",
       description: "Secure financial technology solutions",
@@ -44,7 +44,7 @@ const Skiper52 = () => {
       color: "from-[#302f4d] to-[#120d31]",
     },
     {
-      src: "/Industry%20Card%20images/Education%20and%20Training.webp",
+      src: "/images/industry_cards/Education and Training.webp",
       alt: "Educational Technology",
       title: "Education",
       description: "E-learning platforms and educational tech",
@@ -53,7 +53,7 @@ const Skiper52 = () => {
       color: "from-[#120d31] to-[#f0d3f7]",
     },
     {
-      src: "/Industry%20Card%20images/Logotstic%20and%20Transportation.webp",
+      src: "/images/industry_cards/Logotstic and Transportation.webp",
       alt: "Logistics Technology",
       title: "Logistics",
       description: "Transportation and logistics management",
@@ -62,7 +62,7 @@ const Skiper52 = () => {
       color: "from-[#f0d3f7] to-[#b98ea7]",
     },
     {
-      src: "/Industry%20Card%20images/Manufacturing%20and%20Automotive.webp",
+      src: "/images/industry_cards/Manufacturing and Automotive.webp",
       alt: "Manufacturing Technology",
       title: "Manufacturing",
       description: "IoT and automation solutions",
@@ -71,7 +71,7 @@ const Skiper52 = () => {
       color: "from-[#b98ea7] to-[#a57982]",
     },
     {
-      src: "/Industry%20Card%20images/Energy%20and%20Utilities.webp",
+      src: "/images/industry_cards/Energy and Utilities.webp",
       alt: "Energy & Utilities",
       title: "Energy & Utilities",
       description: "Smart grid and energy management",

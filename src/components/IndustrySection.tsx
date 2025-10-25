@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Badge } from '@/components/ui/badge';
 import { Card } from '@/components/ui/card';
+import Image from 'next/image';
 import {
     AnimatedBuilding2,
     AnimatedShoppingCart,
@@ -24,6 +25,7 @@ const industries = [
         projects: '50+ Projects',
         color: 'from-thistle to-puce',
         solutions: ['Property Management Systems', 'Virtual Tours', 'CRM Platforms', 'Market Analytics'],
+        image: '/images/industry_cards/Retail and Ecommerce.webp',
     },
     {
         AnimatedIcon: AnimatedShoppingCart,
@@ -33,6 +35,7 @@ const industries = [
         projects: '80+ Projects',
         color: 'from-puce to-mountbatten-pink',
         solutions: ['Online Marketplaces', 'Payment Gateways', 'Inventory Management', 'Customer Analytics'],
+        image: '/images/industry_cards/Retail and Ecommerce.webp',
     },
     {
         AnimatedIcon: AnimatedHeart,
@@ -42,6 +45,7 @@ const industries = [
         projects: '40+ Projects',
         color: 'from-mountbatten-pink to-space-cadet',
         solutions: ['Telemedicine Platforms', 'Electronic Health Records', 'Medical Device Integration', 'Health Analytics'],
+        image: '/images/industry_cards/Healthcar and Lifesciences.webp',
     },
     {
         AnimatedIcon: AnimatedBriefcase,
@@ -51,6 +55,7 @@ const industries = [
         projects: '60+ Projects',
         color: 'from-space-cadet to-russian-violet',
         solutions: ['Digital Banking', 'Payment Processing', 'Risk Management', 'Regulatory Compliance'],
+        image: '/images/industry_cards/Baking and Financial.webp',
     },
     {
         AnimatedIcon: AnimatedGraduationCap,
@@ -60,6 +65,7 @@ const industries = [
         projects: '45+ Projects',
         color: 'from-russian-violet to-thistle',
         solutions: ['Learning Management Systems', 'Virtual Classrooms', 'Student Portals', 'Assessment Tools'],
+        image: '/images/industry_cards/Education and Training.webp',
     },
     {
         AnimatedIcon: AnimatedPlane,
@@ -69,6 +75,7 @@ const industries = [
         projects: '35+ Projects',
         color: 'from-thistle to-puce',
         solutions: ['Booking Platforms', 'Travel Management', 'Customer Portals', 'Revenue Optimization'],
+        image: '/images/industry_cards/Logotstic and Transportation.webp',
     },
     {
         AnimatedIcon: AnimatedBuilding2,
@@ -78,6 +85,7 @@ const industries = [
         projects: '55+ Projects',
         color: 'from-puce to-mountbatten-pink',
         solutions: ['Smart Manufacturing', 'Supply Chain Management', 'Quality Control', 'Predictive Maintenance'],
+        image: '/images/industry_cards/Manufacturing and Automotive.webp',
     },
     {
         AnimatedIcon: AnimatedHeart,
@@ -87,15 +95,17 @@ const industries = [
         projects: '30+ Projects',
         color: 'from-yellow-500 to-orange-500',
         solutions: ['Smart Grid Systems', 'Energy Analytics', 'Asset Management', 'Customer Portals'],
+        image: '/images/industry_cards/Energy and Utilities.webp',
     },
     {
         AnimatedIcon: AnimatedBriefcase,
         icon: Briefcase,
-        name: 'Government',
-        description: 'Digital transformation for public sector organizations',
+        name: 'Aerospace & Defense',
+        description: 'Digital transformation for aerospace and defense organizations',
         projects: '25+ Projects',
         color: 'from-indigo-500 to-blue-500',
-        solutions: ['Citizen Portals', 'Digital Services', 'Data Management', 'Security Compliance'],
+        solutions: ['Flight Management Systems', 'Defense Analytics', 'Mission Planning', 'Security Compliance'],
+        image: '/images/industry_cards/Aerospace and Defense.webp',
     },
 ];
 
