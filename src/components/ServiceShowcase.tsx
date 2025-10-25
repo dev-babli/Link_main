@@ -22,6 +22,8 @@ import {
 } from 'lucide-react';
 import { motion } from 'motion/react';
 import Link from 'next/link';
+import Image from 'next/image';
+import { ImageFallback } from './ImageFallback';
 
 const services = [
     {
@@ -114,14 +116,17 @@ export const ServiceShowcase: React.FC = () => {
                             transition={{ duration: 0.6, delay: index * 0.1 }}
                         >
                             <CardCurtainReveal className="h-[560px] w-full border border-gray-800/50 bg-black text-white shadow-2xl hover:shadow-blue-500/10 transition-all duration-300">
-                                <CardCurtainRevealBody
-                                    className="bg-cover bg-center bg-no-repeat relative h-full"
-                                    style={{
-                                        backgroundImage: `url(${service.imageUrl})`,
-                                        backgroundSize: 'cover',
-                                        backgroundPosition: 'center'
-                                    }}
-                                >
+                                <CardCurtainRevealBody className="relative h-full overflow-hidden">
+                                    {/* Background Image using Next.js Image with Fallback */}
+                                    <ImageFallback
+                                        src={service.imageUrl}
+                                        alt={`${service.title} - ${service.description}`}
+                                        fill
+                                        className="object-cover"
+                                        priority={index < 3}
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                        fallback="/images/service-cards/web-development-service-card.webp"
+                                    />
                                     {/* Service Icon */}
                                     <div className="relative z-10 flex items-center space-x-4 mb-6">
                                         <div className="p-3 bg-white/20 backdrop-blur-md rounded-xl border border-white/30 shadow-lg">

@@ -8,6 +8,8 @@ import { RxChevronRight } from "react-icons/rx";
 import { useInView } from "react-intersection-observer";
 import "./EnhancedServicesSection.css";
 import { GlowCard, TiltCard, SpotlightCard, RevealOnScroll } from "@/components/MagicEffects";
+import Image from 'next/image';
+import { ImageFallback } from './ImageFallback';
 
 // Import animated icons
 import { Code } from "@/icons/Code";
@@ -164,14 +166,16 @@ export function EnhancedServicesSection() {
                                         <SpotlightCard className="group service-glass-card h-full p-phi-lg cursor-pointer">
                                             <div className="relative h-full">
                                                 {/* Background Image - Always Visible */}
-                                                <div
-                                                    className="absolute inset-0 z-0 opacity-30 group-hover:opacity-40 transition-opacity duration-500"
-                                                    style={{
-                                                        backgroundImage: `url(${service.backgroundImage})`,
-                                                        backgroundSize: 'cover',
-                                                        backgroundPosition: 'center',
-                                                    }}
-                                                />
+                                                <div className="absolute inset-0 z-0 opacity-30 group-hover:opacity-40 transition-opacity duration-500">
+                                                    <ImageFallback
+                                                        src={service.backgroundImage}
+                                                        alt={`${service.title} - ${service.description}`}
+                                                        fill
+                                                        className="object-cover"
+                                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                                        fallback="/images/service-cards/web-development-service-card.webp"
+                                                    />
+                                                </div>
 
                                                 {/* Dark overlay for contrast */}
                                                 <div className="absolute inset-0 bg-black/50 z-[1]" />
