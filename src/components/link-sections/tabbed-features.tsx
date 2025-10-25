@@ -13,8 +13,8 @@ const tabData = [
         subtitle: 'Intelligent Automation',
         description: 'Harness the power of AI and machine learning to automate processes, gain insights, and make data-driven decisions that drive business growth.',
         features: ['Machine Learning Models', 'Natural Language Processing', 'Predictive Analytics'],
-        image: '/herosectionimages/Agentic Ai.webp',
-        fallback: '/herosectionimages/ai-human-collaboration.jpg',
+        image: '/images/service-cards/ai-automation-service-card.webp',
+        fallback: '/images/services/ai-automation/hero-ai-automation.jpg',
     },
     {
         id: 1,
@@ -24,8 +24,8 @@ const tabData = [
         subtitle: 'Scalable Infrastructure',
         description: 'Build resilient, scalable cloud infrastructure on AWS, Azure, and GCP with DevOps best practices and automated deployment pipelines.',
         features: ['Cloud Migration', 'DevOps Automation', 'Microservices Architecture'],
-        image: '/herosectionimages/Intellectt SE Sliders/Cloud Application.webp',
-        fallback: '/herosectionimages/cloud-computing-illustration.jpg',
+        image: '/images/service-cards/cloud-devops-service-card.webp',
+        fallback: '/images/services/cloud-devops/hero-cloud-services.jpg',
     },
     {
         id: 2,
@@ -35,8 +35,8 @@ const tabData = [
         subtitle: 'Business Intelligence',
         description: 'Turn your data into actionable insights with custom dashboards, real-time analytics, and advanced data visualization tools.',
         features: ['Data Warehousing', 'Real-time Analytics', 'Business Intelligence'],
-        image: '/herosectionimages/Intellectt SE Sliders/Data & Analytics.webp',
-        fallback: '/herosectionimages/Data & Analytics.webp',
+        image: '/images/service-cards/data-analytics-service-card.webp',
+        fallback: '/images/services/data-analytics/service-card-data-analytics.webp',
     },
     {
         id: 3,
@@ -46,8 +46,8 @@ const tabData = [
         subtitle: 'Enterprise Security',
         description: 'Implement robust security measures, compliance frameworks, and threat protection to safeguard your digital assets and customer data.',
         features: ['Cybersecurity Assessment', 'Compliance Management', 'Threat Detection'],
-        image: '/herosectionimages/Intellectt SE Sliders/Cyber security.webp',
-        fallback: '/herosectionimages/Cyber Security.webp',
+        image: '/images/service-cards/cybersecurity-service-card.webp',
+        fallback: '/images/services/cybersecurity/service-card-cybersecurity.webp',
     },
 ];
 

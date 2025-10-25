@@ -25,7 +25,7 @@ const slides: HeroSlide[] = [
         title: "AI-Powered",
         subtitle: "Digital Transformation",
         description: "Harness the power of artificial intelligence to revolutionize your business processes and unlock unprecedented growth opportunities.",
-        image: "/herosectionimages/generative-ai-hero.jpg",
+        image: "/images/services/ai-automation/hero-ai-automation.jpg",
         icon: <Brain className="w-8 h-8" />,
         color: "from-[#1e3f20] to-[#345830]",
         stats: [
@@ -39,7 +39,7 @@ const slides: HeroSlide[] = [
         title: "Cloud-First",
         subtitle: "Infrastructure Solutions",
         description: "Build scalable, secure, and resilient cloud infrastructure that grows with your business and adapts to your needs.",
-        image: "/herosectionimages/cloud-computing-illustration.jpg",
+        image: "/images/services/cloud-devops/hero-cloud-services.jpg",
         icon: <Shield className="w-8 h-8" />,
         color: "from-[#345830] to-[#4a7856]",
         stats: [
@@ -53,7 +53,7 @@ const slides: HeroSlide[] = [
         title: "Next-Gen",
         subtitle: "Web Applications",
         description: "Create stunning, performant web applications with cutting-edge technologies that deliver exceptional user experiences.",
-        image: "/herosectionimages/ai-human-collaboration.jpg",
+        image: "/images/services/ai-automation/hero-ai-automation.jpg",
         icon: <Code className="w-8 h-8" />,
         color: "from-[#4a7856] to-[#1e3f20]",
         stats: [
@@ -282,7 +282,7 @@ const LinkHeroSection = () => {
                                             className="object-cover"
                                             onError={(e) => {
                                                 const target = e.target as HTMLImageElement;
-                                                target.src = "/herosectionimages/cloud.webp";
+                                                target.src = "/images/services/cloud-devops/service-card-cloud-solutions.webp";
                                             }}
                                         />
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />

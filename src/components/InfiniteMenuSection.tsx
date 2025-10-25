@@ -4,36 +4,36 @@ import InfiniteMenu from "./InfiniteMenu";
 
 const serviceItems = [
     {
-        image: "/Service Cards images/Cloud and Application Service.webp",
-        fallback: "/Service Cards images/Cloud and Application Service.webp",
+        image: "/images/service-cards/web-development-service-card.webp",
+        fallback: "/images/service-cards/web-development-service-card.webp",
         link: "/services/web-development",
         title: "Web Development",
         description: "Modern, responsive websites built with React, Next.js, and cutting-edge technologies"
     },
     {
-        image: "/Service Cards images/Engineering and Manufacturing.webp",
-        fallback: "/Service Cards images/Engineering and Manufacturing.webp",
+        image: "/images/service-cards/mobile-app-development-service-card.webp",
+        fallback: "/images/service-cards/mobile-app-development-service-card.webp",
         link: "/services/mobile-apps",
         title: "Mobile Apps",
         description: "Native iOS & Android apps with seamless user experiences"
     },
     {
-        image: "/Service Cards images/AI Gen AI.webp",
-        fallback: "/Service Cards images/AI Gen AI.webp",
+        image: "/images/service-cards/ai-automation-service-card.webp",
+        fallback: "/images/service-cards/ai-automation-service-card.webp",
         link: "/services/ai-automation",
         title: "AI & Machine Learning",
         description: "Intelligent automation and predictive analytics that transform operations"
     },
     {
-        image: "/herosectionimages/cloud.webp",
-        fallback: "/herosectionimages/cloud.webp",
+        image: "/images/service-cards/cloud-devops-service-card.webp",
+        fallback: "/images/service-cards/cloud-devops-service-card.webp",
         link: "/services/cloud-devops",
         title: "Cloud Solutions",
         description: "Scalable cloud infrastructure on AWS, Azure, and GCP with DevOps excellence"
     },
     {
-        image: "/Service Cards images/Digital Security.webp",
-        fallback: "/Service Cards images/Digital Security.webp",
+        image: "/images/service-cards/cybersecurity-service-card.webp",
+        fallback: "/images/service-cards/cybersecurity-service-card.webp",
         link: "/services/cybersecurity",
         title: "Cybersecurity",
         description: "Enterprise-grade security solutions and compliance management"

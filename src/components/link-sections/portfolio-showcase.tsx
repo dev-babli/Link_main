@@ -8,57 +8,57 @@ const services = [
         id: 1,
         title: "Web Development",
         description: "Modern, responsive web applications built with cutting-edge technologies",
-        image: "/herosectionimages/Digital Technology.webp",
-        fallback: "/herosectionimages/Digital Technology.webp"
+        image: "/images/service-cards/web-development-service-card.webp",
+        fallback: "/images/service-cards/web-development-service-card.webp"
     },
     {
         id: 2,
         title: "Mobile App Development",
         description: "Native and cross-platform mobile applications for iOS and Android",
-        image: "/herosectionimages/3.webp",
-        fallback: "/herosectionimages/3.webp"
+        image: "/images/service-cards/mobile-app-development-service-card.webp",
+        fallback: "/images/service-cards/mobile-app-development-service-card.webp"
     },
     {
         id: 3,
         title: "AI Automation",
         description: "Intelligent automation solutions powered by artificial intelligence",
-        image: "/herosectionimages/Agentic Ai.webp",
-        fallback: "/herosectionimages/Agentic Ai.webp"
+        image: "/images/service-cards/ai-automation-service-card.webp",
+        fallback: "/images/service-cards/ai-automation-service-card.webp"
     },
     {
         id: 4,
         title: "Cloud Services",
         description: "Scalable cloud infrastructure and migration solutions",
-        image: "/herosectionimages/cloud.webp",
-        fallback: "/herosectionimages/cloud.webp"
+        image: "/images/service-cards/cloud-devops-service-card.webp",
+        fallback: "/images/service-cards/cloud-devops-service-card.webp"
     },
     {
         id: 5,
         title: "Data Analytics",
         description: "Advanced analytics and business intelligence solutions",
-        image: "/herosectionimages/Data & Analytics.webp",
-        fallback: "/herosectionimages/Data & Analytics.webp"
+        image: "/images/service-cards/data-analytics-service-card.webp",
+        fallback: "/images/service-cards/data-analytics-service-card.webp"
     },
     {
         id: 6,
         title: "Cybersecurity",
         description: "Comprehensive security solutions to protect your digital assets",
-        image: "/herosectionimages/Cyber Security.webp",
-        fallback: "/herosectionimages/Cyber Security.webp"
+        image: "/images/service-cards/cybersecurity-service-card.webp",
+        fallback: "/images/service-cards/cybersecurity-service-card.webp"
     },
     {
         id: 7,
         title: "Cloud DevOps",
         description: "Streamlined development and deployment with DevOps practices",
-        image: "/herosectionimages/Scalable Cloud and Application.webp",
-        fallback: "/herosectionimages/Scalable Cloud and Application.webp"
+        image: "/images/service-cards/cloud-devops-service-card.webp",
+        fallback: "/images/service-cards/cloud-devops-service-card.webp"
     },
     {
         id: 8,
         title: "Automation Testing",
         description: "Comprehensive testing solutions to ensure software quality",
-        image: "/herosectionimages/4.webp",
-        fallback: "/herosectionimages/4.webp"
+        image: "/images/service-cards/ai-automation-service-card.webp",
+        fallback: "/images/service-cards/ai-automation-service-card.webp"
     }
 ];
 

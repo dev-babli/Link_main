@@ -13,8 +13,8 @@ const timelineData = [
         subtitle: 'Project Foundation',
         description: 'We begin by understanding your business goals, analyzing requirements, and creating a comprehensive roadmap for your digital transformation.',
         features: ['Business Analysis', 'Technical Requirements', 'Project Roadmap'],
-        image: '/herosectionimages/Agentic Ai.webp',
-        fallback: '/herosectionimages/ai-human-collaboration.jpg',
+        image: '/images/service-cards/ai-automation-service-card.webp',
+        fallback: '/images/services/ai-automation/hero-ai-automation.jpg',
     },
     {
         id: 1,
@@ -24,8 +24,8 @@ const timelineData = [
         subtitle: 'Implementation Phase',
         description: 'Our expert team designs and develops your solution using cutting-edge technologies, following agile methodologies and best practices.',
         features: ['UI/UX Design', 'Frontend Development', 'Backend Development'],
-        image: '/herosectionimages/Intellectt SE Sliders/Cloud Application.webp',
-        fallback: '/herosectionimages/cloud-computing-illustration.jpg',
+        image: '/images/service-cards/cloud-devops-service-card.webp',
+        fallback: '/images/services/cloud-devops/hero-cloud-services.jpg',
     },
     {
         id: 2,
@@ -35,8 +35,8 @@ const timelineData = [
         subtitle: 'Quality Validation',
         description: 'We rigorously test every aspect of your solution to ensure reliability, performance, and security before deployment.',
         features: ['Automated Testing', 'Performance Testing', 'Security Audits'],
-        image: '/herosectionimages/Intellectt SE Sliders/Data & Analytics.webp',
-        fallback: '/herosectionimages/Data & Analytics.webp',
+        image: '/images/services/data-analytics/service-card-data-analytics.webp',
+        fallback: '/images/services/data-analytics/service-card-data-analytics.webp',
     },
     {
         id: 3,
@@ -46,8 +46,8 @@ const timelineData = [
         subtitle: 'Production Launch',
         description: 'We handle the complete deployment process, ensuring smooth transition to production with monitoring and support.',
         features: ['Cloud Deployment', 'CI/CD Pipeline', 'Monitoring Setup'],
-        image: '/herosectionimages/Intellectt SE Sliders/Cyber security.webp',
-        fallback: '/herosectionimages/Cyber Security.webp',
+        image: '/images/services/cybersecurity/service-card-cybersecurity.webp',
+        fallback: '/images/services/cybersecurity/service-card-cybersecurity.webp',
     },
 ];
 

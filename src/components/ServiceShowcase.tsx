@@ -29,7 +29,7 @@ const services = [
         title: "Web Development",
         icon: <Code size={24} />,
         description: "Transform your digital presence with cutting-edge web applications. We build responsive, scalable, and performant websites that drive business growth.",
-        imageUrl: "/Service Cards images/Cloud and Application Service.webp",
+        imageUrl: "/images/service-cards/web-development-service-card.webp",
         features: ["React & Next.js", "TypeScript", "Tailwind CSS", "Performance Optimization"],
         link: "/services/web-development"
     },
@@ -38,7 +38,7 @@ const services = [
         title: "Mobile Apps",
         icon: <Smartphone size={24} />,
         description: "Create powerful mobile experiences that engage users and drive results. From iOS to Android, we deliver native and cross-platform solutions.",
-        imageUrl: "/Service Cards images/IOT Tech.webp",
+        imageUrl: "/images/service-cards/mobile-app-development-service-card.webp",
         features: ["React Native", "Flutter", "iOS & Android", "App Store Optimization"],
         link: "/services/mobile-apps"
     },
@@ -47,7 +47,7 @@ const services = [
         title: "AI Solutions",
         icon: <Brain size={24} />,
         description: "Leverage artificial intelligence to automate processes, gain insights, and create intelligent solutions that adapt to your business needs.",
-        imageUrl: "/Service Cards images/AI Gen AI.webp",
+        imageUrl: "/images/service-cards/ai-automation-service-card.webp",
         features: ["Machine Learning", "Process Automation", "NLP", "Computer Vision"],
         link: "/services/ai-automation"
     },
@@ -56,7 +56,7 @@ const services = [
         title: "Cloud Services",
         icon: <Cloud size={24} />,
         description: "Scale your infrastructure with cloud solutions that provide reliability, security, and cost-effectiveness for your growing business.",
-        imageUrl: "/Service Cards images/Cloud and Application Service.webp",
+        imageUrl: "/images/service-cards/cloud-devops-service-card.webp",
         features: ["AWS & Azure", "Serverless", "DevOps", "Container Orchestration"],
         link: "/services/cloud-devops"
     },
@@ -65,7 +65,7 @@ const services = [
         title: "Cybersecurity",
         icon: <Shield size={24} />,
         description: "Protect your digital assets with comprehensive security solutions. From threat assessment to incident response, we keep your business secure.",
-        imageUrl: "/Service Cards images/Digital Security.webp",
+        imageUrl: "/images/service-cards/cybersecurity-service-card.webp",
         features: ["Security Audits", "Penetration Testing", "Compliance", "Incident Response"],
         link: "/services/cybersecurity"
     },
@@ -74,7 +74,7 @@ const services = [
         title: "Data Analytics",
         icon: <BarChart3 size={24} />,
         description: "Turn your data into actionable insights with advanced analytics solutions. Make data-driven decisions that drive business success.",
-        imageUrl: "/Service Cards images/Data Analytics.webp",
+        imageUrl: "/images/service-cards/data-analytics-service-card.webp",
         features: ["Business Intelligence", "Real-time Processing", "Predictive Modeling", "Data Visualization"],
         link: "/services/data-analytics"
     }

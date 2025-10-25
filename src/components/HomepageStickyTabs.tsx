@@ -215,7 +215,7 @@ export const HomepageStickyTabs: React.FC = () => {
         "Progressive Web Apps (PWA)"
       ],
       technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Node.js", "PostgreSQL"],
-      imageUrl: "/herosectionimages/Digital Technology.webp",
+      imageUrl: "/images/service-cards/web-development-service-card.webp",
       link: "/services/web-development"
     },
     {
@@ -231,7 +231,7 @@ export const HomepageStickyTabs: React.FC = () => {
         "Offline-First Architecture"
       ],
       technologies: ["React Native", "Flutter", "Swift", "Kotlin", "Firebase", "Expo"],
-      imageUrl: "/herosectionimages/3.webp",
+      imageUrl: "/images/service-cards/mobile-app-development-service-card.webp",
       link: "/services/mobile-apps"
     },
     {
@@ -247,7 +247,7 @@ export const HomepageStickyTabs: React.FC = () => {
         "Predictive Analytics"
       ],
       technologies: ["Python", "TensorFlow", "OpenAI", "LangChain", "Azure AI", "AWS ML"],
-      imageUrl: "/herosectionimages/Agentic Ai.webp",
+      imageUrl: "/images/service-cards/ai-automation-service-card.webp",
       link: "/services/ai-automation"
     },
     {
@@ -263,7 +263,7 @@ export const HomepageStickyTabs: React.FC = () => {
         "Monitoring & Analytics"
       ],
       technologies: ["AWS", "Azure", "Google Cloud", "Docker", "Kubernetes", "Terraform"],
-      imageUrl: "/herosectionimages/cloud.webp",
+      imageUrl: "/images/service-cards/cloud-devops-service-card.webp",
       link: "/services/cloud-devops"
     },
     {
@@ -279,7 +279,7 @@ export const HomepageStickyTabs: React.FC = () => {
         "Security Training & Awareness"
       ],
       technologies: ["SIEM", "Firewalls", "VPN", "Encryption", "SOC", "ISO 27001"],
-      imageUrl: "/herosectionimages/Cyber Security.webp",
+      imageUrl: "/images/service-cards/cybersecurity-service-card.webp",
       link: "/services/cybersecurity"
     },
     {
@@ -295,7 +295,7 @@ export const HomepageStickyTabs: React.FC = () => {
         "ETL/ELT Pipelines"
       ],
       technologies: ["Python", "R", "Tableau", "Power BI", "Apache Spark", "Snowflake"],
-      imageUrl: "/herosectionimages/Data & Analytics.webp",
+      imageUrl: "/images/service-cards/data-analytics-service-card.webp",
       link: "/services/data-analytics"
     }
   ];

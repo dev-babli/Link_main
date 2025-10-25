@@ -34,7 +34,7 @@ export function EnhancedServicesSection() {
             title: "Web Development",
             description: "Custom web applications built with modern frameworks and cutting-edge technologies",
             icon: Code,
-            backgroundImage: "/Service Cards images/Cloud and Application Service.webp",
+            backgroundImage: "/images/service-cards/web-development-service-card.webp",
             highlight: "Full-Stack Solutions",
             link: "/services/web-development"
         },
@@ -42,7 +42,7 @@ export function EnhancedServicesSection() {
             title: "Mobile Apps",
             description: "Native and cross-platform mobile applications for iOS and Android",
             icon: SmartphoneNfc,
-            backgroundImage: "/Service Cards images/Engineering and Manufacturing.webp",
+            backgroundImage: "/images/service-cards/mobile-app-development-service-card.webp",
             highlight: "Cross-Platform",
             link: "/services/mobile-apps"
         },
@@ -50,7 +50,7 @@ export function EnhancedServicesSection() {
             title: "Cloud Solutions",
             description: "Scalable cloud infrastructure and migration services",
             icon: CloudDownload,
-            backgroundImage: "/herosectionimages/cloud.webp",
+            backgroundImage: "/images/service-cards/cloud-devops-service-card.webp",
             highlight: "AWS · Azure · GCP",
             link: "/services/cloud-solutions"
         },
@@ -58,7 +58,7 @@ export function EnhancedServicesSection() {
             title: "Data Analytics",
             description: "Business intelligence and data-driven insights for informed decision making",
             icon: ChartLine,
-            backgroundImage: "/Service Cards images/Data Analytics.webp",
+            backgroundImage: "/images/service-cards/data-analytics-service-card.webp",
             highlight: "AI-Powered Insights",
             link: "/services/data-analytics"
         },
@@ -66,7 +66,7 @@ export function EnhancedServicesSection() {
             title: "Cybersecurity",
             description: "Enterprise-grade security solutions and comprehensive security audits",
             icon: BadgeCheck,
-            backgroundImage: "/Service Cards images/Digital Security.webp",
+            backgroundImage: "/images/service-cards/cybersecurity-service-card.webp",
             highlight: "Zero-Trust Architecture",
             link: "/services/cybersecurity"
         },
@@ -74,7 +74,7 @@ export function EnhancedServicesSection() {
             title: "AI Solutions",
             description: "Intelligent automation and AI solutions to streamline your business processes",
             icon: Sparkles,
-            backgroundImage: "/Service Cards images/AI Gen AI.webp",
+            backgroundImage: "/images/service-cards/ai-automation-service-card.webp",
             highlight: "Machine Learning",
             link: "/services/ai-automation"
         },
@@ -82,7 +82,7 @@ export function EnhancedServicesSection() {
             title: "UI/UX Design",
             description: "User-centered interface design that creates exceptional digital experiences",
             icon: SwatchBook,
-            backgroundImage: "/herosectionimages/Digital Technology.webp",
+            backgroundImage: "/images/service-cards/web-development-service-card.webp",
             highlight: "Design Systems",
             link: "/services/uiux-design"
         },
@@ -90,7 +90,7 @@ export function EnhancedServicesSection() {
             title: "DevOps",
             description: "CI/CD pipelines and automation for seamless software delivery",
             icon: Rocket,
-            backgroundImage: "/herosectionimages/Digital Partner.webp",
+            backgroundImage: "/images/service-cards/cloud-devops-service-card.webp",
             highlight: "Infrastructure as Code",
             link: "/services/devops"
         },
@@ -98,7 +98,7 @@ export function EnhancedServicesSection() {
             title: "API Development",
             description: "RESTful and GraphQL APIs for seamless system integration",
             icon: Network,
-            backgroundImage: "/herosectionimages/Scalable Cloud and Application.webp",
+            backgroundImage: "/images/service-cards/web-development-service-card.webp",
             highlight: "Microservices",
             link: "/services/api-development"
         },
@@ -106,7 +106,7 @@ export function EnhancedServicesSection() {
             title: "Database Design",
             description: "Optimized database solutions for performance and scalability",
             icon: Boxes,
-            backgroundImage: "/herosectionimages/Data & Analytics.webp",
+            backgroundImage: "/images/service-cards/data-analytics-service-card.webp",
             highlight: "SQL & NoSQL",
             link: "/services/database-design"
         },
@@ -114,7 +114,7 @@ export function EnhancedServicesSection() {
             title: "Consulting",
             description: "Technical architecture consulting and strategic technology guidance",
             icon: Users,
-            backgroundImage: "/Service Cards images/Healthcare and Lifesciences.webp",
+            backgroundImage: "/images/service-cards/ai-automation-service-card.webp",
             highlight: "Enterprise Solutions",
             link: "/services/consulting"
         },
@@ -122,7 +122,7 @@ export function EnhancedServicesSection() {
             title: "Support",
             description: "24/7 maintenance and support services for your applications",
             icon: HeartHandshake,
-            backgroundImage: "/Service Cards images/Talent Solution.webp",
+            backgroundImage: "/images/service-cards/cybersecurity-service-card.webp",
             highlight: "24/7 Availability",
             link: "/services/support"
         }

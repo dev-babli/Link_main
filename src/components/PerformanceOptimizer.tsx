@@ -9,14 +9,13 @@ export function PerformanceOptimizer() {
         // Preload critical Link Innovations resources
         const preloadCriticalResources = () => {
             const criticalImages = [
-                "/logos/Logo's/Logo1.png",
-                "/herosectionimages/generative-ai-hero.jpg",
-                "/herosectionimages/cloud-computing-illustration.jpg",
-                "/herosectionimages/ai-human-collaboration.jpg",
-                "/Service Cards images/AI Gen AI.webp",
-                "/Service Cards images/Cloud and Application Service.webp",
-                "/Service Cards images/Data Analytics.webp",
-                "/Service Cards images/Digital Security.webp"
+                "/images/lumin-logo.png",
+                "/images/services/ai-automation/hero-ai-automation.jpg",
+                "/images/services/cloud-devops/hero-cloud-services.jpg",
+                "/images/services/mobile-app-development/hero-mobile-apps.jpg",
+                "/images/service-cards/ai-automation-service-card.webp",
+                "/images/service-cards/web-development-service-card.webp",
+                "/images/service-cards/cybersecurity-service-card.webp"
             ];
 
             criticalImages.forEach((src) => {
@@ -52,10 +51,10 @@ export function PerformanceOptimizer() {
 
                     // Try fallback images based on the original src
                     const fallbackMap: { [key: string]: string } = {
-                        "/herosectionimages/generative-ai-hero.jpg": "/herosectionimages/cloud.webp",
-                        "/herosectionimages/cloud-computing-illustration.jpg": "/herosectionimages/cloud.webp",
-                        "/Service Cards images/AI Gen AI.webp": "/Service Cards images/Cloud and Application Service.webp",
-                        "/Service Cards images/Cloud and Application Service.webp": "/Service Cards images/Data Analytics.webp"
+                        "/images/services/ai-automation/hero-ai-automation.jpg": "/images/services/cloud-devops/hero-cloud-services.jpg",
+                        "/images/services/cloud-devops/hero-cloud-services.jpg": "/images/services/mobile-app-development/hero-mobile-apps.jpg",
+                        "/images/service-cards/ai-automation-service-card.webp": "/images/service-cards/web-development-service-card.webp",
+                        "/images/service-cards/web-development-service-card.webp": "/images/service-cards/cybersecurity-service-card.webp"
                     };
 
                     const fallback = fallbackMap[target.src];
